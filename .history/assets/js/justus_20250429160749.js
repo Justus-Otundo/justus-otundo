@@ -24,18 +24,6 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     button.innerHTML = 'Sending...';
 });
 
-// Add this to your existing JavaScript file
-document.addEventListener('DOMContentLoaded', function() {
-    const hireForm = document.querySelector('.hire-form');
-    if (hireForm) {
-        hireForm.addEventListener('submit', function(e) {
-            const button = this.querySelector('button[type="submit"]');
-            button.disabled = true;
-            button.innerHTML = '<i class="ti-reload spinner"></i> Sending...';
-        });
-    }
-});
-
 // protfolio filters
 $(window).on("load", function() {
     var t = $(".portfolio-container");

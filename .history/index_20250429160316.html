@@ -437,27 +437,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="contact-form-card">
-                        <form action="https://formspree.io/f/movdjdep" method="POST" class="hire-form">
+                        <form id="hireForm" action="process_hire.php" method="POST">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="name" placeholder=" " required>
-                                <label for="name">Your Name</label>
+                                <input class="form-control" type="text" name="name" placeholder="Name *" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder=" " required>
-                                <label for="email">Your Email</label>
+                                <input class="form-control" type="email" name="email" placeholder="Email *" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" name="project_type" placeholder=" " required>
-                                <label for="project_type">Project Type</label>
+                                <input class="form-control" type="text" name="project_type" placeholder="Project Type" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder=" " rows="5" required></textarea>
-                                <label for="message">Project Description</label>
+                                <textarea class="form-control" name="project_description" placeholder="Project Description *" rows="5" required></textarea>
                             </div>
-                            <!-- Optional: Add hidden fields for better email organization -->
-                            <input type="hidden" name="_subject" value="New Hire Request from Portfolio">
-                            <input type="hidden" name="_next" value="https://your-site.com/thanks.html">
-                            
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                             </div>
@@ -644,28 +636,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="contact-form-card">
-                        <form action="https://formspree.io/f/your-formspree-id" method="POST" class="hire-form">
+                        <form id="hireForm" action="process_hire.php" method="POST">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="name" placeholder=" " required>
-                                <label for="name">Your Name</label>
+                                <input class="form-control" type="text" name="name" placeholder="Name *" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder=" " required>
-                                <label for="email">Your Email</label>
+                                <input class="form-control" type="email" name="email" placeholder="Email *" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" name="project_type" placeholder=" " required>
-                                <label for="project_type">Project Type</label>
+                                <input class="form-control" type="text" name="project_type" placeholder="Project Type" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder=" " rows="5" required></textarea>
-                                <label for="message">Project Description</label>
+                                <textarea class="form-control" name="project_description" placeholder="Project Description *" rows="5" required></textarea>
                             </div>
-                            <!-- Optional: Add hidden fields for better email organization -->
-                            <!-- <input type="hidden" name="_subject" value="New Hire Request from Portfolio">
-                            <input type="hidden" name="_next" value="https://your-site.com/thanks.html">
-                        -->
-                            
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                             </div>
@@ -690,9 +673,9 @@
                 <div class="portfolio-container">
                     <div class="col-md-6 col-lg-4 web new">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/web-1.jpeg" class="img-fluid" alt="Web Development Project 1">
+                            <img src="assets/imgs/web-1.jpg" class="img-fluid" alt="Web Development Project 1">
                             <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/web-1.jpeg"></a>
+                                <a class="img-popup" href="assets/imgs/web-1.jpg"></a>
                                 <div class="text-holder">
                                     <h6 class="title">Web Development</h6>
                                     <p class="subtitle">A modern and responsive website design.</p>
@@ -703,9 +686,9 @@
     
                     <div class="col-md-6 col-lg-4 web new">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/web-2.jpeg" class="img-fluid" alt="Web Development Project 2">
+                            <img src="assets/imgs/web-2.jpg" class="img-fluid" alt="Web Development Project 2">
                             <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/web-2.jpeg"></a>
+                                <a class="img-popup" href="assets/imgs/web-2.jpg"></a>
                                 <div class="text-holder">
                                     <h6 class="title">Web Development</h6>
                                     <p class="subtitle">Crafting sleek and interactive web solutions.</p>
@@ -716,9 +699,9 @@
     
                     <div class="col-md-6 col-lg-4 advertising new">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/branding-1.jpeg" class="img-fluid" alt="Advertising Campaign">
+                            <img src="assets/imgs/advertising-2.jpg" class="img-fluid" alt="Advertising Campaign">
                             <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-1.jpeg"></a>
+                                <a class="img-popup" href="assets/imgs/advertising-2.jpg"></a>
                                 <div class="text-holder">
                                     <h6 class="title">Advertising</h6>
                                     <p class="subtitle">Creative and engaging marketing campaigns.</p>
@@ -729,9 +712,9 @@
     
                     <div class="col-md-6 col-lg-4 branding new">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/branding-2.jpeg" class="img-fluid" alt="Branding Project">
+                            <img src="assets/imgs/branding-1.jpg" class="img-fluid" alt="Branding Project">
                             <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-2.jpeg"></a>
+                                <a class="img-popup" href="assets/imgs/branding-1.jpg"></a>
                                 <div class="text-holder">
                                     <h6 class="title">Branding</h6>
                                     <p class="subtitle">Building strong and unique brand identities.</p>
@@ -742,9 +725,9 @@
     
                     <div class="col-md-6 col-lg-4 advertising">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/branding-1.jpeg" class="img-fluid" alt="Advertising Strategy">
+                            <img src="assets/imgs/advertising-1.jpg" class="img-fluid" alt="Advertising Strategy">
                             <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-1.jpeg"></a>
+                                <a class="img-popup" href="assets/imgs/advertising-1.jpg"></a>
                                 <div class="text-holder">
                                     <h6 class="title">Advertising</h6>
                                     <p class="subtitle">Strategic advertising to enhance brand visibility.</p>
@@ -755,9 +738,9 @@
     
                     <div class="col-md-6 col-lg-4 branding">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/branding-1.jpeg" class="img-fluid" alt="Branding Concept">
+                            <img src="assets/imgs/branding-3.jpg" class="img-fluid" alt="Branding Concept">
                             <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-1.jpeg"></a>
+                                <a class="img-popup" href="assets/imgs/branding-3.jpg"></a>
                                 <div class="text-holder">
                                     <h6 class="title">Branding</h6>
                                     <p class="subtitle">Innovative branding concepts for businesses.</p>
@@ -853,25 +836,19 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Send a message</h4>
-                        <form class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+                        <form action="https://formspree.io/f/xnndjdjq" method="POST" class="contact-form">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder=" " required>
-                                <label for="name">Your Name</label>
+                                <input type="text" name="name" placeholder="Your Name" required>
                             </div>
-                            
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
-                                <label for="email">Your Email</label>
+                                <input type="email" name="email" placeholder="Your Email" required>
                             </div>
-                            
                             <div class="form-group">
-                                <textarea class="form-control" id="message" name="message" rows="4" placeholder=" " required></textarea>
-                                <label for="message">Your Message</label>
+                                <textarea name="message" placeholder="Your Message" required></textarea>
                             </div>
-                        
-                            <button type="submit" class="btn-submit">Send Message</button>
-                            
-                            <div class="form-message"></div>
+                            <input type="hidden" name="_subject" value="New Contact Form Submission">
+                            <input type="hidden" name="_next" value="https://your-site.com/thanks.html">
+                            <button type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>

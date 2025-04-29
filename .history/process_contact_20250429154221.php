@@ -1,5 +1,9 @@
 <?php
 require_once 'config/db_connect.php';
+require 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Set proper headers
@@ -41,6 +45,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             throw new Exception(print_r($stmt->errorInfo(), true));
         }
 
+        // Send email notification
+        $mail = new PHPMailer(true);
+        
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';  // Use Gmail SMTP
+        $mail->SMTPAuth = true;
+        $mail->Username = 'justusotundo86@gmail.com';  // Your Gmail address
+        $mail->Password = 'your-app-specific-password';  // Your Gmail app password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        // Recipients
+        $mail->setFrom('justusotundo86@gmail.com', 'Contact Form Notification');
+        $mail->addAddress('justusotundo86@gmail.com');
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Submission';
+        $mail->Body = "
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> {$name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Message:</strong> {$message}</p>
+        ";
+
+        $mail->send();
+        
         $response['status'] = 'success';
         $response['message'] = 'Thank you for your message. I will get back to you soon!';
         
