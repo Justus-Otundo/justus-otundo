@@ -37,31 +37,6 @@ $(document).ready(function(){
             }
         });
     });
-
-    $('#contactForm').on('submit', function(e) {
-        e.preventDefault();
-        
-        $.ajax({
-            type: 'POST',
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
-            dataType: 'json',
-            success: function(response) {
-                console.log('Response:', response); // Debug logging
-                if (response.status === 'success') {
-                    alert(response.message);
-                    $('#contactForm')[0].reset();
-                } else {
-                    alert('Error: ' + (response.message || 'Unknown error occurred'));
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error('AJAX Error:', status, error); // Debug logging
-                console.log('Response Text:', xhr.responseText); // Debug logging
-                alert('Sorry, there was an error sending your message. Please try again.');
-            }
-        });
-    });
 });
 
 // protfolio filters

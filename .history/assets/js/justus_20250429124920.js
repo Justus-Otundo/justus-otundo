@@ -47,17 +47,14 @@ $(document).ready(function(){
             data: $(this).serialize(),
             dataType: 'json',
             success: function(response) {
-                console.log('Response:', response); // Debug logging
                 if (response.status === 'success') {
                     alert(response.message);
                     $('#contactForm')[0].reset();
                 } else {
-                    alert('Error: ' + (response.message || 'Unknown error occurred'));
+                    alert('Error: ' + response.message);
                 }
             },
-            error: function(xhr, status, error) {
-                console.error('AJAX Error:', status, error); // Debug logging
-                console.log('Response Text:', xhr.responseText); // Debug logging
+            error: function() {
                 alert('Sorry, there was an error sending your message. Please try again.');
             }
         });
