@@ -473,7 +473,7 @@
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    height: 100%;
+    margin-bottom: 2rem;
 }
 
 #resume .card:hover {
@@ -511,10 +511,10 @@
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    height: 100%;
     position: relative;
     overflow: hidden;
     border: 2px solid transparent;
+    margin-bottom: 2rem;
 }
 
 .about-card-modern::before {
@@ -746,7 +746,7 @@
 @media (max-width: 991px) {
     .about-card-modern {
         padding: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
     
     .about-header {
@@ -765,6 +765,7 @@
 @media (max-width: 767px) {
     .about-card-modern {
         padding: 1.2rem;
+        margin-bottom: 2rem;
     }
     
     .about-header {
@@ -811,6 +812,7 @@
 @media (max-width: 575px) {
     .about-card-modern {
         padding: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .about-text {
@@ -832,5 +834,367 @@
     
     .expertise-content p {
         font-size: 0.85rem;
+    }
+}
+
+/* Section Spacing Fix */
+#about {
+    padding: 4rem 0 !important;
+    margin: 2rem 0;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row > [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure no overlapping */
+.about-card-modern {
+    z-index: 1;
+    position: relative;
+}
+
+.about-card-modern:hover {
+    z-index: 2;
+}
+
+/* Global Responsive Layout */
+.section {
+    padding: 4rem 0 !important;
+    margin: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Header Responsive */
+.header {
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.header-content {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.header-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.header-mono {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+/* Navigation Responsive */
+.navbar {
+    padding: 1rem 0;
+}
+
+.brand-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.brand-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+/* All Sections Responsive */
+#resume {
+    padding: 4rem 0 6rem !important;
+    overflow: hidden;
+}
+
+#projects, #service, #testimonials, #portfolio, #blog, #contact {
+    padding: 4rem 0 !important;
+}
+
+#resume .row {
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#projects .row, #service .row, #testimonials .row, #blog .row {
+    row-gap: 2rem;
+}
+
+#resume .col-md-6,
+#resume .col-lg-4 {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#resume .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#resume .card-body {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Resume 3-column layout */
+@media (min-width: 992px) {
+    #resume .col-lg-4:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    #resume .col-lg-4:nth-child(3) .card {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #resume .col-lg-4 {
+        margin-bottom: 2rem;
+    }
+    
+    #resume .col-md-12 {
+        order: 3;
+    }
+}
+
+/* Modern Resume Styling */
+.experience-item, .education-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #dc3545;
+}
+
+.exp-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.position, .degree {
+    color: #333;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.company, .institution {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+.achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievements li {
+    padding: 0.3rem 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.skills-gained {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.skill-tag {
+    background: #dc3545;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cert-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.cert-item {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: 1px solid #e9ecef;
+}
+
+@media (max-width: 767px) {
+    .cert-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .exp-header, .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skills-gained {
+        justify-content: center;
+    }
+}
+
+.project-card, .service-card, .testimonial-card-modern, .achievement-card {
+    margin-bottom: 2rem;
+}
+
+.contact-form-card, .contact-info-card {
+    margin-bottom: 2rem;
+}
+
+.bg-dark.text-center {
+    padding: 4rem 0 !important;
+}
+
+.bg-dark .row {
+    row-gap: 2rem;
+}
+
+/* Tablet Responsive (768px - 1199px) */
+@media (max-width: 1199px) {
+    .section, #resume, #projects, #service, #testimonials, #portfolio, #blog, #contact {
+        padding: 3rem 0 !important;
+    }
+    
+    .header-title {
+        font-size: 2.5rem;
+    }
+    
+    .header-mono {
+        font-size: 1.1rem;
+    }
+    
+    .brand-subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile Responsive (576px - 767px) */
+@media (max-width: 767px) {
+    .section, #resume, #projects, #service, #testimonials, #portfolio, #blog, #contact {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .header-title {
+        font-size: 2rem;
+    }
+    
+    .header-mono {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .brand-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .brand-title {
+        font-size: 1rem;
+    }
+    
+    .brand-subtitle {
+        font-size: 0.7rem;
+        display: none;
+    }
+    
+    .col-lg-4, .col-lg-6, .col-md-6, .col-md-4 {
+        margin-bottom: 2rem;
+    }
+    
+    .service-card, .testimonial-card-modern, .project-card {
+        padding: 1.5rem;
+    }
+    
+    .bg-dark .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .font40 {
+        font-size: 2rem !important;
+    }
+}
+
+/* Small Mobile Responsive (< 576px) */
+@media (max-width: 575px) {
+    .section, #resume, #projects, #service, #testimonials, #portfolio, #blog, #contact {
+        padding: 2rem 0 !important;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .header-title {
+        font-size: 1.8rem;
+    }
+    
+    .header-mono {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+    
+    .brand-txt {
+        display: none;
+    }
+    
+    .service-card, .testimonial-card-modern, .project-card, .about-card-modern {
+        padding: 1rem;
+    }
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1.2rem; }
+    h5 { font-size: 1.1rem; }
+    h6 { font-size: 1rem; }
+    
+    .font40 {
+        font-size: 1.5rem !important;
+    }
+    
+    .filters {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .filters a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
