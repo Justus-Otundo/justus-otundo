@@ -1067,11 +1067,30 @@
     margin-bottom: 2rem;
 }
 
-.bg-dark.text-center {
+.stats-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     padding: 4rem 0 !important;
+    position: relative;
+    overflow: hidden;
 }
 
-.bg-dark .row {
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+}
+
+.stats-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.stats-section .row {
     row-gap: 2rem;
 }
 

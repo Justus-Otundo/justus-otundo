@@ -14,6 +14,10 @@
 	<link rel="stylesheet" href="assets/css/custom-improvements.css">
 	<!-- Animations -->
 	<link rel="stylesheet" href="assets/css/animations.css">
+	<!-- Contact Modern -->
+	<link rel="stylesheet" href="assets/css/contact-modern.css">
+	<!-- Freelance CTA -->
+	<link rel="stylesheet" href="assets/css/freelance-cta.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <header class="header">
@@ -36,40 +40,82 @@
     </header>
     <!-- Call Me Modal -->
     <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="callModalLabel">Get in Touch</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title" id="callModalLabel">
+                        <i class="ti-mobile mr-2"></i>Let's Connect
+                    </h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="contact-info text-center">
-                        <div class="mb-4">
-                            <i class="ti-mobile icon-lg text-danger"></i>
-                            <h5 class="mt-2">Phone</h5>
-                            <p><a href="tel:+254799993420" class="text-dark">+254 799 993 420</a></p>
-                        </div>
-                        <div class="mb-4">
-                            <i class="ti-email icon-lg text-danger"></i>
-                            <h5 class="mt-2">Email</h5>
-                            <p>
-                                <a href="mailto:justusotundo86@gmail.com?subject=Project%20Inquiry&body=Hi%20Justus,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20potential%20project.%0D%0A%0D%0AProject%20Details:%0D%0A-%20Name:%0D%0A-%20Type%20of%20Project:%0D%0A-%20Timeline:%0D%0A%0D%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20discuss%20further.%0D%0A%0D%0ABest%20regards," 
-                                   class="text-dark email-link">
-                                    justusotundo86@gmail.com
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-method-card mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon bg-primary text-white rounded-circle p-3 mr-3">
+                                        <i class="ti-mobile" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Phone Call</h6>
+                                        <p class="text-muted mb-0">Direct & Immediate</p>
+                                        <small class="text-primary">Available 24/7</small>
+                                    </div>
+                                </div>
+                                <a href="tel:+254799993420" class="btn btn-primary btn-block mt-3">
+                                    <i class="ti-mobile mr-2"></i>Call +254 799 993 420
                                 </a>
-                            </p>
+                            </div>
                         </div>
-                        <div class="form-group mt-4">
-                            <a href="tel:+254799993420" class="btn btn-primary btn-block">
-                                <i class="ti-mobile mr-2"></i>Call Now
-                            </a>
+                        <div class="col-md-6">
+                            <div class="contact-method-card mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon bg-primary text-white rounded-circle p-3 mr-3">
+                                        <i class="ti-email" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Email</h6>
+                                        <p class="text-muted mb-0">Detailed Discussion</p>
+                                        <small class="text-primary">Quick Response</small>
+                                    </div>
+                                </div>
+                                <a href="mailto:justusotundo86@gmail.com?subject=Project%20Inquiry&body=Hi%20Justus,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20potential%20project.%0D%0A%0D%0AProject%20Details:%0D%0A-%20Name:%0D%0A-%20Type%20of%20Project:%0D%0A-%20Timeline:%0D%0A%0D%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20discuss%20further.%0D%0A%0D%0ABest%20regards," class="btn btn-primary btn-block mt-3">
+                                    <i class="ti-email mr-2"></i>Send Email
+                                </a>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <a href="mailto:justusotundo86@gmail.com" class="btn btn-outline-primary btn-block">
-                                <i class="ti-email mr-2"></i>Send Email
-                            </a>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="social-connect-card text-center p-3">
+                                <a href="https://linkedin.com/in/justus-omoto-452044247" class="btn btn-outline-primary btn-block">
+                                    <i class="ti-linkedin mr-2"></i>LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="social-connect-card text-center p-3">
+                                <a href="https://github.com/Justus-Otundo" class="btn btn-outline-dark btn-block">
+                                    <i class="ti-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="social-connect-card text-center p-3">
+                                <button class="btn btn-outline-primary btn-block" data-dismiss="modal" data-toggle="modal" data-target="#hireModal">
+                                    <i class="ti-briefcase mr-2"></i>Hire Me
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="response-info mt-4 p-3 bg-light rounded">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="ti-time text-primary mr-2"></i>
+                            <small class="text-muted">Usually responds within 2 hours</small>
                         </div>
                     </div>
                 </div>
@@ -552,7 +598,7 @@
         </div>
     </section>
 
-    <section class="section bg-dark text-center">
+    <section class="section stats-section text-center">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6 col-lg-3">
@@ -561,7 +607,7 @@
                             <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">2000+</h1>
+                            <h1 class="text-light font-weight-bold font40">2000+</h1>
                             <p class="text-light mb-1">Hours Worked</p>
                         </div>
                     </div>
@@ -572,7 +618,7 @@
                             <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">25+</h1>
+                            <h1 class="text-light font-weight-bold font40">25+</h1>
                             <p class="text-light mb-1">Projects Completed</p>
                         </div>
                     </div>
@@ -583,7 +629,7 @@
                             <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">15+</h1>
+                            <h1 class="text-light font-weight-bold font40">15+</h1>
                             <p class="text-light mb-1">Happy Clients</p>
                         </div>
                     </div>
@@ -594,7 +640,7 @@
                             <div class="m-auto"><i class="ti-cup icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">1000+</h1>
+                            <h1 class="text-light font-weight-bold font40">1000+</h1>
                             <p class="text-light mb-1">Cups of Coffee</p>
                         </div>
                     </div>
@@ -605,46 +651,125 @@
 
     <!-- Hire Me Modal -->
     <div class="modal fade" id="hireModal" tabindex="-1" role="dialog" aria-labelledby="hireModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="hireModalLabel">Let's Work Together</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title" id="hireModalLabel">
+                        <i class="ti-briefcase mr-2"></i>Let's Work Together
+                    </h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="contact-form-card">
-                        <form action="https://formspree.io/f/movdjdep" method="POST" class="hire-form">
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="name" placeholder=" " required>
-                                <label for="name">Your Name</label>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="contact-form-card">
+                                <div class="form-header mb-4">
+                                    <h6 class="text-primary mb-2">Ready to start your project?</h6>
+                                    <p class="text-muted mb-0">Fill out the form below and I'll get back to you within 2 hours.</p>
+                                </div>
+                                <form action="https://formspree.io/f/movdjdep" method="POST" class="hire-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label text-dark" style="position: relative; z-index: 10; margin-bottom: 5px; display: block;">Your Name *</label>
+                                                <input class="form-control" type="text" name="name" placeholder="Enter your full name" style="color: #333 !important; background-color: #fff !important; position: relative; z-index: 1;" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label text-dark" style="position: relative; z-index: 10; margin-bottom: 5px; display: block;">Your Email *</label>
+                                                <input class="form-control" type="email" name="email" placeholder="your.email@example.com" style="color: #333 !important; background-color: #fff !important; position: relative; z-index: 1;" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label text-dark" style="position: relative; z-index: 10; margin-bottom: 5px; display: block;">Project Type *</label>
+                                                <select class="form-control" name="project_type" style="color: #333 !important; background-color: #fff !important; position: relative; z-index: 1; border: 1px solid #ccc;" required>
+                                                    <option value="" style="color: #999;">Select project type</option>
+                                                    <option value="Mobile App Development" style="color: #333;">Mobile App Development</option>
+                                                    <option value="Web Development" style="color: #333;">Web Development</option>
+                                                    <option value="E-commerce Platform" style="color: #333;">E-commerce Platform</option>
+                                                    <option value="Data Analysis" style="color: #333;">Data Analysis</option>
+                                                    <option value="UI/UX Design" style="color: #333;">UI/UX Design</option>
+                                                    <option value="IT Consultation" style="color: #333;">IT Consultation</option>
+                                                    <option value="Other" style="color: #333;">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label text-dark" style="position: relative; z-index: 10; margin-bottom: 5px; display: block;">Budget Range</label>
+                                                <select class="form-control" name="budget" style="color: #333 !important; background-color: #fff !important; position: relative; z-index: 1; border: 1px solid #ccc;">
+                                                    <option value="" style="color: #999;">Select budget range</option>
+                                                    <option value="Under KSh 100,000">Under KSh 100,000</option>
+                                                    <option value="KSh 100,000 - KSh 500,000">KSh 100,000 - KSh 500,000</option>
+                                                    <option value="KSh 500,000 - KSh 1,000,000">KSh 500,000 - KSh 1,000,000</option>
+                                                    <option value="KSh 1,000,000+">KSh 1,000,000+</option>
+                                                    <option value="Let's discuss">Let's discuss</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label text-dark" style="position: relative; z-index: 10; margin-bottom: 5px; display: block;">Project Description *</label>
+                                        <textarea class="form-control" name="message" placeholder="Describe your project requirements, goals, and timeline..." rows="4" style="color: #333 !important; background-color: #fff !important; position: relative; z-index: 1;" required></textarea>
+                                    </div>
+                                    
+                                    <input type="hidden" name="_subject" value="New Hire Request from Portfolio">
+                                    <input type="hidden" name="_next" value="https://justus-otundo.github.io/thanks.html">
+                                    
+                                    <div class="form-group mb-0">
+                                        <button type="submit" class="btn btn-primary btn-block btn-lg btn-submit">
+                                            <span class="submit-text">
+                                                <i class="ti-rocket mr-2"></i>Send Project Request
+                                            </span>
+                                            <span class="loading-spinner d-none">
+                                                <i class="ti-reload rotating mr-2"></i>Sending...
+                                            </span>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder=" " required>
-                                <label for="email">Your Email</label>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="hire-info-card">
+                                <h6 class="text-primary mb-3">Why Choose Me?</h6>
+                                <div class="feature-list">
+                                    <div class="feature-item mb-3">
+                                        <i class="ti-check text-primary mr-2"></i>
+                                        <small class="text-dark">2000+ Hours of Experience</small>
+                                    </div>
+                                    <div class="feature-item mb-3">
+                                        <i class="ti-check text-primary mr-2"></i>
+                                        <small class="text-dark">25+ Successful Projects</small>
+                                    </div>
+                                    <div class="feature-item mb-3">
+                                        <i class="ti-check text-primary mr-2"></i>
+                                        <small class="text-dark">Quick Response Time</small>
+                                    </div>
+                                    <div class="feature-item mb-3">
+                                        <i class="ti-check text-primary mr-2"></i>
+                                        <small class="text-dark">Quality Guaranteed</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-quick mt-4">
+                                    <h6 class="text-dark mb-2">Prefer to call?</h6>
+                                    <a href="tel:+254799993420" class="btn btn-outline-primary btn-sm btn-block">
+                                        <i class="ti-mobile mr-1"></i>+254 799 993 420
+                                    </a>
+                                </div>
+                                
+                                <div class="response-badge mt-3 p-2 bg-light rounded text-center">
+                                    <i class="ti-time text-primary mr-1"></i>
+                                    <small class="text-dark">Response within 2 hours</small>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="project_type" placeholder=" " required>
-                                <label for="project_type">Project Type</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder=" " rows="5" required></textarea>
-                                <label for="message">Project Description</label>
-                            </div>
-                            <!-- Optional: Add hidden fields for better email organization -->
-                            <input type="hidden" name="_subject" value="New Hire Request from Portfolio">
-                            <input type="hidden" name="_next" value="https://justus-otundo.github.io/thanks.html">
-                            
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block btn-submit">
-                                    <span class="submit-text">Send Message</span>
-                                    <span class="loading-spinner d-none">
-                                        <i class="ti-reload rotating"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -872,55 +997,37 @@
 
    <!--end of testimonies-->
     
-    <section class="section bg-dark py-5">
-        <div class="container text-center">
-            <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
-            <button class="btn bg-primary w-lg" data-toggle="modal" data-target="#hireModal">Hire me</button>
+    <section class="freelance-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="ti-rocket"></i>
+                </div>
+                <h2 class="cta-title">Ready to Start Your Project?</h2>
+                <p class="cta-subtitle">I'm available for freelance work and exciting new opportunities</p>
+                <div class="cta-features">
+                    <div class="feature-item">
+                        <i class="ti-check"></i>
+                        <span>Quick Response</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="ti-check"></i>
+                        <span>Quality Work</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="ti-check"></i>
+                        <span>On-Time Delivery</span>
+                    </div>
+                </div>
+                <button class="btn-cta" data-toggle="modal" data-target="#hireModal">
+                    <span class="btn-text">Let's Work Together</span>
+                    <span class="btn-arrow"><i class="ti-arrow-right"></i></span>
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Hire Me Modal -->
-    <div class="modal fade" id="hireModal" tabindex="-1" role="dialog" aria-labelledby="hireModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="hireModalLabel">Let's Work Together</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="contact-form-card">
-                        <form action="https://formspree.io/f/movdjdep" method="POST" class="hire-form">
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="name" placeholder=" " required>
-                                <label for="name">Your Name</label>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder=" " required>
-                                <label for="email">Your Email</label>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="project_type" placeholder=" " required>
-                                <label for="project_type">Project Type</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder=" " rows="5" required></textarea>
-                                <label for="message">Project Description</label>
-                            </div>
-                            <!-- Optional: Add hidden fields for better email organization -->
-                            <input type="hidden" name="_subject" value="New Hire Request from Portfolio">
-                            <input type="hidden" name="_next" value="https://justus-otundo.github.io/thanks.html">
-                            
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Portfolio Section -->
     <section class="section bg-custom-gray" id="portfolio">
@@ -1162,76 +1269,137 @@
     <!-- End of blog section -->
 
     <!-- Start of contact section -->
-
-    <div class="section contact" id="contact">
-        <div id="map" class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15956.291327841762!2d36.63347653115721!3d-1.107613582107961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f27cf31e4bdd9%3A0xad5afeba1b5d392!2sLimuru%20Town.!5e0!3m2!1sen!2ske!4v1742817630378!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+    <section class="section" id="contact">
         <div class="container">
-            <div class="row">
+            <div class="section-header text-center mb-5">
+                <div class="section-icon">
+                    <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=80&h=80&fit=crop" alt="Contact" class="section-img">
+                </div>
+                <h2 class="section-title">Get In <span class="text-danger">Touch</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Let's discuss your next project</p>
+            </div>
+            
+            <div class="row" style="row-gap: 2rem; align-items: flex-start;">
                 <div class="col-lg-8">
-                    <div class="contact-form-card">
-                        <h4 class="contact-title">Send a message</h4>
-                        <form class="contact-form" action="https://formspree.io/f/movdjdep" method="POST">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder=" " required>
-                                <label for="name">Your Name</label>
+                    <div class="contact-form-modern">
+                        <div class="form-header">
+                            <h4 class="form-title">💬 Send Message</h4>
+                            <p class="form-subtitle">Ready to start your project? Drop me a message!</p>
+                        </div>
+                        <form class="modern-form" action="https://formspree.io/f/movdjdep" method="POST">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-modern">
+                                        <input type="text" class="form-input" id="name" name="name" required>
+                                        <label class="form-label">Your Name</label>
+                                        <div class="form-icon"><i class="ti-user"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group-modern">
+                                        <input type="email" class="form-input" id="email" name="email" required>
+                                        <label class="form-label">Your Email</label>
+                                        <div class="form-icon"><i class="ti-email"></i></div>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
-                                <label for="email">Your Email</label>
+                            <div class="form-group-modern">
+                                <input type="text" class="form-input" id="subject" name="subject" required>
+                                <label class="form-label">Subject</label>
+                                <div class="form-icon"><i class="ti-tag"></i></div>
                             </div>
-                            
-                            <div class="form-group">
-                                <textarea class="form-control" id="message" name="message" rows="4" placeholder=" " required></textarea>
-                                <label for="message">Your Message</label>
+                            <div class="form-group-modern">
+                                <textarea class="form-input" id="message" name="message" rows="5" required></textarea>
+                                <label class="form-label">Your Message</label>
+                                <div class="form-icon"><i class="ti-comment"></i></div>
                             </div>
-                        
-                            <button type="submit" class="btn-submit">Send Message</button>
-                            
-                            <div class="form-message"></div>
+                            <button type="submit" class="btn-send">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon"><i class="ti-rocket"></i></span>
+                            </button>
                         </form>
                     </div>
                 </div>
+                
                 <div class="col-lg-4">
-                    <div class="contact-info-card">
-                        <h4 class="contact-title">Get in touch</h4>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-mobile icon-md"></i>
+                    <div class="contact-info-modern">
+                        <div class="info-header">
+                            <h4 class="info-title">📍 Contact Info</h4>
+                            <p class="info-subtitle">Get in touch through any of these channels</p>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="ti-mobile"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h6>Phone</h6>
+                                    <p><a href="tel:+254799993420">+254 799 993 420</a></p>
+                                    <span class="method-badge">Available 24/7</span>
+                                </div>
                             </div>
-                            <div class="col-10 ">
-                                <h6 class="d-inline">Phone : <br> <span class="text-muted">+ 254 799 993 420</span></h6>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="ti-email"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h6>Email</h6>
+                                    <p><a href="mailto:justusotundo86@gmail.com">justusotundo86@gmail.com</a></p>
+                                    <span class="method-badge">Quick Response</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="ti-location-pin"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h6>Location</h6>
+                                    <p>Limuru, Nairobi, Kenya</p>
+                                    <span class="method-badge">Remote Friendly</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-map-alt icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Address :<br> <span class="text-muted">23-00217 Limuru, Nairobi, Kenya.</span></h6>
+                        
+                        <div class="social-connect">
+                            <h6>🌐 Connect With Me</h6>
+                            <div class="social-icons-simple">
+                                <a href="https://www.facebook.com/blaise.junior.967" class="social-icon facebook">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/justus-omoto-452044247" class="social-icon linkedin">
+                                    <i class="ti-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/Justus-Otundo" class="social-icon github">
+                                    <i class="ti-github"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-envelope icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Email :<br> <span class="text-muted">justusotundo86@gmail.com</span></h6>
+                        
+                        <div class="response-time">
+                            <div class="response-badge">
+                                <i class="ti-time"></i>
+                                <span>Usually responds within 2 hours</span>
                             </div>
                         </div>
-                        <ul class="social-icons pt-4">
-                            <li class="social-item"><a class="social-link text-dark" href="https://www.facebook.com/blaise.junior.967"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="https://linkedin.com/in/justus-omoto-452044247"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="https://github.com/Justus-Otundo"><i class="ti-github" aria-hidden="true"></i></a></li>
-                        </ul> 
                     </div>
                 </div>
             </div>
-
+            
+            <div class="map-section mt-5">
+                <div class="map-header text-center mb-4">
+                    <h4>🗺️ Find Me Here</h4>
+                    <p>Located in the heart of Kenya's tech hub</p>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15956.291327841762!2d36.63347653115721!3d-1.107613582107961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f27cf31e4bdd9%3A0xad5afeba1b5d392!2sLimuru%20Town.!5e0!3m2!1sen!2ske!4v1742817630378!5m2!1sen!2ske" width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- End of contact section -->
 
