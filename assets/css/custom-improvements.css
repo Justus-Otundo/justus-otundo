@@ -1,0 +1,312 @@
+/* Custom improvements for portfolio */
+
+/* Project Cards Styling */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card .card-header {
+    border-bottom: none;
+    padding: 1rem 1.25rem;
+}
+
+.project-card .card-body {
+    padding: 1.25rem;
+}
+
+.tech-stack {
+    margin-top: 1rem;
+}
+
+.tech-stack .badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Improved About Section */
+.about-card {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Enhanced Button Styling */
+.btn-outline-danger {
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+    text-decoration: none;
+}
+
+/* Improved Progress Bars */
+.progress {
+    height: 8px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    transition: width 0.6s ease;
+}
+
+/* Enhanced Expertise Section */
+.about-section .row {
+    margin-bottom: 1.5rem;
+}
+
+.about-section .col-1 i {
+    font-size: 1.5rem;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .header-mono {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+/* Animation for skill bars */
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--target-width);
+    }
+}
+
+.progress-bar {
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* Enhanced testimonial cards */
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Improved contact form */
+.contact-form-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Achievement Cards Styling */
+.achievement-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 2px solid transparent;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(220, 53, 69, 0.2);
+    border-color: #dc3545;
+}
+
+.achievement-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+}
+
+.achievement-stats {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.achievement-stats .badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+}
+
+.badge-success {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.alert-light {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
+
+/* Enhanced Portfolio Section */
+.portfolio-img-placeholder {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-app {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.ride-app {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.ecommerce-app {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.web-app {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.health-app {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.branding-app {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.tech-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.portfolio-item:hover .portfolio-img-placeholder {
+    transform: scale(1.05);
+}
+
+.project-tech {
+    margin-top: 1rem;
+}
+
+.project-tech .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.filters a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.filters a:hover,
+.filters a.active {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+    text-decoration: none;
+}
