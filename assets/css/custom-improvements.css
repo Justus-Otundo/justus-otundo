@@ -1198,3 +1198,155 @@
         font-size: 0.9rem;
     }
 }
+
+/* Blue Theme Colors */
+:root {
+    --primary-blue: #007bff;
+    --secondary-blue: #6c5ce7;
+    --light-blue: #74b9ff;
+    --dark-blue: #0056b3;
+}
+
+.text-danger {
+    color: var(--primary-blue) !important;
+}
+
+.bg-danger {
+    background-color: var(--primary-blue) !important;
+}
+
+.btn-danger {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-danger:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+.progress-bar.bg-danger {
+    background-color: var(--primary-blue) !important;
+}
+
+.border-danger {
+    border-color: var(--primary-blue) !important;
+}
+
+/* Update all gradients to blue */
+.about-card-modern::before,
+.testimonial-card-modern::before {
+    background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+}
+
+.about-icon,
+.service-icon,
+.info-icon,
+.social-link-modern,
+.expertise-icon,
+.avatar-placeholder {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)) !important;
+}
+
+.btn-modern {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+}
+
+.achievement-badge {
+    background: linear-gradient(135deg, var(--secondary-blue), var(--light-blue));
+}
+
+#resume .card-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)) !important;
+}
+
+.experience-item,
+.education-item {
+    border-left: 4px solid var(--primary-blue);
+}
+
+.skill-tag {
+    background: var(--primary-blue);
+}
+
+/* Portfolio Image Improvements */
+.portfolio-img-modern {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-img-modern {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,123,255,0.8), rgba(108,92,231,0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay-content {
+    text-align: center;
+    color: white;
+}
+
+.portfolio-overlay h6 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay .btn {
+    background: white;
+    color: var(--primary-blue);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.project-preview {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-info {
+    padding: 1rem 0;
+}
+
+.project-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.project-desc {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-tech .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--primary-blue);
+    color: white;
+}
