@@ -503,3 +503,334 @@
     line-height: 1.6;
     margin-bottom: 1rem;
 }
+
+/* Enhanced About Section */
+.about-card-modern {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.about-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #dc3545, #ff6b6b);
+}
+
+.about-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #dc3545;
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.about-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.about-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.about-card-modern:hover .about-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
+
+.about-title {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.about-subtitle {
+    color: #dc3545;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.about-text {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.btn-modern {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Personal Info Styles */
+.info-list {
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: #999;
+    font-weight: 500;
+}
+
+.info-value {
+    color: #333;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link-modern {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link-modern:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Expertise Styles */
+.expertise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.expertise-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.expertise-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.expertise-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.expertise-icon i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.expertise-content h6 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.expertise-content p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+    .about-card-modern {
+        padding: 2rem;
+    }
+    
+    .about-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .about-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-card-modern {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .about-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .expertise-list {
+        gap: 1rem;
+    }
+    
+    .expertise-item {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-card-modern {
+        padding: 1.2rem;
+    }
+    
+    .about-header {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .about-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .info-item {
+        padding: 0.6rem;
+    }
+    
+    .info-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .expertise-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .expertise-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .social-links {
+        gap: 0.8rem;
+    }
+    
+    .social-link-modern {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-card-modern {
+        padding: 1rem;
+    }
+    
+    .about-text {
+        font-size: 0.9rem;
+    }
+    
+    .btn-modern {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .info-value {
+        font-size: 0.9rem;
+    }
+    
+    .expertise-content h6 {
+        font-size: 0.95rem;
+    }
+    
+    .expertise-content p {
+        font-size: 0.85rem;
+    }
+}
