@@ -117,14 +117,14 @@ export function Projects() {
                       {project.description}
                     </p>
 
-                    {/* Tech Stack */}
+                    {/* Key Features */}
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {project.techStack.map((tech) => (
+                      {project.features.map((feature) => (
                         <span
-                          key={tech}
+                          key={feature}
                           className="px-4 py-2 text-sm font-medium text-white bg-dark-700/80 border border-slate-600/50 rounded-xl hover:border-accent-500/50 transition-colors"
                         >
-                          {tech}
+                          {feature}
                         </span>
                       ))}
                     </div>
