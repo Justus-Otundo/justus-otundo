@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://justus-otundo.github.io/portfolio-react/sitemap.xml

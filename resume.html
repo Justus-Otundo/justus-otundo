@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justus Otundo - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #1e293b;
+      background: #f8fafc;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+    }
+
+    @media screen {
+      .page {
+        margin: 2rem auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      }
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+      color: #fff;
+      padding: 2.5rem 3rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .header-left h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .header-left .title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #34d399;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-left .tagline {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      max-width: 380px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      line-height: 1.8;
+      flex-shrink: 0;
+    }
+
+    .header-right a {
+      color: #34d399;
+      text-decoration: none;
+    }
+
+    /* Accent bar */
+    .accent-bar {
+      height: 3px;
+      background: linear-gradient(90deg, #10b981, #06b6d4, #10b981);
+    }
+
+    /* Content */
+    .content {
+      padding: 2rem 3rem 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 1.75rem;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #10b981;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    /* Experience */
+    .job {
+      margin-bottom: 1.25rem;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .job-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .job-period {
+      font-size: 0.78rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .job-company {
+      font-size: 0.85rem;
+      color: #10b981;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .job ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .job li {
+      font-size: 0.83rem;
+      color: #475569;
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: 0.25rem;
+      line-height: 1.5;
+    }
+
+    .job li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 1rem;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .project-role {
+      font-size: 0.78rem;
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    .project-desc {
+      font-size: 0.83rem;
+      color: #475569;
+      margin-top: 0.15rem;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem 2rem;
+    }
+
+    .skill-category h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.2rem;
+    }
+
+    .skill-category p {
+      font-size: 0.8rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* Education */
+    .edu-item {
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .edu-degree {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-period {
+      font-size: 0.78rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .edu-school {
+      font-size: 0.83rem;
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    /* Certifications */
+    .cert-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 2rem;
+    }
+
+    .cert-item {
+      font-size: 0.82rem;
+      color: #475569;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .cert-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #06b6d4;
+    }
+
+    /* Languages */
+    .lang-row {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .lang-item {
+      font-size: 0.83rem;
+      color: #475569;
+    }
+
+    .lang-item strong {
+      color: #0f172a;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .header {
+        padding: 1.5rem 2rem 1.25rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .accent-bar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .content { padding: 1.5rem 2rem 2rem; }
+      .section { margin-bottom: 1.25rem; }
+      .job li::before, .cert-item::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @page {
+      margin: 0;
+      size: A4;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <h1>Justus Otundo</h1>
+        <div class="title">System Architect & Technology Lead</div>
+        <div class="tagline">
+          Building revenue-generating digital products &mdash; from mobile apps to enterprise systems, delivered on time, on budget, and built to scale.
+        </div>
+      </div>
+      <div class="header-right">
+        <div><a href="mailto:justusotundo86@gmail.com">justusotundo86@gmail.com</a></div>
+        <div>+254 799 993 420</div>
+        <div>Nairobi, Kenya</div>
+        <div><a href="https://linkedin.com/in/justus-omoto-452044247">LinkedIn</a> &middot; <a href="https://github.com/Justus-Otundo">GitHub</a></div>
+      </div>
+    </div>
+    <div class="accent-bar"></div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Professional Summary -->
+      <div class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+          Results-driven System Architect with 3+ years of experience delivering production-grade software products across mobile, web, and enterprise platforms. Currently leading the Technology & Innovation branch at Javi Research Support Services Ltd, where I architect and ship products that serve real users and generate revenue. Proven track record of taking projects from concept to launch &mdash; including a taxi-hailing platform, ERP implementation, and SACCO management system. I combine hands-on development expertise with strategic leadership to build solutions that move the needle.
+        </p>
+      </div>
+
+      <!-- Experience -->
+      <div class="section">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">System Architect & Technology Lead</span>
+            <span class="job-period">November 2025 &ndash; Present</span>
+          </div>
+          <div class="job-company">Javi Research Support Services Ltd, Nairobi</div>
+          <ul>
+            <li>Lead technology strategy, product roadmap, and architecture decisions for the organization</li>
+            <li>Architected and delivered JaviRide, a taxi-hailing platform with real-time tracking, driver management, and payment integration</li>
+            <li>Implemented Teketeke ERP with custom modules for procurement, HR, inventory, and financial reporting</li>
+            <li>Manage cross-functional development teams, ensuring on-time delivery across multiple concurrent projects</li>
+            <li>Established development workflows, code review processes, and deployment pipelines</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Head of Department &mdash; PR & IT</span>
+            <span class="job-period">June 2024 &ndash; October 2025</span>
+          </div>
+          <div class="job-company">Javi Research Support Services Ltd, Nairobi</div>
+          <ul>
+            <li>Launched the Javi Customer App to production, enabling clients to access research services on mobile</li>
+            <li>Built the Niinue Nikuinue SACCO platform, managing member accounts, loans, and financial workflows</li>
+            <li>Managed IT infrastructure, digital operations, and the organization's online presence</li>
+            <li>Delivered data analysis and research reports that directly informed strategic business decisions</li>
+            <li>Increased operational efficiency by 50% through custom software automation</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Fullstack Developer</span>
+            <span class="job-period">2021 &ndash; 2024</span>
+          </div>
+          <div class="job-company">Freelance & Campus Projects</div>
+          <ul>
+            <li>Built web and mobile applications for clients including e-commerce platforms and business websites</li>
+            <li>Developed RESTful APIs and designed database architectures for scalable backend systems</li>
+            <li>Delivered client websites and digital solutions that directly contributed to increased business inquiries</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Key Projects -->
+      <div class="section">
+        <h2 class="section-title">Key Projects</h2>
+
+        <div class="project">
+          <span class="project-name">JaviRide</span> <span class="project-role">&mdash; Project Lead & Architect</span>
+          <div class="project-desc">Full-featured taxi-hailing platform with real-time GPS tracking, automated dispatch, driver/rider apps, admin dashboard, and integrated payment processing.</div>
+        </div>
+
+        <div class="project">
+          <span class="project-name">Teketeke ERP</span> <span class="project-role">&mdash; ERP Implementor</span>
+          <div class="project-desc">Enterprise resource planning system with custom modules for procurement, human resources, inventory management, and automated financial reporting.</div>
+        </div>
+
+        <div class="project">
+          <span class="project-name">Javi Customer App</span> <span class="project-role">&mdash; Lead Developer</span>
+          <div class="project-desc">Cross-platform mobile application enabling clients to access research services, track orders, and manage their accounts on the go.</div>
+        </div>
+
+        <div class="project">
+          <span class="project-name">Niinue Nikuinue SACCO</span> <span class="project-role">&mdash; Lead Developer</span>
+          <div class="project-desc">Complete SACCO management platform handling member registration, loan processing, savings tracking, and automated financial statements.</div>
+        </div>
+      </div>
+
+      <!-- Core Competencies -->
+      <div class="section">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Mobile Development</h4>
+            <p>Cross-platform mobile apps, native performance, offline-first architecture</p>
+          </div>
+          <div class="skill-category">
+            <h4>Web & Backend Systems</h4>
+            <p>Full-stack web applications, RESTful APIs, microservices, cloud deployment</p>
+          </div>
+          <div class="skill-category">
+            <h4>Enterprise Solutions</h4>
+            <p>ERP implementation, business process automation, system integration</p>
+          </div>
+          <div class="skill-category">
+            <h4>Database & Data</h4>
+            <p>Database architecture, data analysis, research analytics, reporting systems</p>
+          </div>
+          <div class="skill-category">
+            <h4>Infrastructure & Security</h4>
+            <p>Network administration, cybersecurity, server management, CI/CD pipelines</p>
+          </div>
+          <div class="skill-category">
+            <h4>Leadership & Strategy</h4>
+            <p>Team management, project planning, product strategy, client communication</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-item">
+          <div class="edu-header">
+            <span class="edu-degree">BSc Information Technology</span>
+            <span class="edu-period">2021 &ndash; 2024</span>
+          </div>
+          <div class="edu-school">Murang'a University of Technology</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-header">
+            <span class="edu-degree">Software Development Bootcamp</span>
+            <span class="edu-period">December 2024</span>
+          </div>
+          <div class="edu-school">Power Learn Project</div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-list">
+          <div class="cert-item">Cisco CCNA 1 & 2 &mdash; Networking</div>
+          <div class="cert-item">Huawei &mdash; Cybersecurity</div>
+          <div class="cert-item">Microsoft &mdash; Server Administration</div>
+          <div class="cert-item">Odoo &mdash; ERP Implementation</div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="section">
+        <h2 class="section-title">Languages</h2>
+        <div class="lang-row">
+          <div class="lang-item"><strong>English</strong> &mdash; Fluent</div>
+          <div class="lang-item"><strong>Kiswahili</strong> &mdash; Proficient</div>
+          <div class="lang-item"><strong>Luhya</strong> &mdash; Native</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
