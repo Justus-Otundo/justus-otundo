@@ -3,9 +3,9 @@
 export const testimonials = [
   {
     id: 1,
-    name: 'Mayfair APC',
-    role: 'Agricultural Organization',
-    content: 'Justus delivered an exceptional website for our business. His attention to detail and technical expertise exceeded our expectations.',
+    name: 'Teketeke Bridges Limited',
+    role: 'Enterprise Solutions',
+    content: 'Justus implemented our ERP system flawlessly, customizing modules for procurement, HR, and financial reporting that perfectly matched our workflows. His deep understanding of business processes and technical execution delivered a system that transformed how we operate. Highly professional and dependable.',
     rating: 5,
     icon: 'UserIcon',
   },
@@ -13,7 +13,7 @@ export const testimonials = [
     id: 2,
     name: 'Karirana Estates Ltd',
     role: 'Tea Manufacturers & Exporters',
-    content: "Working with Justus was a pleasure. His data analysis skills helped us make informed decisions that improved our business performance.",
+    content: "Justus turned our raw data into clear, actionable reports that management could actually use. His analysis directly influenced decisions that improved our operational efficiency. Professional, reliable, and highly skilled.",
     rating: 5,
     icon: 'BriefcaseIcon',
   },
@@ -21,7 +21,7 @@ export const testimonials = [
     id: 3,
     name: 'JAVI RSS Ltd',
     role: 'Research Company',
-    content: 'The custom software solution developed by Justus streamlined our operations and increased efficiency by 50%. Highly recommended!',
+    content: 'Justus built a custom software solution that streamlined our operations and increased efficiency by 50%. He took full ownership of the project, delivered on time, and continues to provide excellent support. Highly recommended.',
     rating: 5,
     icon: 'MagnifyingGlassIcon',
   },
@@ -31,5 +31,5 @@ export const stats = [
   { value: '2000+', label: 'Hours Worked', icon: 'ClockIcon' },
   { value: '25+', label: 'Projects Completed', icon: 'RectangleStackIcon' },
   { value: '15+', label: 'Happy Clients', icon: 'FaceSmileIcon' },
-  { value: '1000+', label: 'Cups of Coffee', icon: 'TrophyIcon' },
+  { value: '100%', label: 'On-Time Delivery', icon: 'TrophyIcon' },
 ];

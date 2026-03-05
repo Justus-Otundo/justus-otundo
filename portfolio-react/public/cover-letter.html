@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justus Otundo - Cover Letter</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #1e293b;
+      background: #f8fafc;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+    }
+
+    @media screen {
+      .page {
+        margin: 2rem auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      }
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+      color: #fff;
+      padding: 2.5rem 3rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .header-left h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .header-left .title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #34d399;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      line-height: 1.8;
+      flex-shrink: 0;
+    }
+
+    .header-right a {
+      color: #34d399;
+      text-decoration: none;
+    }
+
+    .accent-bar {
+      height: 3px;
+      background: linear-gradient(90deg, #10b981, #06b6d4, #10b981);
+    }
+
+    /* Content */
+    .content {
+      padding: 2.5rem 3rem 3rem;
+    }
+
+    .date {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
+    .recipient {
+      margin-bottom: 2rem;
+    }
+
+    .recipient p {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .recipient .name {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .salutation {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 1.25rem;
+    }
+
+    .body p {
+      font-size: 0.88rem;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+    }
+
+    .body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      color: #059669;
+      font-weight: 600;
+    }
+
+    .closing {
+      margin-top: 2rem;
+    }
+
+    .closing p {
+      font-size: 0.88rem;
+      color: #334155;
+      margin-bottom: 0.25rem;
+    }
+
+    .closing .sign-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 1.5rem;
+    }
+
+    .closing .sign-title {
+      font-size: 0.85rem;
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    .closing .sign-contact {
+      font-size: 0.82rem;
+      color: #64748b;
+      margin-top: 0.25rem;
+    }
+
+    /* Divider */
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+      margin: 1.5rem 0;
+    }
+
+    /* Print */
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .header {
+        padding: 1.5rem 2rem 1.25rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .accent-bar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .content { padding: 2rem; }
+    }
+
+    @page {
+      margin: 0;
+      size: A4;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header (matches resume design) -->
+    <div class="header">
+      <div class="header-left">
+        <h1>Justus Otundo</h1>
+        <div class="title">System Architect & Technology Lead</div>
+      </div>
+      <div class="header-right">
+        <div><a href="mailto:justusotundo86@gmail.com">justusotundo86@gmail.com</a></div>
+        <div>+254 799 993 420</div>
+        <div>Nairobi, Kenya</div>
+        <div><a href="https://linkedin.com/in/justus-omoto-452044247">LinkedIn</a> &middot; <a href="https://github.com/Justus-Otundo">GitHub</a></div>
+      </div>
+    </div>
+    <div class="accent-bar"></div>
+
+    <!-- Letter Content -->
+    <div class="content">
+      <div class="date">March 5, 2026</div>
+
+      <div class="recipient">
+        <p class="name">Hiring Manager</p>
+        <p>[Company Name]</p>
+        <p>[Company Address]</p>
+      </div>
+
+      <div class="salutation">Dear Hiring Manager,</div>
+
+      <div class="body">
+        <p>
+          I am writing to express my interest in the <span class="highlight">[Position Title]</span> role at <span class="highlight">[Company Name]</span>. As a System Architect and Technology Lead with over three years of experience delivering production-grade software products, I am confident in my ability to contribute meaningful value to your team from day one.
+        </p>
+
+        <p>
+          In my current role at <strong>Javi Research Support Services Ltd</strong>, I lead the Technology & Innovation branch, where I am responsible for technology strategy, product architecture, and delivery across multiple concurrent projects. I have successfully architected and shipped products that serve real users, including a taxi-hailing platform with real-time tracking, an enterprise ERP system with custom business modules, a cross-platform mobile application, and a complete SACCO management platform. Each of these products was delivered on time, within budget, and built to scale.
+        </p>
+
+        <p>
+          What sets me apart is my ability to <strong>take full ownership</strong> of a project from concept to launch. I don't just write code &mdash; I understand business objectives, design the architecture, lead the development team, and ensure the final product generates real results. At Javi RSS, my custom software solutions increased operational efficiency by 50%, and every product I've shipped continues to serve active users.
+        </p>
+
+        <p>
+          My technical expertise spans the full stack: mobile development, web systems, backend APIs, database architecture, and enterprise solutions including ERP implementation. I hold a BSc in Information Technology from Murang'a University of Technology and carry certifications from Cisco (CCNA), Huawei (Cybersecurity), Microsoft (Server Administration), and Odoo (ERP). This breadth allows me to evaluate problems holistically and choose the right tools for each challenge.
+        </p>
+
+        <p>
+          I am particularly drawn to <span class="highlight">[Company Name]</span> because <span class="highlight">[reason &mdash; e.g., your commitment to innovation in the fintech space aligns with my passion for building products that create real impact]</span>. I would welcome the opportunity to bring my product-building mindset and technical leadership to your organization.
+        </p>
+
+        <p>
+          I am available for freelance, contract, or full-time engagement and can start immediately. I would appreciate the opportunity to discuss how my experience and skills align with your needs.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="closing">
+        <p>Thank you for your time and consideration.</p>
+        <p>I look forward to hearing from you.</p>
+
+        <div class="sign-name">Justus Otundo</div>
+        <div class="sign-title">System Architect & Technology Lead</div>
+        <div class="sign-contact">justusotundo86@gmail.com &middot; +254 799 993 420</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -4,7 +4,7 @@ export const featuredProjects = [
   {
     id: 1,
     title: 'Javi Ride',
-    description: 'Ride-sharing platform with dual apps for passengers and drivers. Real-time GPS, payments, and matching algorithms.',
+    description: 'Built a complete taxi-hailing platform from scratch — two separate apps for passengers and drivers, real-time GPS tracking, smart driver matching, secure payments, and live ride monitoring. Now serving real users.',
     status: 'Production',
     statusType: 'live',
     features: ['Real-time GPS', 'Secure Payments', 'Driver Matching', 'Live Tracking'],
@@ -13,34 +13,33 @@ export const featuredProjects = [
   },
   {
     id: 2,
-    title: 'Javi Customer App',
-    description: 'Mobile app for customer engagement and service delivery. Real-time tracking and seamless booking.',
+    title: 'Teketeke ERP',
+    description: 'Implemented a full enterprise resource planning system with custom modules that automated manual business processes, cut reporting time, and gave leadership real-time visibility into operations.',
     status: 'Production',
     statusType: 'live',
-    features: ['Easy Booking', 'Real-time Updates', 'Notifications', 'User Profiles'],
+    features: ['Custom Modules', 'Business Automation', 'Financial Reports', 'Inventory'],
+    role: 'ERP Implementor',
+    icon: 'RectangleStackIcon',
+  },
+  {
+    id: 3,
+    title: 'Javi Customer App',
+    description: 'Designed and shipped a cross-platform mobile app that transformed how customers interact with the business — seamless booking, instant notifications, and personalized experiences that boosted engagement.',
+    status: 'Production',
+    statusType: 'live',
+    features: ['Easy Booking', 'Real-time Updates', 'Push Notifications', 'User Profiles'],
     role: 'Lead Developer',
     icon: 'DevicePhoneMobileIcon',
   },
   {
-    id: 3,
-    title: 'Niinue App',
-    description: 'Digital services platform with modern UI/UX and robust backend integration.',
+    id: 4,
+    title: 'Niinue Nikuinue SACCO',
+    description: 'Built a digital SACCO platform that replaced manual record-keeping with automated savings, loans processing, and real-time financial dashboards — giving members full control of their finances.',
     status: 'Production',
     statusType: 'live',
-    features: ['Modern UI/UX', 'Secure Platform', 'Fast Performance', 'Cloud Sync'],
+    features: ['Member Management', 'Savings & Loans', 'Financial Dashboard', 'Secure Transactions'],
     role: 'Lead Developer',
-    icon: 'RectangleStackIcon',
-  },
-  {
-    id: 4,
-    title: 'Electric Vehicle Tech',
-    description: 'Electric 2-wheelers & 3-wheelers integration with fleet management and charging infrastructure.',
-    status: 'R&D',
-    statusType: 'research',
-    features: ['Fleet Management', 'Charging Network', 'Smart Analytics', 'Green Tech'],
-    role: 'Innovation Lead',
     icon: 'BoltIcon',
-    isInnovation: true,
   },
 ];
 
@@ -48,9 +47,9 @@ export const portfolioProjects = [
   {
     id: 1,
     title: 'Javi Customer App',
-    description: 'Flutter mobile app for customer engagement',
+    description: 'Mobile app for customer engagement',
     category: 'mobile',
-    // tech: ['Flutter'],
+
     status: 'Live',
     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=200&fit=crop',
   },
@@ -59,7 +58,7 @@ export const portfolioProjects = [
     title: 'Javi Ride',
     description: 'Ride-sharing platform with driver & passenger apps',
     category: 'mobile',
-    // tech: ['Flutter'],
+
     status: 'In Development',
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=200&fit=crop',
   },
@@ -68,7 +67,7 @@ export const portfolioProjects = [
     title: 'Christine Boutique',
     description: 'Custom e-commerce platform',
     category: 'ecommerce',
-    // tech: ['PHP', 'MySQL'],
+
     status: 'Live',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop',
   },
@@ -77,7 +76,7 @@ export const portfolioProjects = [
     title: 'Mayfair Social Culture',
     description: 'Complete NGO website with modern design and digital platform integration.',
     category: 'web',
-    // tech: ['WordPress'],
+
     status: 'Live',
   },
   {
@@ -85,7 +84,7 @@ export const portfolioProjects = [
     title: 'Afya Bora Platform',
     description: 'AI-powered health platform with comprehensive technical documentation.',
     category: 'web',
-    // tech: ['AI Integration', 'Healthcare'],
+
     status: 'Development',
   },
   {
@@ -93,7 +92,7 @@ export const portfolioProjects = [
     title: 'Ulezi Bora Academy',
     description: 'Complete digital branding and marketing campaign development.',
     category: 'branding',
-    // tech: ['Branding', 'Digital Marketing'],
+
     status: 'Live',
   },
 ];
@@ -116,7 +115,7 @@ export const achievements2025 = [
     category: 'Product',
     title: 'Javi Customer App',
     description: 'Full development cycle from concept to production. Now live and serving users.',
-    // tech: ['Flutter', 'LIVE'],
+
     icon: 'DevicePhoneMobileIcon',
   },
   {

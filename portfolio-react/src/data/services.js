@@ -4,44 +4,44 @@ export const services = [
   {
     id: 1,
     title: 'Web Development',
-    description: 'Full-stack solutions with PHP, Node.js, WordPress',
+    description: 'Custom web apps that convert visitors into customers and streamline your operations',
     icon: 'GlobeAltIcon',
-    features: ['PHP/Node.js', 'WordPress', 'PERN/MERN'],
+    features: ['Custom Web Apps', 'E-commerce', 'CMS Solutions'],
   },
   {
     id: 2,
     title: 'Mobile Development',
-    description: 'Cross-platform apps with Flutter & Dart',
+    description: 'Native-quality mobile apps for iOS & Android — from idea to App Store',
     icon: 'DevicePhoneMobileIcon',
-    features: ['Flutter', 'iOS/Android', 'ReactNative',]
+    features: ['iOS/Android', 'Cross-Platform', 'App Store Deployment'],
   },
   {
     id: 3,
     title: 'Data Analysis',
-    description: 'Research analytics with SPSS, STATA, MAXQDA,',
+    description: 'Turn raw data into actionable insights that drive smarter decisions',
     icon: 'ChartBarIcon',
-    features: ['SPSS/STATA', 'Research', 'QDAMiner', 'NVIVO'],
+    features: ['Statistical Analysis', 'Research', 'Qualitative Analysis'],
   },
   {
     id: 4,
-    title: 'Tech Leadership',
-    description: 'IT infrastructure & digital transformation',
+    title: 'ERP & Business Systems',
+    description: 'Automate your business processes and get real-time operational visibility',
     icon: 'CogIcon',
-    features: ['Leadership', 'Infrastructure'],
+    features: ['ERP Implementation', 'Custom Modules', 'Business Automation'],
   },
   {
     id: 5,
     title: 'UI/UX Design',
-    description: 'User interfaces with Figma & modern tools',
+    description: 'Interfaces your users will love — intuitive, fast, and beautiful',
     icon: 'PaintBrushIcon',
-    features: ['Figma', 'Adobe', 'UX Design'],
+    features: ['Prototyping', 'User Research', 'Design Systems'],
   },
   {
     id: 6,
     title: 'SEO & Marketing',
-    description: 'SEO optimization & digital campaigns',
+    description: 'Get found online and convert traffic into paying customers',
     icon: 'ArrowTrendingUpIcon',
-    features: ['SEO', 'Marketing'],
+    features: ['SEO', 'Digital Marketing', 'Analytics'],
   },
 ];
 
@@ -67,10 +67,10 @@ export const philosophyPillars = [
 ];
 
 export const builderJourney = [
-  { step: 1, title: 'Concept' },
-  { step: 2, title: 'System' },
-  { step: 3, title: 'Production' },
-  { step: 4, title: 'Users' },
+  { step: 1, title: 'Discovery', description: 'I learn your business, goals, and users to define what success looks like.' },
+  { step: 2, title: 'Design & Plan', description: 'Architecture, wireframes, and a clear roadmap — so you know exactly what you\'re getting.' },
+  { step: 3, title: 'Build & Test', description: 'Rapid development with regular demos. You see progress every week, not just at the end.' },
+  { step: 4, title: 'Launch & Support', description: 'Deployment, training, and ongoing support. I\'m with you after launch, not just before.' },
 ];
 
 export const whyChooseMe = [

@@ -7,7 +7,7 @@ import {
   PaintBrushIcon,
   ArrowTrendingUpIcon
 } from '@heroicons/react/24/outline';
-import { services } from '../../data/services';
+import { services, builderJourney } from '../../data/services';
 
 const iconMap = {
   GlobeAltIcon: GlobeAltIcon,
@@ -107,6 +107,50 @@ export function Services() {
           })}
         </div>
 
+        {/* How I Work Section */}
+        <motion.div
+          className="mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-highlight-400 bg-highlight-500/10 border border-highlight-500/20 rounded-full">
+              My Process
+            </span>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              How I <span className="text-gradient">Work</span>
+            </h3>
+            <p className="text-slate-400 max-w-xl mx-auto">
+              A proven process that keeps projects on track and delivers results
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {builderJourney.map((phase, index) => (
+              <motion.div
+                key={phase.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-dark-800/90 to-dark-900/90 rounded-2xl p-6 border border-slate-700/50 h-full">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500/30 to-accent-600/20 border border-accent-500/30 flex items-center justify-center mb-4">
+                    <span className="text-xl font-bold text-accent-400">{phase.step}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-2">{phase.title}</h4>
+                  <p className="text-sm text-slate-400 leading-relaxed">{phase.description}</p>
+                </div>
+                {index < builderJourney.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-accent-500/30" />
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* CTA Section */}
         <motion.div
           className="mt-16 text-center"
@@ -117,13 +161,13 @@ export function Services() {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-gradient-to-r from-dark-800/80 to-dark-900/80 backdrop-blur-xl rounded-2xl border border-slate-700/50">
             <p className="text-slate-300 text-lg">
-              Need a custom solution?
+              Ready to bring your idea to life?
             </p>
             <a
               href="#contact"
               className="px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/25"
             >
-              Let's Discuss
+              Start a Project
             </a>
           </div>
         </motion.div>

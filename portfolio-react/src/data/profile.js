@@ -2,16 +2,17 @@
 
 export const profile = {
   name: 'Justus Otundo',
-  title: 'Technology & Innovation Branch Chief',
+  title: 'System Architect & Technology Lead',
   company: 'JAVI RSS Ltd',
-  tagline: 'Technology & Innovation Branch Chief',
-  bio: 'Building production-ready systems that drive business growth. CTO-track executive with expertise in mobile development, digital transformation, and team leadership.',
-  aboutBio: 'Technology leader with expertise in mobile/web development and digital transformation. Leading the tech department at Javi Research Support Services Ltd.',
+  tagline: 'System Architect & Technology Lead',
+  bio: 'I turn business ideas into revenue-generating digital products. From mobile apps to enterprise systems, I deliver solutions that work — on time, on budget, and built to scale. Currently leading technology at Javi Research Support Services Ltd.',
+  aboutBio: 'I combine hands-on development skills with strategic thinking to deliver products that actually move the needle. Whether you need a mobile app, a web platform, or a complete ERP system, I take ownership from concept to launch — and I don\'t stop until it\'s generating results.',
   avatar: './avatar.jpg',
-  resume: './resume.pdf',
+  resume: './resume.html',
+  coverLetter: './cover-letter.html',
   available: true,
-  availableText: 'Available for Opportunities',
-  responseTime: 'Usually responds within 2 hours',
+  availableText: 'Available for Freelance & Contract Work',
+  responseTime: 'Typically responds within 2 hours',
 };
 
 export const contact = {
@@ -25,7 +26,7 @@ export const contact = {
 export const social = {
   linkedin: 'https://linkedin.com/in/justus-omoto-452044247',
   github: 'https://github.com/Justus-Otundo',
-  facebook: 'https://www.facebook.com/blaise.junior.967',
+  twitter: 'https://x.com/',  // TODO: Add your Twitter/X handle
 };
 
 export const stats = [
@@ -34,36 +35,36 @@ export const stats = [
   { number: '2+', label: 'Years Exp' },
 ];
 
-export const heroTechStack = ['Flutter', 'Node.js', 'Firebase', 'PERN/MERN', 'ReactNative', 'CMS', 'SEO'];
+export const heroTechStack = ['Mobile Apps', 'Web Systems', 'Cloud Solutions', 'ERP Systems', 'API Development', 'Digital Strategy'];
 
 export const skills = {
   mobile: {
     title: 'Mobile',
-    description: 'Flutter, Dart',
+    description: 'Cross-platform mobile applications',
     icon: 'DevicePhoneMobileIcon',
   },
   web: {
     title: 'Web',
-    description: 'PHP, Node.js, JavaScript',
+    description: 'Full-stack web systems & APIs',
     icon: 'GlobeAltIcon',
   },
   data: {
     title: 'Data',
-    description: 'SPSS, STATA, SQL, NVIVO, Atlas.ti, ',
+    description: 'Research analytics & data management',
     icon: 'ChartBarIcon',
   },
 };
 
 export const skillBars = [
-  { name: 'Flutter & Dart', percentage: 92 },
-  { name: 'PHP & Node.js', percentage: 88 },
-  { name: 'JavaScript & HTML/CSS, React/Vue', percentage: 90 },
-  { name: 'Python & C/C++', percentage: 85 },
-  { name: 'Database Management (SQL)', percentage: 93 },
-  { name: 'Data Analysis (SPSS/STATA)', percentage: 91 },
+  { name: 'Mobile App Development', percentage: 92 },
+  { name: 'Backend & API Development', percentage: 88 },
+  { name: 'Frontend & Web Development', percentage: 90 },
+  { name: 'ERP & Business Systems', percentage: 85 },
+  { name: 'Database Design & Management', percentage: 93 },
+  { name: 'Data Analysis & Research', percentage: 91 },
   { name: 'Cybersecurity & Networking', percentage: 89 },
   { name: 'Project Leadership', percentage: 94 },
-  { name: 'UI/UX Design (Figma/Adobe)', percentage: 87 },
+  { name: 'UI/UX Design', percentage: 87 },
 ];
 
 export const languages = [
@@ -78,7 +79,7 @@ export const education = [
     degree: 'BSc Information Technology',
     institution: "Murang'a University of Technology",
     status: 'Graduate',
-    skills: ['C++', 'Python', 'PHP', 'JavaScript', 'SQL'],
+    skills: ['Software Engineering', 'Systems Development', 'Data Management'],
   },
   {
     period: 'December 2024',
@@ -89,10 +90,10 @@ export const education = [
 ];
 
 export const certifications = [
-  'Cisco CCNA 1 & 2',
-  'Huawei Cybersecurity',
-  'Microsoft Server',
-  'Python Development',
+  'Cisco CCNA 1 & 2 — Networking',
+  'Huawei — Cybersecurity',
+  'Microsoft — Server Administration',
+  'Odoo — ERP Implementation',
 ];
 
 export const formspreeEndpoint = 'https://formspree.io/f/movdjdep';

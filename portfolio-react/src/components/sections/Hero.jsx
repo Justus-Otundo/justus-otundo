@@ -25,15 +25,15 @@ export function Hero() {
           className="absolute inset-0 opacity-[0.015]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(56, 189, 248, 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(56, 189, 248, 0.3) 1px, transparent 1px)
+              linear-gradient(rgba(16, 185, 129, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(16, 185, 129, 0.3) 1px, transparent 1px)
             `,
             backgroundSize: '100px 100px'
           }}
         />
 
         {/* Radial gradient from center */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(10,22,40,0.8)_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(2,6,23,0.8)_70%)]" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
@@ -57,7 +57,7 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-highlight-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-highlight-400"></span>
               </span>
-              <span className="text-sm font-medium text-highlight-400">Open to Opportunities</span>
+              <span className="text-sm font-medium text-highlight-400">Available for Hire</span>
             </motion.div>
 
             {/* Main Heading */}
@@ -127,7 +127,7 @@ export function Hero() {
                 offset={-80}
                 className="group w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-2xl cursor-pointer transition-all duration-300 shadow-xl shadow-accent-500/25 hover:shadow-accent-500/40 hover:-translate-y-1 flex items-center justify-center gap-3"
               >
-                <span>Let's Talk</span>
+                <span>Hire Me</span>
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -215,7 +215,7 @@ export function Hero() {
 
                 {/* Tech Stack */}
                 <div className="space-y-3">
-                  <p className="text-xs text-slate-500 uppercase tracking-wider text-center font-semibold">Tech Stack</p>
+                  <p className="text-xs text-slate-500 uppercase tracking-wider text-center font-semibold">Core Expertise</p>
                   <div className="flex flex-wrap justify-center gap-2">
                     {heroTechStack.map((tech) => (
                       <span
@@ -249,7 +249,7 @@ export function Hero() {
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ delay: 1, type: "spring" }}
               >
-                <span className="text-sm font-bold text-dark-900">CTO Track</span>
+                <span className="text-sm font-bold text-dark-900">System Architect</span>
               </motion.div>
 
               {/* Floating years badge */}

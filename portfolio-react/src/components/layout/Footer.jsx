@@ -1,91 +1,76 @@
-import { Link } from 'react-scroll';
 import { profile, contact, social } from '../../data/profile';
-
-const footerLinks = [
-  { name: 'Home', to: 'home' },
-  { name: 'About', to: 'about' },
-  { name: 'Projects', to: 'projects' },
-  { name: 'Services', to: 'services' },
-  { name: 'Contact', to: 'contact' },
-];
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark-900 border-t border-dark-700/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer */}
-        <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+    <footer className="relative overflow-hidden">
+      {/* Top CTA Banner */}
+      <div className="bg-gradient-to-r from-accent-600 via-accent-500 to-accent-600 py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Have a project in mind?
+          </h3>
+          <p className="text-white/80 mb-6 max-w-lg mx-auto">
+            I'm currently available for freelance work and new opportunities. Let's build something great together.
+          </p>
+          <a
+            href={`mailto:${contact.email}`}
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-accent-600 font-bold rounded-xl hover:bg-white/90 transition-all duration-300 shadow-lg"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            {contact.email}
+          </a>
+        </div>
+      </div>
+
+      {/* Main Footer */}
+      <div className="bg-dark-900 border-t border-dark-700/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="py-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            {/* Brand */}
+            <div className="flex items-center gap-4">
               <img
                 src={profile.avatar}
                 alt={profile.name}
-                className="w-12 h-12 rounded-full border-2 border-accent-500/50 object-cover"
+                className="w-12 h-12 rounded-full border-2 border-accent-500/40 object-cover"
               />
               <div>
-                <h3 className="text-white font-bold text-lg">{profile.name}</h3>
-                <p className="text-accent-400 text-sm">{profile.title}</p>
+                <h4 className="text-white font-bold text-lg">{profile.name}</h4>
+                <p className="text-slate-400 text-sm">{profile.title}</p>
               </div>
             </div>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              {profile.bio}
-            </p>
-          </div>
 
-          {/* Quick Links */}
-          <div className="md:text-center">
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {footerLinks.map((link) => (
-                <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    className="text-zinc-400 hover:text-accent-400 transition-colors cursor-pointer"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact & Social */}
-          <div className="md:text-right">
-            <h4 className="text-white font-semibold mb-4">Connect</h4>
-            <div className="space-y-2 mb-6">
-              <p className="text-zinc-400 text-sm">
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="hover:text-accent-400 transition-colors"
-                >
-                  {contact.email}
-                </a>
-              </p>
-              <p className="text-zinc-400 text-sm">
-                <a
-                  href={`tel:${contact.phoneLink}`}
-                  className="hover:text-accent-400 transition-colors"
-                >
-                  {contact.phone}
-                </a>
-              </p>
-              <p className="text-zinc-400 text-sm">{contact.location}</p>
+            {/* Contact Info */}
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
+              <a
+                href={`tel:${contact.phoneLink}`}
+                className="hover:text-accent-400 transition-colors flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                {contact.phone}
+              </a>
+              <span className="hidden md:block w-1 h-1 rounded-full bg-slate-600" />
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                {contact.location}
+              </span>
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 md:justify-end">
+            <div className="flex items-center gap-3">
               <a
                 href={social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-lg bg-dark-700 text-zinc-400 hover:bg-accent-500/20 hover:text-accent-400 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -96,7 +81,7 @@ export function Footer() {
                 href={social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-lg bg-dark-700 text-zinc-400 hover:bg-accent-500/20 hover:text-accent-400 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-all duration-300"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -105,7 +90,7 @@ export function Footer() {
               </a>
               <a
                 href={`mailto:${contact.email}`}
-                className="w-10 h-10 flex items-center justify-center rounded-lg bg-dark-700 text-zinc-400 hover:bg-accent-500/20 hover:text-accent-400 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-all duration-300"
                 aria-label="Email"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,22 +99,16 @@ export function Footer() {
               </a>
             </div>
           </div>
-        </div>
 
-        {/* Bottom Bar */}
-        <div className="py-6 border-t border-dark-700/50 text-center">
-          <p className="text-zinc-500 text-sm">
-            &copy; {currentYear} Created with{' '}
-            <span className="text-red-500">&#10084;</span> by{' '}
-            <a
-              href={social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-400 hover:text-accent-300 transition-colors"
-            >
-              {profile.name}
-            </a>
-          </p>
+          {/* Bottom Bar */}
+          <div className="py-5 border-t border-dark-700/50 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-slate-500 text-sm">
+              &copy; {currentYear} {profile.name}. All rights reserved.
+            </p>
+            <p className="text-slate-600 text-xs">
+              Nairobi, Kenya
+            </p>
+          </div>
         </div>
       </div>
     </footer>

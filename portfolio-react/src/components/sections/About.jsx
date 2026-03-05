@@ -60,18 +60,28 @@ export function About() {
                 </div>
               </div>
               <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                {profile.aboutBio} With a strong foundation in mobile and web development, I specialize in creating
-                scalable solutions that drive business growth. My journey from developer to technology leader
-                has equipped me with both technical expertise and strategic vision.
+                {profile.aboutBio} My journey from developer to technology leader means you get someone who
+                understands both the technical details and the business goals. I don't just write code — I
+                deliver products that solve real problems and generate revenue.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
                   href={profile.resume}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/25"
                 >
                   <ArrowDownTrayIcon className="w-5 h-5" />
-                  Download Resume
+                  View Resume
+                </a>
+                <a
+                  href={profile.coverLetter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-dark-700 hover:bg-dark-600 border border-slate-600 text-white font-semibold rounded-xl transition-all duration-300"
+                >
+                  <ArrowDownTrayIcon className="w-5 h-5" />
+                  Cover Letter
                 </a>
                 <a
                   href={`mailto:${contact.email}`}
@@ -193,13 +203,13 @@ export function About() {
                     </svg>
                   </a>
                   <a
-                    href={social.facebook}
+                    href={social.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700 border border-slate-600 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-all"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
                   </a>
                 </div>

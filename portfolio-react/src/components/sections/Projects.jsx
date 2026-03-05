@@ -39,7 +39,7 @@ export function Projects() {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Production-ready systems that drive business growth and digital transformation
+            Real products I've built and shipped — not demos, not tutorials, real systems serving real users
           </p>
         </motion.div>
 
@@ -171,7 +171,7 @@ export function Projects() {
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-dark-700/50 hover:bg-dark-600/50 border border-slate-600 hover:border-accent-500/50 text-white font-semibold rounded-2xl transition-all duration-300"
           >
-            <span>Interested in working together?</span>
+            <span>Want results like these? Let's talk.</span>
             <ArrowTopRightOnSquareIcon className="w-5 h-5" />
           </a>
         </motion.div>
