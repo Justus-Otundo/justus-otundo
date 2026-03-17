@@ -5,8 +5,8 @@ export const profile = {
   title: 'System Architect & Technology Lead',
   company: 'JAVI RSS Ltd',
   tagline: 'System Architect & Technology Lead',
-  bio: 'I turn business ideas into revenue-generating digital products. From mobile apps to enterprise systems, I deliver solutions that work — on time, on budget, and built to scale. Currently leading technology at Javi Research Support Services Ltd.',
-  aboutBio: 'I combine hands-on development skills with strategic thinking to deliver products that actually move the needle. Whether you need a mobile app, a web platform, or a complete ERP system, I take ownership from concept to launch — and I don\'t stop until it\'s generating results.',
+  bio: 'I build mobile apps, web platforms, and ERP systems — and I\'ve shipped enough of them to know what actually works in production. Currently leading technology at Javi Research Support Services Ltd, where I\'m responsible for everything from architecture decisions to making sure the deploy doesn\'t break on a Friday.',
+  aboutBio: 'I started as a developer, got good at it, and eventually ended up leading the tech side of things at Javi RSS. I\'ve built ride-hailing apps, SACCO platforms, ERP systems — the kind of stuff that real businesses depend on daily. I care about writing code that doesn\'t fall apart six months later.',
   avatar: './avatar.jpg',
   resume: './resume.html',
   coverLetter: './cover-letter.html',
@@ -26,7 +26,6 @@ export const contact = {
 export const social = {
   linkedin: 'https://linkedin.com/in/justus-omoto-452044247',
   github: 'https://github.com/Justus-Otundo',
-  twitter: 'https://x.com/',  // TODO: Add your Twitter/X handle
 };
 
 export const stats = [
@@ -55,16 +54,13 @@ export const skills = {
   },
 };
 
-export const skillBars = [
-  { name: 'Mobile App Development', percentage: 92 },
-  { name: 'Backend & API Development', percentage: 88 },
-  { name: 'Frontend & Web Development', percentage: 90 },
-  { name: 'ERP & Business Systems', percentage: 85 },
-  { name: 'Database Design & Management', percentage: 93 },
-  { name: 'Data Analysis & Research', percentage: 91 },
-  { name: 'Cybersecurity & Networking', percentage: 89 },
-  { name: 'Project Leadership', percentage: 94 },
-  { name: 'UI/UX Design', percentage: 87 },
+export const techStack = [
+  { category: 'Mobile', tools: ['Flutter', 'Dart', 'Android Studio', 'Firebase'] },
+  { category: 'Frontend', tools: ['React', 'JavaScript', 'Tailwind CSS', 'HTML/CSS'] },
+  { category: 'Backend', tools: ['Python', 'Django', 'Node.js', 'REST APIs'] },
+  { category: 'Data & DB', tools: ['PostgreSQL', 'MySQL', 'MongoDB', 'Data Analysis'] },
+  { category: 'ERP', tools: ['Odoo', 'Custom Modules', 'Business Automation'] },
+  { category: 'DevOps', tools: ['Git', 'Linux', 'Docker', 'CI/CD'] },
 ];
 
 export const languages = [
@@ -90,10 +86,14 @@ export const education = [
 ];
 
 export const certifications = [
-  'Cisco CCNA 1 & 2 — Networking',
-  'Huawei — Cybersecurity',
-  'Microsoft — Server Administration',
-  'Odoo — ERP Implementation',
+  { name: 'Microsoft Azure Administrator (AZ-104)', issuer: 'Microsoft', year: '2025' },
+  { name: 'Microsoft Azure Fundamentals', issuer: 'Microsoft', year: '2025' },
+  { name: 'Microsoft 365 Fundamentals (MS-900)', issuer: 'Microsoft', year: '2025' },
+  { name: 'Microsoft Security, Compliance & Identity', issuer: 'Microsoft', year: '2025' },
+  { name: 'AI in Azure', issuer: 'Microsoft', year: '2025' },
+  { name: 'Cisco CCNA 1 & 2 — Networking', issuer: 'Cisco', year: '' },
+  { name: 'Cybersecurity Certification', issuer: 'Huawei', year: '' },
+  { name: 'ERP Implementation', issuer: 'Odoo', year: '' },
 ];
 
 export const formspreeEndpoint = 'https://formspree.io/f/movdjdep';

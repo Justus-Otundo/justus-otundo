@@ -23,5 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Large original images
+public/avatar-original.jpg
+
 # Claude
 .claude

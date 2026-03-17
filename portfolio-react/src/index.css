@@ -112,20 +112,18 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #34d399 0%, #22d3ee 50%, #34d399 100%);
-  background-size: 200% auto;
+  background: linear-gradient(135deg, #34d399 0%, #22d3ee 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 3s linear infinite;
 }
 
 .glow-accent {
-  box-shadow: 0 0 60px rgba(16, 185, 129, 0.25), 0 0 100px rgba(6, 182, 212, 0.12);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
 }
 
 .glow-gold {
-  box-shadow: 0 0 40px rgba(6, 182, 212, 0.25);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
 }
 
 /* Hero background with subtle gradient */
@@ -145,9 +143,9 @@ body {
 }
 
 .card-executive:hover {
-  border-color: rgba(16, 185, 129, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(16, 185, 129, 0.06);
-  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
 }
 
 /* Button styles */
@@ -205,5 +203,5 @@ body {
 
 /* Glowing border effect for images */
 .image-glow {
-  box-shadow: 0 0 40px rgba(16, 185, 129, 0.15), 0 0 80px rgba(6, 182, 212, 0.08);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
 }
