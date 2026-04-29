@@ -83,7 +83,7 @@ export function Hero() {
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-white mb-4 leading-[1.1]">
               I build software{' '}
-              <span className="text-gradient">that ships.</span>
+              <span className="text-gradient">businesses run on.</span>
             </h1>
 
             {/* Bio */}
@@ -94,11 +94,11 @@ export function Hero() {
             {/* Stats */}
             <div className="flex items-center justify-center lg:justify-start divide-x divide-slate-700 mb-8">
               {stats.map((stat, index) => (
-                <div key={index} className="px-5 sm:px-6 first:pl-0 last:pr-0 text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-bold text-white">
+                <div key={index} className="px-3 sm:px-5 md:px-6 first:pl-0 last:pr-0 text-center lg:text-left">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     {stat.number}
                   </div>
-                  <div className="text-xs text-slate-500 font-medium mt-0.5">
+                  <div className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5 whitespace-nowrap">
                     {stat.label}
                   </div>
                 </div>

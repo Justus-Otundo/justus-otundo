@@ -11,6 +11,13 @@ const colorVariants = [
   { bg: 'from-success-500/20 to-highlight-500/10', border: 'border-success-500/30' },
 ];
 
+const stepStyles = [
+  { card: 'bg-amber-500', shadow: 'shadow-amber-500/30' },
+  { card: 'bg-sky-500', shadow: 'shadow-sky-500/30' },
+  { card: 'bg-rose-500', shadow: 'shadow-rose-500/30' },
+  { card: 'bg-emerald-500', shadow: 'shadow-emerald-500/30' },
+];
+
 export function Services() {
   return (
     <section id="services" className="py-24 relative overflow-hidden">
@@ -87,37 +94,60 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="mb-12">
+          <div className="mb-16 text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
               How I Work
             </h3>
-            <p className="text-slate-400 max-w-xl">
+            <p className="text-slate-400 max-w-xl mx-auto">
               Every project follows the same four steps. No surprises.
             </p>
+            <div className="mt-4 h-1 w-16 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {builderJourney.map((phase, index) => (
-              <motion.div
-                key={phase.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="relative"
-              >
-                <div className="bg-gradient-to-br from-dark-800/90 to-dark-900/90 rounded-2xl p-6 border border-slate-700/50 h-full">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500/30 to-accent-600/20 border border-accent-500/30 flex items-center justify-center mb-4" aria-hidden="true">
-                    <span className="text-xl font-bold text-accent-400">{phase.step}</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-20 pt-14">
+            {builderJourney.map((phase, index) => {
+              const StepIcon = getIcon(phase.icon);
+              const styles = stepStyles[index % stepStyles.length];
+
+              return (
+                <motion.div
+                  key={phase.step}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ delay: index * 0.12, duration: 0.5 }}
+                  className="relative"
+                >
+                  {/* Avatar circle (icon) — overlaps top of card */}
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10 w-24 h-24 rounded-full bg-white p-1.5 shadow-xl">
+                    <div className={`w-full h-full rounded-full ${styles.card} flex items-center justify-center`}>
+                      {StepIcon && <StepIcon className="w-10 h-10 text-white" aria-hidden="true" />}
+                    </div>
                   </div>
-                  <h4 className="text-lg font-bold text-white mb-2">{phase.title}</h4>
-                  <p className="text-sm text-slate-400 leading-relaxed">{phase.description}</p>
-                </div>
-                {index < builderJourney.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-accent-500/30" aria-hidden="true" />
-                )}
-              </motion.div>
-            ))}
+
+                  {/* Speech-bubble card body */}
+                  <div className={`relative ${styles.card} rounded-3xl pt-16 px-6 pb-10 shadow-2xl ${styles.shadow}`}>
+                    <h4 className="text-xl font-bold text-white text-center mb-3">
+                      {phase.title}
+                    </h4>
+                    <p className="text-sm text-white/90 text-center leading-relaxed">
+                      {phase.description}
+                    </p>
+
+                    {/* Triangle tail */}
+                    <div
+                      className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-5 h-5 ${styles.card} rotate-45`}
+                      aria-hidden="true"
+                    />
+                  </div>
+
+                  {/* Numbered badge — overlaps bottom of card */}
+                  <div className={`absolute -bottom-6 left-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full ${styles.card} border-4 border-white shadow-xl flex items-center justify-center`}>
+                    <span className="text-white font-bold text-lg">{phase.step}</span>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 

@@ -17,6 +17,7 @@ import {
   ClockIcon,
   FaceSmileIcon,
   TrophyIcon,
+  TicketIcon,
 } from '@heroicons/react/24/outline';
 
 const iconMap = {
@@ -38,6 +39,7 @@ const iconMap = {
   ClockIcon,
   FaceSmileIcon,
   TrophyIcon,
+  TicketIcon,
 };
 
 export function getIcon(name) {

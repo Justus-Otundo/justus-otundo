@@ -5,7 +5,7 @@ export const profile = {
   title: 'System Architect & Technology Lead',
   company: 'JAVI RSS Ltd',
   tagline: 'System Architect & Technology Lead',
-  bio: 'I build mobile apps, web platforms, and ERP systems — and I\'ve shipped enough of them to know what actually works in production. Currently leading technology at Javi Research Support Services Ltd, where I\'m responsible for everything from architecture decisions to making sure the deploy doesn\'t break on a Friday.',
+  bio: 'I lead the design, build, and delivery of mobile apps, web platforms, and ERP systems — now serving 6,000+ ride-hailing users, 1,000+ SACCO members, and 500+ enterprise users in production. Currently heading technology at Javi Research Support Services Ltd, where I own everything from architecture decisions to making sure the deploy doesn\'t break on a Friday.',
   aboutBio: 'I started as a developer, got good at it, and eventually ended up leading the tech side of things at Javi RSS. I\'ve built ride-hailing apps, SACCO platforms, ERP systems — the kind of stuff that real businesses depend on daily. I care about writing code that doesn\'t fall apart six months later.',
   avatar: './avatar.jpg',
   resume: './resume.html',

@@ -41,36 +41,36 @@ export function About() {
             viewport={{ once: true }}
           >
             {/* Bio Card */}
-            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-8 border border-slate-700/50">
-              <div className="flex items-start gap-5 mb-6">
+            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-5 sm:p-7 lg:p-8 border border-slate-700/50">
+              <div className="flex items-start gap-4 sm:gap-5 mb-6">
                 <img
                   src={profile.avatar}
                   alt={profile.name}
-                  className="w-16 h-16 rounded-2xl object-cover border-2 border-accent-500/30 flex-shrink-0"
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover border-2 border-accent-500/30 flex-shrink-0"
                 />
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">{profile.name}</h3>
-                  <p className="text-accent-400 font-semibold text-sm">{profile.title} @ {profile.company}</p>
-                  <p className="text-slate-500 text-sm mt-1">{contact.locationFull}</p>
+                <div className="min-w-0">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 leading-tight">{profile.name}</h3>
+                  <p className="text-accent-400 font-semibold text-xs sm:text-sm">{profile.title} @ {profile.company}</p>
+                  <p className="text-slate-500 text-xs sm:text-sm mt-1">{contact.locationFull}</p>
                 </div>
               </div>
-              <p className="text-slate-300 text-lg leading-relaxed mb-4">
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
                 {profile.aboutBio}
               </p>
-              <p className="text-slate-400 leading-relaxed mb-4">
+              <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">
                 My journey from developer to technology leader means I understand both sides — the code and the business.
                 When I take on a project, I'm thinking about what happens after launch, not just what gets it out the door.
               </p>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
                 Outside of work, I'm exploring EV technology for fleet integration, mentoring junior developers,
                 and always looking for the next hard problem to solve.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <a
                   href={profile.resume}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-accent-500/25 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-accent-500/25 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 >
                   <ArrowDownTrayIcon className="w-5 h-5" />
                   View Resume
@@ -79,7 +79,7 @@ export function About() {
                   href={profile.coverLetter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-dark-700 hover:bg-dark-600 border border-slate-600 text-white font-semibold rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-dark-700 hover:bg-dark-600 border border-slate-600 text-white font-semibold rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500"
                 >
                   <ArrowDownTrayIcon className="w-5 h-5" />
                   Cover Letter
@@ -88,7 +88,7 @@ export function About() {
             </div>
 
             {/* Education */}
-            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-8 border border-slate-700/50">
+            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-5 sm:p-7 lg:p-8 border border-slate-700/50">
               <div className="flex items-center gap-3 mb-6">
                 <AcademicCapIcon className="w-6 h-6 text-highlight-400" aria-hidden="true" />
                 <h3 className="text-xl font-bold text-white">Education</h3>

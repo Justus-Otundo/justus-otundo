@@ -67,10 +67,10 @@ export const philosophyPillars = [
 ];
 
 export const builderJourney = [
-  { step: 1, title: 'Discovery', description: 'I learn your business, goals, and users to define what success looks like.' },
-  { step: 2, title: 'Design & Plan', description: 'Architecture, wireframes, and a clear roadmap — so you know exactly what you\'re getting.' },
-  { step: 3, title: 'Build & Test', description: 'Rapid development with regular demos. You see progress every week, not just at the end.' },
-  { step: 4, title: 'Launch & Support', description: 'Deployment, training, and ongoing support. I\'m with you after launch, not just before.' },
+  { step: 1, title: 'Discovery', description: 'I learn your business, goals, and users to define what success looks like.', icon: 'MagnifyingGlassIcon' },
+  { step: 2, title: 'Design & Plan', description: 'Architecture, wireframes, and a clear roadmap — so you know exactly what you\'re getting.', icon: 'PaintBrushIcon' },
+  { step: 3, title: 'Build & Test', description: 'Rapid development with regular demos. You see progress every week, not just at the end.', icon: 'CodeBracketIcon' },
+  { step: 4, title: 'Launch & Support', description: 'Deployment, training, and ongoing support. I\'m with you after launch, not just before.', icon: 'RocketLaunchIcon' },
 ];
 
 export const whyChooseMe = [

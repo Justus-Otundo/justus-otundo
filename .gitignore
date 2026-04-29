@@ -1,4 +1,22 @@
+# Editor / IDE / local tool folders
 .history
 .claude
 .qodo
 .vscode
+.sixth
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Markdown notes (keep README only)
+*.md
+!README.md
+!**/README.md
+
+# Local dev artifacts
+Growth_Tracker_Justus_Otundo.xlsx
+generate_tracker.py

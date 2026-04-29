@@ -205,3 +205,17 @@ body {
 .image-glow {
   box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
 }
+
+/* 3D tilt on hover — desktop only, gated to avoid sticky tap state on touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card-tilt {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+  .card-tilt:hover {
+    transform: perspective(1200px) rotateX(4deg) rotateY(-4deg) translateY(-8px) scale(1.015);
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(16, 185, 129, 0.18);
+  }
+}

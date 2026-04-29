@@ -17,9 +17,9 @@
 
 ## About
 
-I build and ship production software — mobile apps, web platforms, ERP systems, and cloud infrastructure. Currently leading the technology department at **Javi Research Support Services Ltd**, where I own everything from architecture decisions to deployment pipelines.
+I lead the design and delivery of production software — mobile apps, web platforms, ERP systems, and cloud infrastructure now serving **6,000+ ride-hailing users**, **1,000+ SACCO members**, and **500+ enterprise users**. Currently leading the technology department at **Javi Research Support Services Ltd**, where I own everything from architecture decisions to deployment pipelines.
 
-My background spans full-stack development, enterprise systems implementation, cloud administration, and team leadership. I've taken products from concept to production and maintained them through real-world scale.
+My background spans full-stack development, enterprise systems implementation, cloud administration, and team leadership. I take products from concept to production and keep them running through real-world scale.
 
 ---
 

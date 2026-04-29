@@ -28,3 +28,7 @@ public/avatar-original.jpg
 
 # Claude
 .claude
+
+# Markdown notes (keep README only)
+*.md
+!README.md
