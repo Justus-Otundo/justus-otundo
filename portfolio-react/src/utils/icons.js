@@ -18,6 +18,7 @@ import {
   FaceSmileIcon,
   TrophyIcon,
   TicketIcon,
+  ChatBubbleLeftRightIcon,
 } from '@heroicons/react/24/outline';
 
 const iconMap = {
@@ -40,6 +41,7 @@ const iconMap = {
   FaceSmileIcon,
   TrophyIcon,
   TicketIcon,
+  ChatBubbleLeftRightIcon,
 };
 
 export function getIcon(name) {

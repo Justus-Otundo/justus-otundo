@@ -20,7 +20,7 @@ const stepStyles = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-800/50 to-dark-900" />
 
@@ -56,7 +56,7 @@ export function Services() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group"
               >
-                <div className="relative h-full bg-gradient-to-br from-dark-800/90 to-dark-900/90 rounded-3xl p-8 border border-slate-700/50 hover:border-slate-600/50 transition-colors duration-300">
+                <div className="relative h-full bg-gradient-to-br from-dark-800/90 to-dark-900/90 rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 hover:border-slate-600/50 transition-colors duration-300">
                   {/* Icon */}
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.bg} border ${colors.border} flex items-center justify-center mb-6`} aria-hidden="true">
                     {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
@@ -104,7 +104,7 @@ export function Services() {
             <div className="mt-4 h-1 w-16 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-20 pt-14">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 sm:gap-y-16 lg:gap-y-20 pt-14">
             {builderJourney.map((phase, index) => {
               const StepIcon = getIcon(phase.icon);
               const styles = stepStyles[index % stepStyles.length];

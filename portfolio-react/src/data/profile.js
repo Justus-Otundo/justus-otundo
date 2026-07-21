@@ -5,13 +5,13 @@ export const profile = {
   title: 'System Architect & Technology Lead',
   company: 'JAVI RSS Ltd',
   tagline: 'System Architect & Technology Lead',
-  bio: 'I lead the design, build, and delivery of mobile apps, web platforms, and ERP systems — now serving 6,000+ ride-hailing users, 1,000+ SACCO members, and 500+ enterprise users in production. Currently heading technology at Javi Research Support Services Ltd, where I own everything from architecture decisions to making sure the deploy doesn\'t break on a Friday.',
-  aboutBio: 'I started as a developer, got good at it, and eventually ended up leading the tech side of things at Javi RSS. I\'ve built ride-hailing apps, SACCO platforms, ERP systems — the kind of stuff that real businesses depend on daily. I care about writing code that doesn\'t fall apart six months later.',
+  bio: 'I build mobile apps, web platforms, and ERP systems that businesses actually use every day. Ride-hailing for 6,000+ users, SACCO platforms for 1,000+ members, enterprise tools for 500+ staff — all in production, all real. Looking for my next team to build with.',
+  aboutBio: 'I got into coding because I liked solving problems. Somewhere along the way I ended up leading the whole tech side of things — architecture, teams, deployments, the works. I\'ve built ride-hailing apps, SACCO systems, ERP platforms — stuff that people depend on to do their jobs. I care about building things that work six months down the line, not just on demo day.',
   avatar: './avatar.jpg',
   resume: './resume.html',
   coverLetter: './cover-letter.html',
   available: true,
-  availableText: 'Available for Freelance & Contract Work',
+  availableText: 'Open to New Opportunities',
   responseTime: 'Typically responds within 2 hours',
 };
 
@@ -29,7 +29,7 @@ export const social = {
 };
 
 export const stats = [
-  { number: '3+', label: 'Products Live' },
+  { number: '4+', label: 'Products Live' },
   { number: '25+', label: 'Projects' },
   { number: '2+', label: 'Years Exp' },
 ];

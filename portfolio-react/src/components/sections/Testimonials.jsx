@@ -54,7 +54,7 @@ export function Testimonials() {
             subtitle="What my clients say about working with me"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => {
               const IconComponent = getIcon(testimonial.icon);
               return (

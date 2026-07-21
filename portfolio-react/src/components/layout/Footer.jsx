@@ -16,7 +16,7 @@ export function Footer() {
           </p>
           <a
             href={`mailto:${contact.email}`}
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-accent-600 font-bold rounded-xl hover:bg-white/90 transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent-500"
+            className="inline-flex items-center gap-2 px-5 sm:px-8 py-3.5 bg-white text-accent-600 font-bold rounded-xl text-sm sm:text-base hover:bg-white/90 transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent-500"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -71,7 +71,7 @@ export function Footer() {
                 href={social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -82,7 +82,7 @@ export function Footer() {
                 href={social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -91,7 +91,7 @@ export function Footer() {
               </a>
               <a
                 href={`mailto:${contact.email}`}
-                className="w-10 h-10 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 aria-label="Email"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -106,7 +106,7 @@ export function Footer() {
             <p className="text-slate-500 text-sm">
               &copy; {currentYear} {profile.name}. All rights reserved.
             </p>
-            <p className="text-slate-600 text-xs">
+            <p className="text-slate-400 text-xs">
               Nairobi, Kenya
             </p>
           </div>

@@ -74,14 +74,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {/* Availability */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full border border-accent-500/30 bg-accent-500/10">
-              <span className="w-2 h-2 rounded-full bg-accent-400" aria-hidden="true" />
-              <span className="text-xs font-medium text-accent-400 uppercase tracking-wider">Open to work</span>
-            </div>
-
             {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-white mb-4 leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-[1.1]">
               I build software{' '}
               <span className="text-gradient">businesses run on.</span>
             </h1>
@@ -98,7 +92,7 @@ export function Hero() {
                   <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     {stat.number}
                   </div>
-                  <div className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5 whitespace-nowrap">
+                  <div className="text-xs text-slate-500 font-medium mt-0.5">
                     {stat.label}
                   </div>
                 </div>
@@ -146,7 +140,7 @@ export function Hero() {
                   href={item.href}
                   target={item.icon !== 'email' ? '_blank' : undefined}
                   rel={item.icon !== 'email' ? 'noopener noreferrer' : undefined}
-                  className="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-700/80 text-slate-400 hover:text-white hover:border-accent-500/40 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-11 h-11 flex items-center justify-center rounded-lg border border-slate-700/80 text-slate-400 hover:text-white hover:border-accent-500/40 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                   aria-label={item.label}
                 >
                   {item.icon === 'linkedin' && (

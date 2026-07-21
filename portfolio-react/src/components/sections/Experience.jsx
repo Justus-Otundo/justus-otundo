@@ -63,12 +63,12 @@ export function Experience() {
 
                     {/* Content */}
                     <div className="flex-1 pb-2">
-                      <div className={`p-5 rounded-xl ${
+                      <div className={`p-5 rounded-xl transition-colors duration-200 ${
                         item.isCurrent
                           ? 'bg-accent-500/10 border border-accent-500/25'
                           : item.isFuture
                           ? 'bg-dark-800/40 border border-dark-600/40 opacity-70'
-                          : 'bg-dark-800 border border-dark-600/40'
+                          : 'bg-dark-800 border border-dark-600/40 active:border-accent-500/20'
                       }`}>
                         <div className="flex items-center gap-2 flex-wrap">
                           <span className={`text-sm font-medium ${item.isCurrent ? 'text-accent-400' : 'text-zinc-500'}`}>

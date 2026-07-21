@@ -139,7 +139,7 @@ export function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                <form onSubmit={handleSubmit} noValidate className="space-y-5 sm:space-y-6">
                   {submitError && (
                     <div className="flex items-center gap-3 p-4 bg-red-500/10 border border-red-500/30 rounded-xl" role="alert">
                       <ExclamationCircleIcon className="w-5 h-5 text-red-400 flex-shrink-0" />

@@ -65,6 +65,17 @@ export const featuredProjects = [
     icon: 'TicketIcon',
     liveUrl: 'https://tickets.javi.co.ke',
   },
+  {
+    id: 7,
+    title: 'Justus AI Assistant',
+    description: 'I built an AI-powered assistant that answers questions about my work, projects, and availability 24/7. It\'s embedded on my portfolio as a floating widget — visitors can ask it anything and get instant answers. Built with a custom backend on Render.',
+    status: 'Live',
+    statusType: 'live',
+    features: ['AI-Powered', 'Real-time Chat', 'Custom Backend', 'Portfolio Widget'],
+    role: 'Solo Developer',
+    icon: 'ChatBubbleLeftRightIcon',
+    liveUrl: 'https://justus-ai-assistant.onrender.com/',
+  },
 ];
 
 export const portfolioProjects = [

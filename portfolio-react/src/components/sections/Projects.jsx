@@ -5,7 +5,7 @@ import { featuredProjects, portfolioProjects } from '../../data/projects';
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark-800/30 via-dark-900 to-dark-800/30" />
 
@@ -75,7 +75,7 @@ export function Projects() {
                       </div>
 
                       {/* Status Badge */}
-                      <span className={`shrink-0 px-3 py-1 sm:px-4 sm:py-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full ${
+                      <span className={`shrink-0 px-3 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-full ${
                         project.statusType === 'live'
                           ? 'bg-success-500/20 text-success-400 border border-success-500/30'
                           : 'bg-highlight-500/20 text-highlight-400 border border-highlight-500/30'
@@ -239,7 +239,7 @@ export function Projects() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-dark-700/50 hover:bg-dark-600/50 border border-slate-600 hover:border-accent-500/50 text-white font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-500"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-4 bg-dark-700/50 hover:bg-dark-600/50 border border-slate-600 hover:border-accent-500/50 text-white font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-500"
           >
             <span>Want results like these? Let's talk.</span>
             <ArrowTopRightOnSquareIcon className="w-5 h-5" aria-hidden="true" />
