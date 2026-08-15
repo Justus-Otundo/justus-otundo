@@ -66,8 +66,8 @@ export function Testimonials() {
                   transition={{ delay: index * 0.1 }}
                   className="group h-full"
                 >
-                  <div className="card-tilt relative h-full bg-gradient-to-br from-dark-800/60 to-dark-900/80 backdrop-blur-sm rounded-3xl border border-slate-700/40 group-hover:border-accent-500/40 p-7 sm:p-9 lg:p-10 overflow-hidden">
-                    {/* Watermark quote mark — left side, behind the stars */}
+                  <div className="card-tilt relative h-full bg-gradient-to-br from-dark-800/60 to-dark-900/80 backdrop-blur-sm rounded-3xl border border-stone-700/40 group-hover:border-accent-500/40 p-7 sm:p-9 lg:p-10 overflow-hidden">
+                    {/* Watermark quote mark: left side, behind the stars */}
                     <div className="absolute top-4 left-5 sm:top-5 sm:left-6 text-accent-500/10 select-none pointer-events-none" aria-hidden="true">
                       <svg className="w-20 h-20 sm:w-24 sm:h-24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
@@ -88,7 +88,7 @@ export function Testimonials() {
 
                       {/* Quote body */}
                       <blockquote className="flex-1 mb-6 sm:mb-8">
-                        <p className="text-base sm:text-[17px] lg:text-lg text-slate-200 leading-relaxed italic">
+                        <p className="text-base sm:text-[17px] lg:text-lg text-stone-200 leading-relaxed italic">
                           &ldquo;{testimonial.content}&rdquo;
                         </p>
                       </blockquote>
@@ -105,7 +105,7 @@ export function Testimonials() {
                           <div className="font-bold text-white text-sm sm:text-base leading-tight">
                             {testimonial.name}
                           </div>
-                          <div className="text-xs sm:text-sm text-slate-400 mt-0.5">
+                          <div className="text-xs sm:text-sm text-stone-400 mt-0.5">
                             {testimonial.role}
                           </div>
                         </div>

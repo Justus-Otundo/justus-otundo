@@ -4,7 +4,7 @@ export const services = [
   {
     id: 1,
     title: 'Web Development',
-    description: 'Custom websites and web apps — from company sites to full SaaS platforms.',
+    description: 'Custom websites and web apps, from company sites to full SaaS platforms.',
     icon: 'GlobeAltIcon',
     features: ['Custom Web Apps', 'E-commerce', 'CMS Solutions'],
   },
@@ -18,7 +18,7 @@ export const services = [
   {
     id: 3,
     title: 'Data Analysis',
-    description: 'Making sense of messy data — research analytics, reports, and dashboards.',
+    description: 'Making sense of messy data: research analytics, reports, and dashboards.',
     icon: 'ChartBarIcon',
     features: ['Statistical Analysis', 'Research', 'Qualitative Analysis'],
   },
@@ -32,7 +32,7 @@ export const services = [
   {
     id: 5,
     title: 'UI/UX Design',
-    description: 'Clean, functional interfaces. Not just pretty — actually easy to use.',
+    description: 'Clean, functional interfaces. Not just pretty, actually easy to use.',
     icon: 'PaintBrushIcon',
     features: ['Prototyping', 'User Research', 'Design Systems'],
   },

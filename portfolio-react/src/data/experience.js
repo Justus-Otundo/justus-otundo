@@ -6,7 +6,7 @@ export const timeline = [
     date: '2021',
     title: 'Fullstack Developer',
     company: null,
-    description: 'Started journey in software development',
+    description: 'Started freelancing and building campus projects',
     skills: ['Web Development', 'Backend Systems', 'Databases'],
     icon: 'CodeBracketIcon',
     position: 'left',
@@ -39,7 +39,7 @@ export const timeline = [
   },
   {
     id: 4,
-    date: 'November 2025 – May 2026',
+    date: 'November 2025 - May 2026',
     title: 'System Architect & Technology Lead',
     company: 'Javi RSS Ltd',
     description: 'Led technology strategy & product architecture',
@@ -66,7 +66,7 @@ export const timeline = [
 export const workExperience = [
   {
     id: 1,
-    period: 'November 2025 – May 2026',
+    period: 'November 2025 - May 2026',
     title: 'System Architect & Technology Lead',
     company: 'Javi Research Support Services Ltd',
     status: 'Previous',

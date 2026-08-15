@@ -12,10 +12,10 @@ const colorVariants = [
 ];
 
 const stepStyles = [
-  { card: 'bg-amber-500', shadow: 'shadow-amber-500/30' },
-  { card: 'bg-sky-500', shadow: 'shadow-sky-500/30' },
+  { card: 'bg-accent-500', shadow: 'shadow-accent-500/30' },
+  { card: 'bg-highlight-500', shadow: 'shadow-highlight-500/30' },
   { card: 'bg-rose-500', shadow: 'shadow-rose-500/30' },
-  { card: 'bg-emerald-500', shadow: 'shadow-emerald-500/30' },
+  { card: 'bg-success-500', shadow: 'shadow-success-500/30' },
 ];
 
 export function Services() {
@@ -35,7 +35,7 @@ export function Services() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             What I Can Do For You
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl">
+          <p className="text-lg text-stone-400 max-w-2xl">
             Whether you need an app built from scratch or an existing system fixed, here's what I bring to the table
           </p>
           <div className="mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full" />
@@ -56,7 +56,7 @@ export function Services() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group"
               >
-                <div className="relative h-full bg-gradient-to-br from-dark-800/90 to-dark-900/90 rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 hover:border-slate-600/50 transition-colors duration-300">
+                <div className="relative h-full bg-gradient-to-br from-dark-800/90 to-dark-900/90 rounded-3xl p-5 sm:p-6 lg:p-8 border border-stone-700/50 hover:border-stone-600/50 transition-colors duration-300">
                   {/* Icon */}
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.bg} border ${colors.border} flex items-center justify-center mb-6`} aria-hidden="true">
                     {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
@@ -66,7 +66,7 @@ export function Services() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-slate-400 mb-6 leading-relaxed">
+                  <p className="text-stone-400 mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
@@ -75,7 +75,7 @@ export function Services() {
                     {service.features.map((feature) => (
                       <span
                         key={feature}
-                        className="px-3 py-1.5 text-xs font-semibold text-slate-300 bg-dark-700/80 border border-slate-600/50 rounded-lg"
+                        className="px-3 py-1.5 text-xs font-semibold text-stone-300 bg-dark-700/80 border border-stone-600/50 rounded-lg"
                       >
                         {feature}
                       </span>
@@ -98,7 +98,7 @@ export function Services() {
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
               How I Work
             </h3>
-            <p className="text-slate-400 max-w-xl mx-auto">
+            <p className="text-stone-400 max-w-xl mx-auto">
               Every project follows the same four steps. No surprises.
             </p>
             <div className="mt-4 h-1 w-16 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
@@ -118,7 +118,7 @@ export function Services() {
                   transition={{ delay: index * 0.12, duration: 0.5 }}
                   className="relative"
                 >
-                  {/* Avatar circle (icon) — overlaps top of card */}
+                  {/* Avatar circle (icon): overlaps top of card */}
                   <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10 w-24 h-24 rounded-full bg-white p-1.5 shadow-xl">
                     <div className={`w-full h-full rounded-full ${styles.card} flex items-center justify-center`}>
                       {StepIcon && <StepIcon className="w-10 h-10 text-white" aria-hidden="true" />}
@@ -141,7 +141,7 @@ export function Services() {
                     />
                   </div>
 
-                  {/* Numbered badge — overlaps bottom of card */}
+                  {/* Numbered badge: overlaps bottom of card */}
                   <div className={`absolute -bottom-6 left-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full ${styles.card} border-4 border-white shadow-xl flex items-center justify-center`}>
                     <span className="text-white font-bold text-lg">{phase.step}</span>
                   </div>
@@ -159,9 +159,9 @@ export function Services() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-gradient-to-r from-dark-800/80 to-dark-900/80 rounded-2xl border border-slate-700/50">
-            <p className="text-slate-300 text-lg">
-              Ready to bring your idea to life?
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-gradient-to-r from-dark-800/80 to-dark-900/80 rounded-2xl border border-stone-700/50">
+            <p className="text-stone-300 text-lg">
+              Got a project you need built?
             </p>
             <a
               href="#contact"

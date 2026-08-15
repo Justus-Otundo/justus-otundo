@@ -20,14 +20,14 @@ export function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-0">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Profile Card — first on mobile, right on desktop */}
+          {/* Profile Card: first on mobile, right on desktop */}
           <motion.div
             className="order-1 lg:order-2 w-full max-w-sm lg:max-w-none"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="bg-dark-800/60 border border-slate-700/50 rounded-2xl p-4 sm:p-5 max-w-sm mx-auto lg:max-w-md">
+            <div className="bg-dark-800/60 border border-stone-700/50 rounded-2xl p-4 sm:p-5 max-w-sm mx-auto lg:max-w-md">
               {/* Image */}
               <div className="relative mb-4">
                 <div className="aspect-square rounded-xl overflow-hidden">
@@ -39,7 +39,7 @@ export function Hero() {
                   />
                 </div>
                 <div className="absolute bottom-3 left-3 right-3">
-                  <div className="bg-dark-900/80 backdrop-blur-sm rounded-lg px-4 py-2.5 border border-slate-700/50">
+                  <div className="bg-dark-900/80 backdrop-blur-sm rounded-lg px-4 py-2.5 border border-stone-700/50">
                     <p className="text-white font-semibold text-sm">{profile.name}</p>
                     <p className="text-accent-400 text-xs">{profile.title}</p>
                   </div>
@@ -51,7 +51,7 @@ export function Hero() {
                 {heroTechStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1.5 text-xs font-medium text-slate-300 bg-dark-700/80 border border-slate-600/40 rounded-lg"
+                    className="px-3 py-1.5 text-xs font-medium text-stone-300 bg-dark-700/80 border border-stone-600/40 rounded-lg"
                   >
                     {tech}
                   </span>
@@ -59,7 +59,7 @@ export function Hero() {
               </div>
 
               {/* Motto */}
-              <div className="mt-4 pt-4 border-t border-slate-700/40 text-center">
+              <div className="mt-4 pt-4 border-t border-stone-700/40 text-center">
                 <p className="text-sm text-accent-400 font-medium italic">
                   "Nyenyekea Mungu Akutumie"
                 </p>
@@ -67,7 +67,7 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Text Content — second on mobile, left on desktop */}
+          {/* Text Content: second on mobile, left on desktop */}
           <motion.div
             className="order-2 lg:order-1 text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
@@ -81,18 +81,18 @@ export function Hero() {
             </h1>
 
             {/* Bio */}
-            <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-base sm:text-lg text-stone-300 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               {profile.bio}
             </p>
 
             {/* Stats */}
-            <div className="flex items-center justify-center lg:justify-start divide-x divide-slate-700 mb-8">
+            <div className="flex items-center justify-center lg:justify-start divide-x divide-stone-700 mb-8">
               {stats.map((stat, index) => (
                 <div key={index} className="px-3 sm:px-5 md:px-6 first:pl-0 last:pr-0 text-center lg:text-left">
                   <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     {stat.number}
                   </div>
-                  <div className="text-xs text-slate-500 font-medium mt-0.5">
+                  <div className="text-xs text-stone-500 font-medium mt-0.5">
                     {stat.label}
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export function Hero() {
                 smooth={true}
                 duration={500}
                 offset={-80}
-                className="w-full sm:w-auto px-6 py-3 border border-slate-600 hover:border-slate-500 text-slate-200 font-semibold rounded-xl cursor-pointer transition-colors duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-dark-900"
+                className="w-full sm:w-auto px-6 py-3 border border-stone-600 hover:border-stone-500 text-stone-200 font-semibold rounded-xl cursor-pointer transition-colors duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2 focus:ring-offset-dark-900"
                 role="button"
                 tabIndex={0}
               >
@@ -140,7 +140,7 @@ export function Hero() {
                   href={item.href}
                   target={item.icon !== 'email' ? '_blank' : undefined}
                   rel={item.icon !== 'email' ? 'noopener noreferrer' : undefined}
-                  className="w-11 h-11 flex items-center justify-center rounded-lg border border-slate-700/80 text-slate-400 hover:text-white hover:border-accent-500/40 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-11 h-11 flex items-center justify-center rounded-lg border border-stone-700/80 text-stone-400 hover:text-white hover:border-accent-500/40 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                   aria-label={item.label}
                 >
                   {item.icon === 'linkedin' && (

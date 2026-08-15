@@ -5,8 +5,8 @@ export const profile = {
   title: 'System Architect & Technology Lead',
   company: 'JAVI RSS Ltd',
   tagline: 'System Architect & Technology Lead',
-  bio: 'I build mobile apps, web platforms, and ERP systems that businesses actually use every day. Ride-hailing for 6,000+ users, SACCO platforms for 1,000+ members, enterprise tools for 500+ staff — all in production, all real. Looking for my next team to build with.',
-  aboutBio: 'I got into coding because I liked solving problems. Somewhere along the way I ended up leading the whole tech side of things — architecture, teams, deployments, the works. I\'ve built ride-hailing apps, SACCO systems, ERP platforms — stuff that people depend on to do their jobs. I care about building things that work six months down the line, not just on demo day.',
+  bio: 'I build mobile apps, web platforms, and ERP systems that businesses actually use every day. Ride-hailing for 6,000+ users, SACCO platforms for 1,000+ members, enterprise tools for 500+ staff. All in production, all real. Looking for my next team to build with.',
+  aboutBio: 'I got into coding because I liked solving problems. Somewhere along the way I ended up leading the whole tech side of things: architecture, teams, deployments, the works. I\'ve built ride-hailing apps, SACCO systems, and ERP platforms that people depend on to do their jobs. I care about building things that work six months down the line, not just on demo day.',
   avatar: './avatar.jpg',
   resume: './resume.html',
   coverLetter: './cover-letter.html',
@@ -31,7 +31,7 @@ export const social = {
 export const stats = [
   { number: '4+', label: 'Products Live' },
   { number: '25+', label: 'Projects' },
-  { number: '2+', label: 'Years Exp' },
+  { number: '3+', label: 'Years Exp' },
 ];
 
 export const heroTechStack = ['Mobile Apps', 'Web Systems', 'Cloud Solutions', 'ERP Systems', 'API Development', 'Digital Strategy'];
@@ -91,7 +91,7 @@ export const certifications = [
   { name: 'Microsoft 365 Fundamentals (MS-900)', issuer: 'Microsoft', year: '2025' },
   { name: 'Microsoft Security, Compliance & Identity', issuer: 'Microsoft', year: '2025' },
   { name: 'AI in Azure', issuer: 'Microsoft', year: '2025' },
-  { name: 'Cisco CCNA 1 & 2 — Networking', issuer: 'Cisco', year: '' },
+  { name: 'Cisco CCNA 1 & 2 - Networking', issuer: 'Cisco', year: '' },
   { name: 'Cybersecurity Certification', issuer: 'Huawei', year: '' },
   { name: 'ERP Implementation', issuer: 'Odoo', year: '' },
 ];

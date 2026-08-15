@@ -17,6 +17,9 @@ Thumbs.db
 !README.md
 !**/README.md
 
+# Local progress tracking (never push)
+sessions/
+
 # Local dev artifacts
 Growth_Tracker_Justus_Otundo.xlsx
 generate_tracker.py

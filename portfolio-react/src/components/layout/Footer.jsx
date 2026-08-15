@@ -12,7 +12,7 @@ export function Footer() {
             Have a project in mind?
           </h3>
           <p className="text-white/80 mb-6 max-w-lg mx-auto">
-            I'm currently available for freelance work and new opportunities. Let's build something great together.
+            I'm currently available for freelance work and new opportunities. If you have a project, let's talk about it.
           </p>
           <a
             href={`mailto:${contact.email}`}
@@ -40,12 +40,12 @@ export function Footer() {
               />
               <div>
                 <h4 className="text-white font-bold text-lg">{profile.name}</h4>
-                <p className="text-slate-400 text-sm">{profile.title}</p>
+                <p className="text-stone-400 text-sm">{profile.title}</p>
               </div>
             </div>
 
             {/* Contact Info */}
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-stone-400">
               <a
                 href={`tel:${contact.phoneLink}`}
                 className="hover:text-accent-400 transition-colors flex items-center gap-2 focus:outline-none focus:text-accent-400"
@@ -55,7 +55,7 @@ export function Footer() {
                 </svg>
                 {contact.phone}
               </a>
-              <span className="hidden md:block w-1 h-1 rounded-full bg-slate-600" aria-hidden="true" />
+              <span className="hidden md:block w-1 h-1 rounded-full bg-stone-600" aria-hidden="true" />
               <span className="flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -71,7 +71,7 @@ export function Footer() {
                 href={social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-stone-700/50 text-stone-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -82,7 +82,7 @@ export function Footer() {
                 href={social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-stone-700/50 text-stone-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -91,7 +91,7 @@ export function Footer() {
               </a>
               <a
                 href={`mailto:${contact.email}`}
-                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-dark-700/80 border border-stone-700/50 text-stone-400 hover:text-white hover:border-accent-500/50 hover:bg-accent-500/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 aria-label="Email"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -103,10 +103,10 @@ export function Footer() {
 
           {/* Bottom Bar */}
           <div className="py-5 border-t border-dark-700/50 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-slate-500 text-sm">
+            <p className="text-stone-500 text-sm">
               &copy; {currentYear} {profile.name}. All rights reserved.
             </p>
-            <p className="text-slate-400 text-xs">
+            <p className="text-stone-400 text-xs">
               Nairobi, Kenya
             </p>
           </div>

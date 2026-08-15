@@ -15,16 +15,16 @@ export function Experience() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Career Journey
+            Career So Far
           </h2>
-          <p className="text-lg text-slate-400 max-w-xl">
+          <p className="text-lg text-stone-400 max-w-xl">
             From developer to technology leadership
           </p>
           <div className="mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full" />
         </motion.div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Timeline Line — left on mobile, center on md+ */}
+          {/* Timeline Line: left on mobile, center on md+ */}
           <div className="absolute left-5 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-500 via-success-500 to-highlight-500" aria-hidden="true" />
 
           <div className="space-y-10" role="list" aria-label="Career timeline">
@@ -71,19 +71,19 @@ export function Experience() {
                           : 'bg-dark-800 border border-dark-600/40 active:border-accent-500/20'
                       }`}>
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className={`text-sm font-medium ${item.isCurrent ? 'text-accent-400' : 'text-zinc-500'}`}>
+                          <span className={`text-sm font-medium ${item.isCurrent ? 'text-accent-400' : 'text-stone-500'}`}>
                             {item.date}
                           </span>
                           {item.isCurrent && <Badge variant="success" size="sm">CURRENT</Badge>}
                         </div>
-                        <h3 className={`text-lg font-semibold mt-1.5 ${item.isFuture ? 'text-zinc-400' : 'text-white'}`}>
+                        <h3 className={`text-lg font-semibold mt-1.5 ${item.isFuture ? 'text-stone-400' : 'text-white'}`}>
                           {item.title}
                         </h3>
                         {item.company && <p className="text-accent-400 text-sm mt-1">{item.company}</p>}
                         {item.skills && (
                           <div className="flex flex-wrap gap-1.5 mt-3">
                             {item.skills.map((skill) => (
-                              <span key={skill} className="px-2 py-0.5 text-xs font-medium text-zinc-400 bg-dark-700 rounded">
+                              <span key={skill} className="px-2 py-0.5 text-xs font-medium text-stone-400 bg-dark-700 rounded">
                                 {skill}
                               </span>
                             ))}
@@ -105,19 +105,19 @@ export function Experience() {
                           : 'bg-dark-800 border border-dark-600/40 hover:border-accent-500/20'
                       }`}>
                         <div className={`flex items-center gap-2 flex-wrap ${isLeft ? 'justify-end' : ''}`}>
-                          <span className={`text-sm font-medium ${item.isCurrent ? 'text-accent-400' : 'text-zinc-500'}`}>
+                          <span className={`text-sm font-medium ${item.isCurrent ? 'text-accent-400' : 'text-stone-500'}`}>
                             {item.date}
                           </span>
                           {item.isCurrent && <Badge variant="success" size="sm">CURRENT</Badge>}
                         </div>
-                        <h3 className={`text-lg font-semibold mt-1.5 ${item.isFuture ? 'text-zinc-400' : 'text-white'}`}>
+                        <h3 className={`text-lg font-semibold mt-1.5 ${item.isFuture ? 'text-stone-400' : 'text-white'}`}>
                           {item.title}
                         </h3>
                         {item.company && <p className="text-accent-400 text-sm mt-1">{item.company}</p>}
                         {item.skills && (
                           <div className={`flex flex-wrap gap-1.5 mt-3 ${isLeft ? 'justify-end' : ''}`}>
                             {item.skills.map((skill) => (
-                              <span key={skill} className="px-2 py-0.5 text-xs font-medium text-zinc-400 bg-dark-700 rounded">
+                              <span key={skill} className="px-2 py-0.5 text-xs font-medium text-stone-400 bg-dark-700 rounded">
                                 {skill}
                               </span>
                             ))}
@@ -126,7 +126,7 @@ export function Experience() {
                       </div>
                     </div>
 
-                    {/* Center marker — fixed 4rem width */}
+                    {/* Center marker: fixed 4rem width */}
                     <div className="w-16 flex justify-center flex-shrink-0 z-10" aria-hidden="true">
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                         item.isCurrent

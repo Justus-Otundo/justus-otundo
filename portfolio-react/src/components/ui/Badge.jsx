@@ -8,7 +8,7 @@ export function Badge({
   const baseStyles = 'inline-flex items-center font-medium rounded-full backdrop-blur-sm';
 
   const variants = {
-    default: 'bg-dark-700/80 text-slate-200 border border-dark-600',
+    default: 'bg-dark-700/80 text-stone-200 border border-dark-600',
     accent: 'bg-accent-500/20 text-accent-400 border border-accent-500/40',
     success: 'bg-success-500/20 text-success-400 border border-success-500/40',
     warning: 'bg-highlight-500/20 text-highlight-400 border border-highlight-500/40',

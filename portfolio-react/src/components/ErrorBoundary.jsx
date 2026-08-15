@@ -20,7 +20,7 @@ export class ErrorBoundary extends Component {
         <div className="min-h-screen bg-dark-900 flex items-center justify-center px-4">
           <div className="text-center max-w-md">
             <h1 className="text-3xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-slate-400 mb-6">
+            <p className="text-stone-400 mb-6">
               Sorry about that. Please try refreshing the page.
             </p>
             <button

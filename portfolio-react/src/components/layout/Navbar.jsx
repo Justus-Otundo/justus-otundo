@@ -73,7 +73,7 @@ export function Navbar() {
                 duration={500}
                 offset={-80}
                 activeClass="text-accent-400 bg-accent-500/10"
-                className="px-2.5 lg:px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white hover:bg-dark-700/50 rounded-lg transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="px-2.5 lg:px-4 py-2 text-sm font-medium text-stone-300 hover:text-white hover:bg-dark-700/50 rounded-lg transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
                 tabIndex={0}
               >
                 {link.name}
@@ -99,7 +99,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2.5 text-zinc-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-lg"
+            className="md:hidden p-2.5 text-stone-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-lg"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -135,7 +135,7 @@ export function Navbar() {
                   offset={-80}
                   onClick={() => setIsMobileMenuOpen(false)}
                   activeClass="text-accent-400 bg-accent-500/10"
-                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-dark-700/50 rounded-lg transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="block px-4 py-3 text-stone-300 hover:text-white hover:bg-dark-700/50 rounded-lg transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
                   tabIndex={0}
                 >
                   {link.name}

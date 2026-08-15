@@ -20,8 +20,8 @@ export function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Things I've Built
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            These are production systems — real users, real data, real uptime requirements
+          <p className="text-lg text-stone-400 max-w-2xl mx-auto">
+            These are production systems with real users, real data, real uptime requirements
           </p>
           <div className="mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
         </motion.div>
@@ -42,9 +42,9 @@ export function Projects() {
               >
                 <div className="relative h-full bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl overflow-hidden transition-all duration-500">
                   {/* Border */}
-                  <div className="absolute inset-0 rounded-3xl border border-slate-700/50 group-hover:border-accent-500/30 transition-colors duration-300 pointer-events-none z-10" />
+                  <div className="absolute inset-0 rounded-3xl border border-stone-700/50 group-hover:border-accent-500/30 transition-colors duration-300 pointer-events-none z-10" />
 
-                  {/* Optional hero image — drop a screenshot/mockup at project.image to enable */}
+                  {/* Optional hero image: drop a screenshot/mockup at project.image to enable */}
                   {project.image && (
                     <div className="relative aspect-video w-full overflow-hidden bg-dark-700/60">
                       <img
@@ -85,7 +85,7 @@ export function Projects() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-slate-300 text-base sm:text-[17px] lg:text-lg leading-relaxed mb-5 sm:mb-6">
+                    <p className="text-stone-300 text-base sm:text-[17px] lg:text-lg leading-relaxed mb-5 sm:mb-6">
                       {project.description}
                     </p>
 
@@ -94,14 +94,14 @@ export function Projects() {
                       {project.features.map((feature) => (
                         <span
                           key={feature}
-                          className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-white bg-dark-700/80 border border-slate-600/50 rounded-xl"
+                          className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-white bg-dark-700/80 border border-stone-600/50 rounded-xl"
                         >
                           {feature}
                         </span>
                       ))}
                     </div>
 
-                    {/* Store Badges — only render if URLs exist */}
+                    {/* Store Badges: only render if URLs exist */}
                     {(project.playStoreUrl || project.appStoreUrl) && (
                       <div className="flex flex-wrap gap-2 mb-5 sm:mb-6">
                         {project.playStoreUrl && (
@@ -109,7 +109,7 @@ export function Projects() {
                             href={project.playStoreUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-dark-700 border border-slate-600/60 rounded-lg hover:bg-dark-600 hover:border-accent-500/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500"
+                            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-dark-700 border border-stone-600/60 rounded-lg hover:bg-dark-600 hover:border-accent-500/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500"
                             aria-label={`Get ${project.title} on Google Play (opens in new tab)`}
                           >
                             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -123,7 +123,7 @@ export function Projects() {
                             href={project.appStoreUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-dark-700 border border-slate-600/60 rounded-lg hover:bg-dark-600 hover:border-accent-500/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500"
+                            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-dark-700 border border-stone-600/60 rounded-lg hover:bg-dark-600 hover:border-accent-500/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500"
                             aria-label={`Get ${project.title} on the App Store (opens in new tab)`}
                           >
                             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -136,12 +136,12 @@ export function Projects() {
                     )}
 
                     {/* Bottom Status */}
-                    <div className="pt-6 border-t border-slate-700/50 flex items-center justify-between gap-2 flex-wrap">
+                    <div className="pt-6 border-t border-stone-700/50 flex items-center justify-between gap-2 flex-wrap">
                       <div className="flex items-center gap-2">
                         <span className={`w-2 h-2 rounded-full ${
                           project.statusType === 'live' ? 'bg-success-400' : 'bg-highlight-400'
                         }`} aria-hidden="true" />
-                        <span className="text-sm text-slate-400">
+                        <span className="text-sm text-stone-400">
                           {project.statusType === 'live' ? 'Live in Production' : 'In Research & Development'}
                         </span>
                       </div>
@@ -177,7 +177,7 @@ export function Projects() {
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
                 Other Work
               </h3>
-              <p className="text-slate-400 max-w-2xl mx-auto">
+              <p className="text-stone-400 max-w-2xl mx-auto">
                 Additional websites and projects I've designed and built
               </p>
               <div className="mt-4 h-1 w-16 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
@@ -193,20 +193,20 @@ export function Projects() {
                   transition={{ delay: index * 0.05, duration: 0.4 }}
                   className="group"
                 >
-                  <div className="relative h-full bg-dark-800/60 rounded-2xl border border-slate-700/50 group-hover:border-accent-500/30 transition-colors duration-300 p-6 flex flex-col">
+                  <div className="relative h-full bg-dark-800/60 rounded-2xl border border-stone-700/50 group-hover:border-accent-500/30 transition-colors duration-300 p-6 flex flex-col">
                     <div className="flex items-start justify-between mb-3 gap-3">
                       <h4 className="text-lg font-bold text-white leading-tight">
                         {project.title}
                       </h4>
-                      <span className="shrink-0 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-dark-700/80 text-slate-300 border border-slate-600/50">
+                      <span className="shrink-0 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-dark-700/80 text-stone-300 border border-stone-600/50">
                         {project.status}
                       </span>
                     </div>
-                    <p className="text-sm text-slate-400 leading-relaxed mb-5 flex-1">
+                    <p className="text-sm text-stone-400 leading-relaxed mb-5 flex-1">
                       {project.description}
                     </p>
-                    <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                      <span className="text-xs uppercase font-semibold text-slate-500 tracking-wider">
+                    <div className="flex items-center justify-between pt-4 border-t border-stone-700/50">
+                      <span className="text-xs uppercase font-semibold text-stone-500 tracking-wider">
                         {project.category}
                       </span>
                       {project.liveUrl && (
@@ -239,7 +239,7 @@ export function Projects() {
         >
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-4 bg-dark-700/50 hover:bg-dark-600/50 border border-slate-600 hover:border-accent-500/50 text-white font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-500"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-4 bg-dark-700/50 hover:bg-dark-600/50 border border-stone-600 hover:border-accent-500/50 text-white font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-500"
           >
             <span>Want results like these? Let's talk.</span>
             <ArrowTopRightOnSquareIcon className="w-5 h-5" aria-hidden="true" />
