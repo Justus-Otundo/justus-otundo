@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { SectionHeader } from '../ui';
 import { getIcon } from '../../utils/icons';
 import { featuredProjects, portfolioProjects } from '../../data/projects';
 
@@ -11,20 +13,12 @@ export function Projects() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Things I've Built
-          </h2>
-          <p className="text-lg text-stone-400 max-w-2xl mx-auto">
-            These are production systems with real users, real data, real uptime requirements
-          </p>
-          <div className="mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
-        </motion.div>
+        <SectionHeader
+          badge="Projects"
+          title="Things I've"
+          highlight="Built"
+          subtitle="These are production systems with real users, real data, real uptime requirements"
+        />
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
@@ -136,15 +130,7 @@ export function Projects() {
                     )}
 
                     {/* Bottom Status */}
-                    <div className="pt-6 border-t border-stone-700/50 flex items-center justify-between gap-2 flex-wrap">
-                      <div className="flex items-center gap-2">
-                        <span className={`w-2 h-2 rounded-full ${
-                          project.statusType === 'live' ? 'bg-success-400' : 'bg-highlight-400'
-                        }`} aria-hidden="true" />
-                        <span className="text-sm text-stone-400">
-                          {project.statusType === 'live' ? 'Live in Production' : 'In Research & Development'}
-                        </span>
-                      </div>
+                    <div className="pt-6 border-t border-stone-700/50 flex items-center justify-end gap-2 flex-wrap">
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
@@ -237,13 +223,19 @@ export function Projects() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <a
-            href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-4 bg-dark-700/50 hover:bg-dark-600/50 border border-stone-600 hover:border-accent-500/50 text-white font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-500"
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-4 bg-dark-700/50 hover:bg-dark-600/50 border border-stone-600 hover:border-accent-500/50 text-white font-semibold rounded-2xl transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
+            role="button"
+            tabIndex={0}
           >
             <span>Want results like these? Let's talk.</span>
             <ArrowTopRightOnSquareIcon className="w-5 h-5" aria-hidden="true" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

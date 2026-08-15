@@ -49,6 +49,7 @@ export function Testimonials() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionHeader
+            badge="Testimonials"
             title="Client"
             highlight="Testimonials"
             subtitle="What my clients say about working with me"

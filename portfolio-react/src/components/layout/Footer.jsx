@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+import { ArrowUpIcon } from '@heroicons/react/24/outline';
 import { profile, contact, social } from '../../data/profile';
 
 export function Footer() {
@@ -106,9 +108,23 @@ export function Footer() {
             <p className="text-stone-500 text-sm">
               &copy; {currentYear} {profile.name}. All rights reserved.
             </p>
-            <p className="text-stone-400 text-xs">
-              Nairobi, Kenya
-            </p>
+            <div className="flex items-center gap-4">
+              <p className="text-stone-400 text-xs">
+                Nairobi, Kenya
+              </p>
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-stone-400 hover:text-accent-400 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-md"
+                tabIndex={0}
+                aria-label="Back to top"
+              >
+                Back to top
+                <ArrowUpIcon className="w-3.5 h-3.5" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

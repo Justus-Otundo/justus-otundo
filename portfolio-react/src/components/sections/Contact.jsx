@@ -101,6 +101,7 @@ export function Contact() {
     <section id="contact" className="py-20 bg-dark-800/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
+          badge="Contact"
           title="Get In"
           highlight="Touch"
           subtitle="Have a project in mind? Tell me about it."

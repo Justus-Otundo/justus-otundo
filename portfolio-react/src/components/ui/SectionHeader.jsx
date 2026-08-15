@@ -34,7 +34,9 @@ export function SectionHeader({
         )}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-lg text-stone-400 max-w-2xl mx-auto">
+        <p className={`mt-4 text-lg text-stone-400 max-w-2xl ${
+          align === 'center' ? 'mx-auto' : align === 'right' ? 'ml-auto' : ''
+        }`}>
           {subtitle}
         </p>
       )}

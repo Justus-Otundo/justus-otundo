@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
+import { SectionHeader } from '../ui';
 import { getIcon } from '../../utils/icons';
 import { services, builderJourney } from '../../data/services';
 
@@ -26,20 +28,13 @@ export function Services() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            What I Can Do For You
-          </h2>
-          <p className="text-lg text-stone-400 max-w-2xl">
-            Whether you need an app built from scratch or an existing system fixed, here's what I bring to the table
-          </p>
-          <div className="mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full" />
-        </motion.div>
+        <SectionHeader
+          badge="Services"
+          title="What I Can"
+          highlight="Do For You"
+          subtitle="Whether you need an app built from scratch or an existing system fixed, here's what I bring to the table"
+          align="left"
+        />
 
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -163,12 +158,18 @@ export function Services() {
             <p className="text-stone-300 text-lg">
               Got a project you need built?
             </p>
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/25 focus:outline-none focus:ring-2 focus:ring-accent-500"
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
+              role="button"
+              tabIndex={0}
             >
               Start a Project
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

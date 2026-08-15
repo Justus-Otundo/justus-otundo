@@ -6,6 +6,7 @@ import {
   ArrowDownTrayIcon,
   AcademicCapIcon,
 } from '@heroicons/react/24/outline';
+import { SectionHeader } from '../ui';
 import { profile, contact, social, certifications, education } from '../../data/profile';
 
 export function About() {
@@ -16,20 +17,12 @@ export function About() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Me
-          </h2>
-          <p className="text-lg text-stone-400 max-w-2xl mx-auto">
-            The short version of how I got here
-          </p>
-          <div className="mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
-        </motion.div>
+        <SectionHeader
+          badge="About"
+          title="About"
+          highlight="Me"
+          subtitle="The short version of how I got here"
+        />
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8 items-start">
@@ -103,7 +96,14 @@ export function About() {
                     <div>
                       <h4 className="text-white font-semibold">{edu.degree}</h4>
                       <p className="text-accent-400 text-sm">{edu.institution}</p>
-                      <p className="text-stone-500 text-sm mt-1">{edu.period}</p>
+                      <div className="flex flex-wrap items-center gap-2 mt-1">
+                        <p className="text-stone-500 text-sm">{edu.period}</p>
+                        {edu.status && (
+                          <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-success-400 bg-success-500/10 border border-success-500/20 rounded-full">
+                            {edu.status}
+                          </span>
+                        )}
+                      </div>
                       {edu.skills && (
                         <div className="flex flex-wrap gap-1.5 mt-2">
                           {edu.skills.map((skill) => (

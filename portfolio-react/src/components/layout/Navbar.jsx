@@ -5,7 +5,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { profile } from '../../data/profile';
 
 const navLinks = [
-  { name: 'Home', to: 'home' },
   { name: 'About', to: 'about' },
   { name: 'Projects', to: 'projects' },
   { name: 'Experience', to: 'experience' },
@@ -16,14 +15,33 @@ const navLinks = [
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(total > 0 ? window.scrollY / total : 0);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setIsMobileMenuOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
@@ -36,6 +54,12 @@ export function Navbar() {
       role="navigation"
       aria-label="Main navigation"
     >
+      {/* Scroll progress bar */}
+      <div
+        className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-500 to-highlight-500 origin-left z-50 transition-transform duration-150 ease-out"
+        style={{ transform: `scaleX(${scrollProgress})` }}
+        aria-hidden="true"
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}

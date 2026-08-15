@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Badge } from '../ui';
+import { Badge, SectionHeader } from '../ui';
 import { getIcon } from '../../utils/icons';
 import { timeline } from '../../data/experience';
 
@@ -8,20 +8,13 @@ export function Experience() {
     <section id="experience" className="py-20 bg-dark-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          className="mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Career So Far
-          </h2>
-          <p className="text-lg text-stone-400 max-w-xl">
-            From developer to technology leadership
-          </p>
-          <div className="mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full" />
-        </motion.div>
+        <SectionHeader
+          badge="Experience"
+          title="Career"
+          highlight="So Far"
+          subtitle="From developer to technology leadership"
+          align="left"
+        />
 
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline Line: left on mobile, center on md+ */}
@@ -80,6 +73,7 @@ export function Experience() {
                           {item.title}
                         </h3>
                         {item.company && <p className="text-accent-400 text-sm mt-1">{item.company}</p>}
+                        {item.description && <p className="text-stone-400 text-sm leading-relaxed mt-2">{item.description}</p>}
                         {item.skills && (
                           <div className="flex flex-wrap gap-1.5 mt-3">
                             {item.skills.map((skill) => (
@@ -114,6 +108,7 @@ export function Experience() {
                           {item.title}
                         </h3>
                         {item.company && <p className="text-accent-400 text-sm mt-1">{item.company}</p>}
+                        {item.description && <p className={`text-stone-400 text-sm leading-relaxed mt-2 ${isLeft ? 'text-right' : ''}`}>{item.description}</p>}
                         {item.skills && (
                           <div className={`flex flex-wrap gap-1.5 mt-3 ${isLeft ? 'justify-end' : ''}`}>
                             {item.skills.map((skill) => (

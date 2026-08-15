@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { profile, contact, social, stats, heroTechStack } from '../../data/profile';
 
 export function Hero() {
@@ -20,9 +20,9 @@ export function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-0">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Profile Card: first on mobile, right on desktop */}
+          {/* Profile Card: second on mobile, right on desktop */}
           <motion.div
-            className="order-1 lg:order-2 w-full max-w-sm lg:max-w-none"
+            className="order-2 lg:order-2 w-full max-w-sm lg:max-w-none"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -67,13 +67,24 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Text Content: second on mobile, left on desktop */}
+          {/* Text Content: first on mobile, left on desktop */}
           <motion.div
-            className="order-2 lg:order-1 text-center lg:text-left"
+            className="order-1 lg:order-1 text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
+            {/* Availability badge (disabled: currently not showing) */}
+            {/* {profile.available && (
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-success-500/30 bg-success-500/10 mb-6">
+                <span className="relative flex h-2 w-2" aria-hidden="true">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-success-400" />
+                </span>
+                <span className="text-sm font-medium text-success-400">{profile.availableText}</span>
+              </div>
+            )} */}
+
             {/* Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-[1.1]">
               I build software{' '}
@@ -164,6 +175,19 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <Link
+        to="about"
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-80}
+        aria-label="Scroll to About section"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-1 text-stone-500 hover:text-accent-400 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-lg"
+      >
+        <ChevronDownIcon className="w-6 h-6 animate-bounce" aria-hidden="true" />
+      </Link>
     </section>
   );
 }

@@ -34,6 +34,8 @@
 
     /* Header */
     .header {
+      position: relative;
+      overflow: hidden;
       background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
       color: #fff;
       padding: 2.5rem 3rem 2rem;
@@ -43,17 +45,43 @@
       gap: 2rem;
     }
 
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -70%;
+      right: -8%;
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.16) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .header-left {
+      position: relative;
+      z-index: 1;
+    }
+
     .header-left h1 {
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 0.25rem;
     }
 
+    .header-left h1::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #fbbf24, #f97316);
+      margin-bottom: 0.6rem;
+    }
+
     .header-left .title {
       font-size: 1rem;
-      font-weight: 500;
-      color: #f59e0b;
+      font-weight: 600;
+      color: #fbbf24;
       margin-bottom: 0.5rem;
     }
 
@@ -64,6 +92,8 @@
     }
 
     .header-right {
+      position: relative;
+      z-index: 1;
       text-align: right;
       font-size: 0.82rem;
       color: #d6d3d1;
@@ -78,7 +108,7 @@
 
     /* Accent bar */
     .accent-bar {
-      height: 3px;
+      height: 4px;
       background: linear-gradient(90deg, #f59e0b, #f97316, #f59e0b);
     }
 
@@ -96,14 +126,26 @@
     }
 
     .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: #f59e0b;
+      color: #b45309;
       border-bottom: 2px solid #e7e5e4;
       padding-bottom: 0.4rem;
       margin-bottom: 1rem;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #fbbf24, #f97316);
     }
 
     /* Summary */
@@ -168,11 +210,12 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 0.55em;
-      width: 5px;
-      height: 5px;
+      top: 0.5em;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #f59e0b;
+      box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.15);
     }
 
     /* Projects */
@@ -306,6 +349,14 @@
       }
       .header {
         padding: 1.5rem 2rem 1.25rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .header::after {
+        display: none;
+      }
+      .header-left h1::before,
+      .section-title::before {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
