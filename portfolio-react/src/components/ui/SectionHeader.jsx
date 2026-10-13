@@ -40,7 +40,7 @@ export function SectionHeader({
           {subtitle}
         </p>
       )}
-      <div className={`mt-4 h-1 w-20 bg-gradient-to-r from-accent-500 to-success-500 rounded-full ${
+      <div className={`mt-4 h-1 w-20 bg-accent-500 rounded-full ${
         align === 'center' ? 'mx-auto' : align === 'right' ? 'ml-auto' : ''
       }`} />
     </motion.div>

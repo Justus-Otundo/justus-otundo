@@ -20,6 +20,8 @@ import {
   TicketIcon,
   ChatBubbleLeftRightIcon,
   HomeModernIcon,
+  TagIcon,
+  ShoppingBagIcon,
 } from '@heroicons/react/24/outline';
 
 const iconMap = {
@@ -44,6 +46,8 @@ const iconMap = {
   TicketIcon,
   ChatBubbleLeftRightIcon,
   HomeModernIcon,
+  TagIcon,
+  ShoppingBagIcon,
 };
 
 export function getIcon(name) {

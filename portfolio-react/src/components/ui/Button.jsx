@@ -14,7 +14,7 @@ export function Button({
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900';
 
   const variants = {
-    primary: 'bg-gradient-to-r from-accent-500 to-accent-600 text-white hover:from-accent-400 hover:to-accent-500 focus:ring-accent-500 shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40',
+    primary: 'bg-accent-500 text-white hover:bg-accent-600 focus:ring-accent-500 shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40',
     secondary: 'bg-dark-700 text-stone-100 border border-dark-600 hover:bg-dark-600 hover:border-accent-500/50 focus:ring-dark-600',
     outline: 'border-2 border-accent-500 text-accent-400 hover:bg-accent-500/10 focus:ring-accent-500',
     ghost: 'text-stone-300 hover:text-white hover:bg-dark-700 focus:ring-dark-600',

@@ -10,7 +10,6 @@ export function Testimonials() {
       {/* Stats Section */}
       <section className="py-20 relative overflow-hidden" aria-label="Key statistics">
         <div className="absolute inset-0 stats-gradient" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-900/20 via-transparent to-dark-900/20" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -45,7 +44,7 @@ export function Testimonials() {
 
       {/* Testimonials Section */}
       <section id="testimonials" className="py-16 sm:py-20 lg:py-24 relative" aria-label="Client testimonials">
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-800/50 to-dark-900" />
+        <div className="absolute inset-0 bg-dark-800/50" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionHeader
@@ -67,7 +66,7 @@ export function Testimonials() {
                   transition={{ delay: index * 0.1 }}
                   className="group h-full"
                 >
-                  <div className="card-tilt relative h-full bg-gradient-to-br from-dark-800/60 to-dark-900/80 backdrop-blur-sm rounded-3xl border border-stone-700/40 group-hover:border-accent-500/40 p-7 sm:p-9 lg:p-10 overflow-hidden">
+                  <div className="card-tilt relative h-full bg-dark-800/70 backdrop-blur-sm rounded-3xl border border-stone-700/40 group-hover:border-accent-500/40 p-7 sm:p-9 lg:p-10 overflow-hidden">
                     {/* Watermark quote mark: left side, behind the stars */}
                     <div className="absolute top-4 left-5 sm:top-5 sm:left-6 text-accent-500/10 select-none pointer-events-none" aria-hidden="true">
                       <svg className="w-20 h-20 sm:w-24 sm:h-24" fill="currentColor" viewBox="0 0 24 24">
@@ -95,11 +94,11 @@ export function Testimonials() {
                       </blockquote>
 
                       {/* Divider stripe */}
-                      <div className="h-px w-12 bg-gradient-to-r from-accent-500 to-transparent mb-4 sm:mb-5" aria-hidden="true" />
+                      <div className="h-px w-12 bg-accent-500 mb-4 sm:mb-5" aria-hidden="true" />
 
                       {/* Author */}
                       <figcaption className="flex items-center gap-3 sm:gap-4">
-                        <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-accent-500/20 to-highlight-500/15 border border-accent-500/30 flex items-center justify-center shrink-0" aria-hidden="true">
+                        <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-accent-500/15 border border-accent-500/30 flex items-center justify-center shrink-0" aria-hidden="true">
                           {IconComponent && <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-accent-400" />}
                         </div>
                         <div className="min-w-0">

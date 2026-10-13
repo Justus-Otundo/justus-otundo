@@ -9,7 +9,7 @@ export function Projects() {
   return (
     <section id="projects" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-800/30 via-dark-900 to-dark-800/30" />
+      <div className="absolute inset-0 bg-dark-900" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -34,7 +34,7 @@ export function Projects() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group"
               >
-                <div className="relative h-full bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl overflow-hidden transition-all duration-500">
+                <div className="relative h-full bg-dark-800 rounded-3xl overflow-hidden transition-all duration-500">
                   {/* Border */}
                   <div className="absolute inset-0 rounded-3xl border border-stone-700/50 group-hover:border-accent-500/30 transition-colors duration-300 pointer-events-none z-10" />
 
@@ -55,7 +55,7 @@ export function Projects() {
                     {/* Top Row */}
                     <div className="flex items-start justify-between gap-3 mb-5 sm:mb-6">
                       <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-accent-500/30 to-accent-600/20 border border-accent-500/30 flex items-center justify-center shrink-0" aria-hidden="true">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-accent-500/15 border border-accent-500/30 flex items-center justify-center shrink-0" aria-hidden="true">
                           {IconComponent && <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 text-accent-400" />}
                         </div>
                         <div className="min-w-0">
@@ -166,7 +166,7 @@ export function Projects() {
               <p className="text-stone-400 max-w-2xl mx-auto">
                 Additional websites and projects I've designed and built
               </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
+              <div className="mt-4 h-1 w-16 bg-accent-500 rounded-full mx-auto" />
             </motion.div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

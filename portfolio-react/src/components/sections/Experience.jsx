@@ -18,7 +18,7 @@ export function Experience() {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline Line: left on mobile, center on md+ */}
-          <div className="absolute left-5 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-500 via-success-500 to-highlight-500" aria-hidden="true" />
+          <div className="absolute left-5 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-accent-500" aria-hidden="true" />
 
           <div className="space-y-10" role="list" aria-label="Career timeline">
             {timeline.map((item, index) => {
@@ -41,7 +41,7 @@ export function Experience() {
                     <div className="flex-shrink-0 z-10" aria-hidden="true">
                       <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                         item.isCurrent
-                          ? 'bg-gradient-to-br from-accent-500 to-success-500'
+                          ? 'bg-accent-500'
                           : item.isFuture
                           ? 'bg-dark-700 border-2 border-highlight-500/50'
                           : 'bg-dark-800 border-2 border-accent-500/50'
@@ -125,7 +125,7 @@ export function Experience() {
                     <div className="w-16 flex justify-center flex-shrink-0 z-10" aria-hidden="true">
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                         item.isCurrent
-                          ? 'bg-gradient-to-br from-accent-500 to-success-500 shadow-lg shadow-accent-500/20'
+                          ? 'bg-accent-500 shadow-lg shadow-accent-500/20'
                           : item.isFuture
                           ? 'bg-dark-700 border-2 border-highlight-500/50'
                           : 'bg-dark-800 border-2 border-accent-500/50'

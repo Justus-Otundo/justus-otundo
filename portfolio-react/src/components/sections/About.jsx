@@ -13,7 +13,7 @@ export function About() {
   return (
     <section id="about" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-800/50 to-dark-900" />
+      <div className="absolute inset-0 bg-dark-900" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -34,7 +34,7 @@ export function About() {
             viewport={{ once: true }}
           >
             {/* Bio Card */}
-            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-5 sm:p-7 lg:p-8 border border-stone-700/50">
+            <div className="bg-dark-800/80 rounded-3xl p-5 sm:p-7 lg:p-8 border border-stone-700/50">
               <div className="flex items-start gap-4 sm:gap-5 mb-6">
                 <img
                   src={profile.avatar}
@@ -64,7 +64,7 @@ export function About() {
                   href={profile.resume}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-accent-500/25 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-accent-500/25 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 >
                   <ArrowDownTrayIcon className="w-5 h-5" />
                   View Resume
@@ -82,7 +82,7 @@ export function About() {
             </div>
 
             {/* Education */}
-            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-5 sm:p-7 lg:p-8 border border-stone-700/50">
+            <div className="bg-dark-800/80 rounded-3xl p-5 sm:p-7 lg:p-8 border border-stone-700/50">
               <div className="flex items-center gap-3 mb-6">
                 <AcademicCapIcon className="w-6 h-6 text-highlight-400" aria-hidden="true" />
                 <h3 className="text-xl font-bold text-white">Education</h3>
@@ -128,7 +128,7 @@ export function About() {
             viewport={{ once: true }}
           >
             {/* Contact Info Card */}
-            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-6 border border-stone-700/50">
+            <div className="bg-dark-800/80 rounded-3xl p-6 border border-stone-700/50">
               <h3 className="text-lg font-bold text-white mb-4">Contact</h3>
               <div className="space-y-3">
                 <a href={`mailto:${contact.email}`} className="flex items-center gap-3 p-3 bg-dark-700/50 rounded-xl hover:bg-dark-600/50 transition-colors">
@@ -159,7 +159,7 @@ export function About() {
             </div>
 
             {/* Certifications Card */}
-            <div className="bg-gradient-to-br from-dark-800/80 to-dark-900/80 rounded-3xl p-6 border border-stone-700/50">
+            <div className="bg-dark-800/80 rounded-3xl p-6 border border-stone-700/50">
               <div className="flex items-center gap-3 mb-4">
                 <AcademicCapIcon className="w-5 h-5 text-accent-400" aria-hidden="true" />
                 <h3 className="text-lg font-bold text-white">Certifications</h3>

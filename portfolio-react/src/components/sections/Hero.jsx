@@ -12,9 +12,7 @@ export function Hero() {
     >
       {/* Background */}
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900" />
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-accent-500/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/3 w-[400px] h-[400px] bg-highlight-500/8 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-dark-900" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-0">

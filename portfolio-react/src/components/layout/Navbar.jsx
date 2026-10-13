@@ -56,7 +56,7 @@ export function Navbar() {
     >
       {/* Scroll progress bar */}
       <div
-        className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-500 to-highlight-500 origin-left z-50 transition-transform duration-150 ease-out"
+        className="absolute top-0 left-0 right-0 h-0.5 bg-accent-500 origin-left z-50 transition-transform duration-150 ease-out"
         style={{ transform: `scaleX(${scrollProgress})` }}
         aria-hidden="true"
       />
@@ -113,7 +113,7 @@ export function Navbar() {
               smooth={true}
               duration={500}
               offset={-80}
-              className="px-3.5 lg:px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 rounded-xl transition-all duration-300 cursor-pointer shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-dark-900"
+              className="px-3.5 lg:px-5 py-2.5 text-sm font-medium text-white bg-accent-500 hover:bg-accent-600 rounded-xl transition-all duration-300 cursor-pointer shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-dark-900"
               tabIndex={0}
               role="button"
             >
@@ -172,7 +172,7 @@ export function Navbar() {
                 duration={500}
                 offset={-80}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 mt-4 text-center text-white bg-gradient-to-r from-accent-500 to-accent-600 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="block px-4 py-3 mt-4 text-center text-white bg-accent-500 hover:bg-accent-600 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
                 tabIndex={0}
               >
                 Get in Touch

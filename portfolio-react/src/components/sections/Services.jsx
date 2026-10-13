@@ -5,12 +5,12 @@ import { getIcon } from '../../utils/icons';
 import { services, builderJourney } from '../../data/services';
 
 const colorVariants = [
-  { bg: 'from-accent-500/20 to-accent-600/10', border: 'border-accent-500/30' },
-  { bg: 'from-success-500/20 to-success-600/10', border: 'border-success-500/30' },
-  { bg: 'from-highlight-500/20 to-highlight-600/10', border: 'border-highlight-500/30' },
-  { bg: 'from-accent-500/20 to-highlight-500/10', border: 'border-accent-500/30' },
-  { bg: 'from-highlight-500/20 to-accent-500/10', border: 'border-highlight-500/30' },
-  { bg: 'from-success-500/20 to-highlight-500/10', border: 'border-success-500/30' },
+  { bg: 'bg-accent-500/20', border: 'border-accent-500/30' },
+  { bg: 'bg-success-500/20', border: 'border-success-500/30' },
+  { bg: 'bg-highlight-500/20', border: 'border-highlight-500/30' },
+  { bg: 'bg-accent-500/20', border: 'border-accent-500/30' },
+  { bg: 'bg-highlight-500/20', border: 'border-highlight-500/30' },
+  { bg: 'bg-success-500/20', border: 'border-success-500/30' },
 ];
 
 const stepStyles = [
@@ -24,7 +24,7 @@ export function Services() {
   return (
     <section id="services" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-800/50 to-dark-900" />
+      <div className="absolute inset-0 bg-dark-900" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -51,9 +51,9 @@ export function Services() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group"
               >
-                <div className="relative h-full bg-gradient-to-br from-dark-800/90 to-dark-900/90 rounded-3xl p-5 sm:p-6 lg:p-8 border border-stone-700/50 hover:border-stone-600/50 transition-colors duration-300">
+                <div className="relative h-full bg-dark-800/90 rounded-3xl p-5 sm:p-6 lg:p-8 border border-stone-700/50 hover:border-stone-600/50 transition-colors duration-300">
                   {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.bg} border ${colors.border} flex items-center justify-center mb-6`} aria-hidden="true">
+                  <div className={`w-16 h-16 rounded-2xl ${colors.bg} border ${colors.border} flex items-center justify-center mb-6`} aria-hidden="true">
                     {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
                   </div>
 
@@ -96,7 +96,7 @@ export function Services() {
             <p className="text-stone-400 max-w-xl mx-auto">
               Every project follows the same four steps. No surprises.
             </p>
-            <div className="mt-4 h-1 w-16 bg-gradient-to-r from-accent-500 to-highlight-500 rounded-full mx-auto" />
+            <div className="mt-4 h-1 w-16 bg-accent-500 rounded-full mx-auto" />
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 sm:gap-y-16 lg:gap-y-20 pt-14">
@@ -154,7 +154,7 @@ export function Services() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-gradient-to-r from-dark-800/80 to-dark-900/80 rounded-2xl border border-stone-700/50">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-dark-800/80 rounded-2xl border border-stone-700/50">
             <p className="text-stone-300 text-lg">
               Got a project you need built?
             </p>
@@ -164,7 +164,7 @@ export function Services() {
               smooth={true}
               duration={500}
               offset={-80}
-              className="px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-400 hover:to-accent-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
+              className="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
               role="button"
               tabIndex={0}
             >

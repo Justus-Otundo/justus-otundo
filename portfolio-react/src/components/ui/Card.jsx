@@ -14,7 +14,7 @@ export function Card({
     default: 'bg-dark-800 border border-dark-600/50',
     glass: 'glass-card',
     elevated: 'bg-dark-800 shadow-xl shadow-black/20',
-    gradient: 'bg-gradient-to-br from-dark-800 to-dark-900 border border-dark-600/30',
+    gradient: 'bg-dark-800 border border-dark-600/30',
   };
 
   const hoverStyles = hover

@@ -2,6 +2,28 @@
 
 export const featuredProjects = [
   {
+    id: 9,
+    title: 'Gennash Auto World',
+    description: 'I designed and built a live vehicle marketplace and dealership platform: a public storefront where visitors browse, search, filter, compare, and enquire about vehicles, plus a protected back office where staff manage vehicles, pricing, media, enquiries, and site content. Runs on a custom domain with CDN, SEO, and an automated database behind it.',
+    status: 'Production',
+    statusType: 'live',
+    features: ['Vehicle Search & Filters', 'Enquiry Management', 'Back-office Admin', 'SEO & Custom Domain'],
+    role: 'Lead Developer',
+    icon: 'TagIcon',
+    liveUrl: 'https://www.gennashautoworld.co.ke',
+  },
+  {
+    id: 10,
+    title: 'Walk Fit Collections',
+    description: 'I built a full e-commerce platform for a footwear brand: a public store with product catalog, size-level inventory, free-gift addons, guest checkout with delivery, and an admin panel for managing products, stock, sizes, and orders. Live and selling with its own custom domain.',
+    status: 'Production',
+    statusType: 'live',
+    features: ['Size-level Inventory', 'Guest Checkout', 'Order Management', 'Admin Dashboard'],
+    role: 'Lead Developer',
+    icon: 'ShoppingBagIcon',
+    liveUrl: 'https://www.walkfitcollections.co.ke',
+  },
+  {
     id: 1,
     title: 'JaviRide',
     description: 'I built a complete Kenyan taxi-hailing platform from scratch: dual passenger and driver apps, real-time GPS, automated dispatch, integrated payments, in-trip fare negotiation, and carpooling. It now serves 6,000+ users with 100+ trips processed, replacing phone-based dispatch with on-demand matching. I still lead ongoing platform development.',

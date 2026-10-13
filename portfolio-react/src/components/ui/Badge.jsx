@@ -14,7 +14,7 @@ export function Badge({
     warning: 'bg-highlight-500/20 text-highlight-400 border border-highlight-500/40',
     live: 'bg-success-500/25 text-success-400 border border-success-500/50',
     research: 'bg-highlight-500/25 text-highlight-400 border border-highlight-500/50',
-    gradient: 'bg-gradient-to-r from-accent-500/25 to-highlight-500/25 text-white border border-accent-500/30',
+    gradient: 'bg-accent-500/20 text-white border border-accent-500/30',
     gold: 'bg-highlight-500/25 text-highlight-400 border border-highlight-500/50',
   };
 
