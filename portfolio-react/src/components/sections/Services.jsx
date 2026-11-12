@@ -1,176 +1,126 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { SectionHeader } from '../ui';
 import { getIcon } from '../../utils/icons';
 import { services, builderJourney } from '../../data/services';
 
-const colorVariants = [
-  { bg: 'bg-accent-500/20', border: 'border-accent-500/30' },
-  { bg: 'bg-success-500/20', border: 'border-success-500/30' },
-  { bg: 'bg-highlight-500/20', border: 'border-highlight-500/30' },
-  { bg: 'bg-accent-500/20', border: 'border-accent-500/30' },
-  { bg: 'bg-highlight-500/20', border: 'border-highlight-500/30' },
-  { bg: 'bg-success-500/20', border: 'border-success-500/30' },
-];
-
-const stepStyles = [
-  { card: 'bg-accent-500', shadow: 'shadow-accent-500/30' },
-  { card: 'bg-highlight-500', shadow: 'shadow-highlight-500/30' },
-  { card: 'bg-rose-500', shadow: 'shadow-rose-500/30' },
-  { card: 'bg-success-500', shadow: 'shadow-success-500/30' },
-];
-
 export function Services() {
   return (
-    <section id="services" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-dark-900" />
+    <section id="services" className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
+      <div className="absolute inset-0 bg-dark-900" aria-hidden="true" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Services"
-          title="What I Can"
-          highlight="Do For You"
-          subtitle="Whether you need an app built from scratch or an existing system fixed, here's what I bring to the table"
+          title="Practical support,"
+          highlight="from plan to production."
+          subtitle="I help teams turn business needs into dependable digital products, and stay accountable for the result."
           align="left"
         />
 
-        {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <ul className="grid gap-4 md:grid-cols-2">
           {services.map((service, index) => {
             const IconComponent = getIcon(service.icon);
-            const colors = colorVariants[index % colorVariants.length];
 
             return (
-              <motion.div
+              <motion.li
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="group"
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ delay: (index % 2) * 0.06, duration: 0.35 }}
+                className="rounded-3xl border border-stone-700/70 bg-dark-800 p-5 sm:p-7"
               >
-                <div className="relative h-full bg-dark-800/90 rounded-3xl p-5 sm:p-6 lg:p-8 border border-stone-700/50 hover:border-stone-600/50 transition-colors duration-300">
-                  {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl ${colors.bg} border ${colors.border} flex items-center justify-center mb-6`} aria-hidden="true">
-                    {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-stone-400 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="px-3 py-1.5 text-xs font-semibold text-stone-300 bg-dark-700/80 border border-stone-600/50 rounded-lg"
-                      >
-                        {feature}
-                      </span>
-                    ))}
+                <div className="flex items-start gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-accent-500/20 bg-accent-500/10 text-accent-500">
+                    {IconComponent && <IconComponent className="h-5 w-5" aria-hidden="true" />}
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold text-stone-200">{service.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-stone-400">{service.description}</p>
+                    <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${service.title} areas`}>
+                      {service.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="rounded-full border border-stone-700/80 px-3 py-1 text-xs font-medium text-stone-500"
+                        >
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              </motion.div>
+              </motion.li>
             );
           })}
+        </ul>
+
+        <div className="mt-20 border-t border-stone-700/70 pt-16 sm:mt-24 sm:pt-20">
+          <div className="mb-9 max-w-2xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent-500">
+              A clear process
+            </p>
+            <h3 className="text-3xl font-semibold tracking-tight text-stone-200 sm:text-4xl">
+              How I work
+            </h3>
+            <p className="mt-3 text-base leading-7 text-stone-400">
+              You know what is happening, what comes next, and who is accountable at every stage.
+            </p>
+          </div>
+
+          <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {builderJourney.map((phase, index) => (
+              <motion.li
+                key={phase.step}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ delay: index * 0.06, duration: 0.35 }}
+                className="rounded-3xl border border-stone-700/70 bg-dark-800 p-5 sm:p-6"
+              >
+                <div className="mb-7 flex items-center justify-between">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-500 text-sm font-semibold text-white">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span className="text-xs font-medium uppercase tracking-[0.14em] text-stone-500">
+                    Step {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <h4 className="text-lg font-semibold text-stone-200">{phase.title}</h4>
+                <p className="mt-2 text-sm leading-6 text-stone-400">{phase.description}</p>
+              </motion.li>
+            ))}
+          </ol>
         </div>
 
-        {/* How I Work Section */}
         <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-12 flex flex-col gap-5 rounded-3xl border border-stone-700/70 bg-dark-800 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="mb-16 text-center">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              How I Work
+          <div>
+            <h3 className="text-lg font-semibold text-stone-200 sm:text-xl">
+              Have a challenge worth solving?
             </h3>
-            <p className="text-stone-400 max-w-xl mx-auto">
-              Every project follows the same four steps. No surprises.
+            <p className="mt-1 text-sm leading-6 text-stone-400">
+              Tell me what your team needs. We can work out the right next step together.
             </p>
-            <div className="mt-4 h-1 w-16 bg-accent-500 rounded-full mx-auto" />
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 sm:gap-y-16 lg:gap-y-20 pt-14">
-            {builderJourney.map((phase, index) => {
-              const StepIcon = getIcon(phase.icon);
-              const styles = stepStyles[index % stepStyles.length];
-
-              return (
-                <motion.div
-                  key={phase.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ delay: index * 0.12, duration: 0.5 }}
-                  className="relative"
-                >
-                  {/* Avatar circle (icon): overlaps top of card */}
-                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10 w-24 h-24 rounded-full bg-white p-1.5 shadow-xl">
-                    <div className={`w-full h-full rounded-full ${styles.card} flex items-center justify-center`}>
-                      {StepIcon && <StepIcon className="w-10 h-10 text-white" aria-hidden="true" />}
-                    </div>
-                  </div>
-
-                  {/* Speech-bubble card body */}
-                  <div className={`relative ${styles.card} rounded-3xl pt-16 px-6 pb-10 shadow-2xl ${styles.shadow}`}>
-                    <h4 className="text-xl font-bold text-white text-center mb-3">
-                      {phase.title}
-                    </h4>
-                    <p className="text-sm text-white/90 text-center leading-relaxed">
-                      {phase.description}
-                    </p>
-
-                    {/* Triangle tail */}
-                    <div
-                      className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-5 h-5 ${styles.card} rotate-45`}
-                      aria-hidden="true"
-                    />
-                  </div>
-
-                  {/* Numbered badge: overlaps bottom of card */}
-                  <div className={`absolute -bottom-6 left-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full ${styles.card} border-4 border-white shadow-xl flex items-center justify-center`}>
-                    <span className="text-white font-bold text-lg">{phase.step}</span>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-        >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-dark-800/80 rounded-2xl border border-stone-700/50">
-            <p className="text-stone-300 text-lg">
-              Got a project you need built?
-            </p>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-80}
-              className="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
-              role="button"
-              tabIndex={0}
-            >
-              Start a Project
-            </Link>
-          </div>
+          <Link
+            to="contact"
+            spy
+            smooth
+            duration={500}
+            offset={-80}
+            className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2"
+            role="button"
+            tabIndex={0}
+          >
+            Start a conversation
+            <ArrowUpRightIcon className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </motion.div>
       </div>
     </section>

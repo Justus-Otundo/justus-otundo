@@ -1,191 +1,104 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { ArrowRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
-import { profile, contact, social, stats, heroTechStack } from '../../data/profile';
+import { ArrowDownIcon, ArrowUpRightIcon } from '@heroicons/react/24/outline';
+import { profile, contact, social, stats } from '../../data/profile';
 
 export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative overflow-hidden border-b border-stone-700/70"
       aria-label="Introduction"
     >
-      {/* Background */}
-      <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-dark-900" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-0">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-          {/* Profile Card: second on mobile, right on desktop */}
+      <div className="mx-auto max-w-7xl px-5 pb-12 pt-28 sm:px-8 sm:pb-16 lg:px-12 lg:pb-12 lg:pt-32">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <motion.div
-            className="order-2 lg:order-2 w-full max-w-sm lg:max-w-none"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.45 }}
           >
-            <div className="bg-dark-800/60 border border-stone-700/50 rounded-2xl p-4 sm:p-5 max-w-sm mx-auto lg:max-w-md">
-              {/* Image */}
-              <div className="relative mb-4">
-                <div className="aspect-square rounded-xl overflow-hidden">
-                  <img
-                    src={profile.avatar}
-                    alt={`${profile.name} - ${profile.title}`}
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                  />
-                </div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <div className="bg-dark-900/80 backdrop-blur-sm rounded-lg px-4 py-2.5 border border-stone-700/50">
-                    <p className="text-white font-semibold text-sm">{profile.name}</p>
-                    <p className="text-accent-400 text-xs">{profile.title}</p>
-                  </div>
-                </div>
-              </div>
+            <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent-500 sm:mb-7">
+              <span className="h-px w-8 bg-highlight-500" aria-hidden="true" />
+              Senior Software Developer
+              <span className="text-stone-500">Nairobi, Kenya</span>
+            </p>
 
-              {/* Tech stack pills */}
-              <div className="flex flex-wrap gap-2">
-                {heroTechStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1.5 text-xs font-medium text-stone-300 bg-dark-700/80 border border-stone-600/40 rounded-lg"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {/* Motto */}
-              <div className="mt-4 pt-4 border-t border-stone-700/40 text-center">
-                <p className="text-sm text-accent-400 font-medium italic">
-                  "Nyenyekea Mungu Akutumie"
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Text Content: first on mobile, left on desktop */}
-          <motion.div
-            className="order-1 lg:order-1 text-center lg:text-left"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            {/* Availability badge (disabled: currently not showing) */}
-            {/* {profile.available && (
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-success-500/30 bg-success-500/10 mb-6">
-                <span className="relative flex h-2 w-2" aria-hidden="true">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-success-400" />
-                </span>
-                <span className="text-sm font-medium text-success-400">{profile.availableText}</span>
-              </div>
-            )} */}
-
-            {/* Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-[1.1]">
-              I build software{' '}
-              <span className="text-gradient">businesses run on.</span>
+            <h1 className="max-w-3xl text-[clamp(2.65rem,8vw,5.75rem)] font-medium leading-[0.99] tracking-tight text-stone-200">
+              I build systems
+              <br />
+              <span className="font-serif italic text-accent-500">people rely on.</span>
             </h1>
 
-            {/* Bio */}
-            <p className="text-base sm:text-lg text-stone-300 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="mt-6 max-w-2xl text-base leading-7 text-stone-400 sm:mt-8 sm:text-lg sm:leading-8">
               {profile.bio}
             </p>
 
-            {/* Stats */}
-            <div className="flex items-center justify-center lg:justify-start divide-x divide-stone-700 mb-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="px-3 sm:px-5 md:px-6 first:pl-0 last:pr-0 text-center lg:text-left">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
-                    {stat.number}
-                  </div>
-                  <div className="text-xs text-stone-500 font-medium mt-0.5">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-8">
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className="group w-full sm:w-auto px-6 py-3 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-xl cursor-pointer transition-colors duration-200 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-dark-900"
-                role="button"
-                tabIndex={0}
-              >
-                Get in Touch
-                <ArrowRightIcon className="w-4 h-4" aria-hidden="true" />
-              </Link>
+            <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
               <Link
                 to="projects"
-                spy={true}
-                smooth={true}
+                spy
+                smooth
                 duration={500}
                 offset={-80}
-                className="w-full sm:w-auto px-6 py-3 border border-stone-600 hover:border-stone-500 text-stone-200 font-semibold rounded-xl cursor-pointer transition-colors duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2 focus:ring-offset-dark-900"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-accent-500 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-600 sm:w-auto"
                 role="button"
                 tabIndex={0}
               >
-                View My Work
+                View selected work
+                <ArrowDownIcon className="h-4 w-4" aria-hidden="true" />
               </Link>
+              <a
+                href={profile.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-stone-600 px-6 py-3.5 text-sm font-semibold text-stone-300 transition-colors hover:border-accent-400 hover:text-accent-500 sm:w-auto"
+              >
+                View my resume
+                <ArrowUpRightIcon className="h-4 w-4" aria-hidden="true" />
+              </a>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center justify-center lg:justify-start gap-3">
-              {[
-                { href: social.linkedin, icon: 'linkedin', label: 'LinkedIn' },
-                { href: social.github, icon: 'github', label: 'GitHub' },
-                { href: `mailto:${contact.email}`, icon: 'email', label: 'Email' },
-              ].map((item) => (
-                <a
-                  key={item.icon}
-                  href={item.href}
-                  target={item.icon !== 'email' ? '_blank' : undefined}
-                  rel={item.icon !== 'email' ? 'noopener noreferrer' : undefined}
-                  className="w-11 h-11 flex items-center justify-center rounded-lg border border-stone-700/80 text-stone-400 hover:text-white hover:border-accent-500/40 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500"
-                  aria-label={item.label}
-                >
-                  {item.icon === 'linkedin' && (
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  )}
-                  {item.icon === 'github' && (
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                  )}
-                  {item.icon === 'email' && (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  )}
-                </a>
-              ))}
+            <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-stone-500">
+              <a className="transition-colors hover:text-accent-500" href={social.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a className="transition-colors hover:text-accent-500" href={social.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a className="transition-colors hover:text-accent-500" href={`mailto:${contact.email}`}>Email</a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="relative mx-auto w-full max-w-sm lg:max-w-md lg:justify-self-end"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.12 }}
+          >
+            <div className="relative rounded-[2rem] bg-dark-700 p-2.5 sm:p-3">
+              <img
+                src={profile.avatar}
+                alt={`${profile.name}, ${profile.title}`}
+                className="aspect-[4/4.5] w-full rounded-[1.5rem] object-cover object-top"
+                fetchPriority="high"
+              />
+              <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/40 bg-dark-800/95 p-4 shadow-sm sm:bottom-6 sm:left-6 sm:right-6">
+                <p className="font-semibold text-stone-200">{profile.name}</p>
+                <p className="mt-1 text-sm text-stone-500">{profile.title}</p>
+              </div>
+            </div>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-success-400 sm:justify-end">
+              <span className="h-2 w-2 rounded-full bg-success-400" aria-hidden="true" />
+              Open to new opportunities
             </div>
           </motion.div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <Link
-        to="about"
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-80}
-        aria-label="Scroll to About section"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-1 text-stone-500 hover:text-accent-400 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-lg"
-      >
-        <ChevronDownIcon className="w-6 h-6 animate-bounce" aria-hidden="true" />
-      </Link>
+        <div className="mt-12 grid grid-cols-3 gap-3 border-t border-stone-700/70 pt-6 sm:mt-16 sm:gap-6 sm:pt-8 lg:mt-14">
+          {stats.map((stat) => (
+            <div key={stat.label} className="min-w-0">
+              <p className="text-2xl font-semibold tracking-tight text-stone-200 sm:text-3xl">{stat.number}</p>
+              <p className="mt-1 text-[11px] leading-4 text-stone-500 sm:text-sm">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

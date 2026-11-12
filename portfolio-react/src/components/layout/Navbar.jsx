@@ -6,24 +6,18 @@ import { profile } from '../../data/profile';
 
 const navLinks = [
   { name: 'About', to: 'about' },
-  { name: 'Projects', to: 'projects' },
+  { name: 'Work', to: 'projects' },
   { name: 'Experience', to: 'experience' },
   { name: 'Services', to: 'services' },
-  { name: 'Testimonials', to: 'testimonials' },
   { name: 'Contact', to: 'contact' },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      const total = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress(total > 0 ? window.scrollY / total : 0);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -46,99 +40,74 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-dark-900/95 backdrop-blur-lg border-b border-dark-700/50 shadow-lg'
-          : 'bg-transparent'
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-200 ${
+        isScrolled ? 'border-stone-700/80 bg-dark-900/95 backdrop-blur-sm' : 'border-transparent bg-dark-900/80'
       }`}
-      role="navigation"
       aria-label="Main navigation"
     >
-      {/* Scroll progress bar */}
-      <div
-        className="absolute top-0 left-0 right-0 h-0.5 bg-accent-500 origin-left z-50 transition-transform duration-150 ease-out"
-        style={{ transform: `scaleX(${scrollProgress})` }}
-        aria-hidden="true"
-      />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="flex items-center gap-3 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-lg"
-            tabIndex={0}
-            aria-label="Go to top"
-          >
-            <img
-              src={profile.avatar}
-              alt=""
-              className="w-10 h-10 rounded-full border-2 border-accent-500/50 object-cover"
-              aria-hidden="true"
-            />
-            <div className="hidden sm:block">
-              <span className="text-white font-bold text-lg block">{profile.name}</span>
-              <span className="text-accent-400 text-xs uppercase tracking-wider block">
-                {profile.title}
-              </span>
-            </div>
-          </Link>
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
+        <Link
+          to="home"
+          smooth
+          duration={500}
+          className="flex cursor-pointer items-center gap-2.5 text-sm font-semibold tracking-tight text-stone-200 sm:gap-3 sm:text-base"
+          tabIndex={0}
+          role="link"
+          aria-label="Go to top"
+        >
+          <img
+            src={profile.avatar}
+            alt=""
+            aria-hidden="true"
+            className="h-9 w-9 shrink-0 rounded-full border border-stone-600 object-cover object-top"
+          />
+          <span>
+            {profile.name}
+            {' '}
+            <span className="font-normal text-stone-500">/ Portfolio</span>
+          </span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-0.5 lg:gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                activeClass="text-accent-400 bg-accent-500/10"
-                className="px-2.5 lg:px-4 py-2 text-sm font-medium text-stone-300 hover:text-white hover:bg-dark-700/50 rounded-lg transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
-                tabIndex={0}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
+        <div className="hidden items-center gap-7 md:flex">
+          {navLinks.map((link) => (
             <Link
-              to="contact"
-              spy={true}
-              smooth={true}
+              key={link.to}
+              to={link.to}
+              spy
+              smooth
               duration={500}
               offset={-80}
-              className="px-3.5 lg:px-5 py-2.5 text-sm font-medium text-white bg-accent-500 hover:bg-accent-600 rounded-xl transition-all duration-300 cursor-pointer shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-dark-900"
+              activeClass="text-accent-500"
+              className="cursor-pointer text-sm font-medium text-stone-400 transition-colors hover:text-stone-200"
               tabIndex={0}
-              role="button"
+              role="link"
             >
-              Get in Touch
+              {link.name}
             </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2.5 text-stone-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-lg"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          ))}
+          <span className="h-5 w-px bg-stone-600" aria-hidden="true" />
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-accent-500 transition-colors hover:text-accent-600"
           >
-            {isMobileMenuOpen ? (
-              <XMarkIcon className="w-6 h-6" />
-            ) : (
-              <Bars3Icon className="w-6 h-6" />
-            )}
-          </button>
+            Resume
+          </a>
         </div>
+
+        <button
+          type="button"
+          className="rounded-md p-2 text-stone-300 transition-colors hover:bg-dark-700 md:hidden"
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+          {isMobileMenuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -146,37 +115,35 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-dark-900/98 backdrop-blur-lg border-b border-dark-700/50"
+            className="overflow-hidden border-t border-stone-700 bg-dark-900 md:hidden"
           >
-            <div className="container mx-auto px-4 py-4 space-y-1">
+            <div className="mx-auto max-w-7xl px-5 py-3 sm:px-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   duration={500}
                   offset={-80}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  activeClass="text-accent-400 bg-accent-500/10"
-                  className="block px-4 py-3 text-stone-300 hover:text-white hover:bg-dark-700/50 rounded-lg transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  activeClass="text-accent-500"
+                  className="block cursor-pointer border-b border-stone-700/70 py-3 text-sm font-medium text-stone-300 last:border-0"
                   tabIndex={0}
+                  role="link"
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-80}
+              <a
+                href={profile.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-3 text-sm font-semibold text-accent-500"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 mt-4 text-center text-white bg-accent-500 hover:bg-accent-600 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-500"
-                tabIndex={0}
               >
-                Get in Touch
-              </Link>
+                View resume
+              </a>
             </div>
           </motion.div>
         )}

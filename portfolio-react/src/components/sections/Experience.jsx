@@ -11,8 +11,8 @@ export function Experience() {
         <SectionHeader
           badge="Experience"
           title="Career"
-          highlight="So Far"
-          subtitle="From developer to technology leadership"
+          highlight="and direction"
+          subtitle="Experience to date, followed by the leadership goal I am working toward."
           align="left"
         />
 
@@ -43,12 +43,12 @@ export function Experience() {
                         item.isCurrent
                           ? 'bg-accent-500'
                           : item.isFuture
-                          ? 'bg-dark-700 border-2 border-highlight-500/50'
+                          ? 'bg-dark-700 border-2 border-accent-500/50'
                           : 'bg-dark-800 border-2 border-accent-500/50'
                       }`}>
                         {IconComponent && (
                           <IconComponent className={`w-4 h-4 ${
-                            item.isCurrent ? 'text-white' : item.isFuture ? 'text-highlight-400' : 'text-accent-400'
+                            item.isCurrent ? 'text-white' : item.isFuture ? 'text-accent-500' : 'text-accent-400'
                           }`} />
                         )}
                       </div>
@@ -60,7 +60,7 @@ export function Experience() {
                         item.isCurrent
                           ? 'bg-accent-500/10 border border-accent-500/25'
                           : item.isFuture
-                          ? 'bg-dark-800/40 border border-dark-600/40 opacity-70'
+                          ? 'bg-accent-500/5 border border-accent-500/25'
                           : 'bg-dark-800 border border-dark-600/40 active:border-accent-500/20'
                       }`}>
                         <div className="flex items-center gap-2 flex-wrap">
@@ -68,8 +68,9 @@ export function Experience() {
                             {item.date}
                           </span>
                           {item.isCurrent && <Badge variant="success" size="sm">CURRENT</Badge>}
+                          {item.isFuture && <Badge variant="accent" size="sm">GOAL</Badge>}
                         </div>
-                        <h3 className={`text-lg font-semibold mt-1.5 ${item.isFuture ? 'text-stone-400' : 'text-white'}`}>
+                        <h3 className="mt-1.5 text-lg font-semibold text-stone-200">
                           {item.title}
                         </h3>
                         {item.company && <p className="text-accent-400 text-sm mt-1">{item.company}</p>}
@@ -95,7 +96,7 @@ export function Experience() {
                         item.isCurrent
                           ? 'bg-accent-500/10 border border-accent-500/25'
                           : item.isFuture
-                          ? 'bg-dark-800/40 border border-dark-600/40 opacity-70'
+                          ? 'bg-accent-500/5 border border-accent-500/25'
                           : 'bg-dark-800 border border-dark-600/40 hover:border-accent-500/20'
                       }`}>
                         <div className={`flex items-center gap-2 flex-wrap ${isLeft ? 'justify-end' : ''}`}>
@@ -103,8 +104,9 @@ export function Experience() {
                             {item.date}
                           </span>
                           {item.isCurrent && <Badge variant="success" size="sm">CURRENT</Badge>}
+                          {item.isFuture && <Badge variant="accent" size="sm">GOAL</Badge>}
                         </div>
-                        <h3 className={`text-lg font-semibold mt-1.5 ${item.isFuture ? 'text-stone-400' : 'text-white'}`}>
+                        <h3 className="mt-1.5 text-lg font-semibold text-stone-200">
                           {item.title}
                         </h3>
                         {item.company && <p className="text-accent-400 text-sm mt-1">{item.company}</p>}
@@ -127,12 +129,12 @@ export function Experience() {
                         item.isCurrent
                           ? 'bg-accent-500 shadow-lg shadow-accent-500/20'
                           : item.isFuture
-                          ? 'bg-dark-700 border-2 border-highlight-500/50'
+                          ? 'bg-dark-700 border-2 border-accent-500/50'
                           : 'bg-dark-800 border-2 border-accent-500/50'
                       }`}>
                         {IconComponent && (
                           <IconComponent className={`w-5 h-5 ${
-                            item.isCurrent ? 'text-white' : item.isFuture ? 'text-highlight-400' : 'text-accent-400'
+                            item.isCurrent ? 'text-white' : item.isFuture ? 'text-accent-500' : 'text-accent-400'
                           }`} />
                         )}
                       </div>

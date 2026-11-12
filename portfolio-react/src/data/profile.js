@@ -2,11 +2,11 @@
 
 export const profile = {
   name: 'Justus Otundo',
-  title: 'System Architect & Technology Lead',
+  title: 'Senior Software Developer & Systems Architect',
   company: 'JAVI RSS Ltd',
-  tagline: 'System Architect & Technology Lead',
-  bio: 'I build mobile apps, web platforms, and ERP systems that businesses actually use every day. Ride-hailing for 6,000+ users, SACCO platforms for 1,000+ members, enterprise tools for 500+ staff. All in production, all real. Looking for my next team to build with.',
-  aboutBio: 'I got into coding because I liked solving problems. Somewhere along the way I ended up leading the whole tech side of things: architecture, teams, deployments, the works. I\'ve built ride-hailing apps, SACCO systems, and ERP platforms that people depend on to do their jobs. I care about building things that work six months down the line, not just on demo day.',
+  tagline: 'Senior Software Developer & Systems Architect',
+  bio: 'I design and deliver production software for real-world operations. My work includes a ride-hailing platform used by 6,000+ people, a SACCO system serving 1,000+ members, and business tools used by more than 500 staff. I take ownership from technical planning through release and ongoing improvement.',
+  aboutBio: 'I began as a software developer, drawn to the challenge of turning complex problems into useful products. Over time, my work expanded to architecture, delivery, and technology leadership. I care about building dependable systems and being accountable for how they perform after launch.',
   avatar: './avatar.jpg',
   resume: './resume.html',
   coverLetter: './cover-letter.html',
@@ -31,36 +31,7 @@ export const social = {
 export const stats = [
   { number: '4+', label: 'Products Live' },
   { number: '25+', label: 'Projects' },
-  { number: '3+', label: 'Years Exp' },
-];
-
-export const heroTechStack = ['Mobile Apps', 'Web Systems', 'Cloud Solutions', 'ERP Systems', 'API Development', 'Digital Strategy'];
-
-export const skills = {
-  mobile: {
-    title: 'Mobile',
-    description: 'Cross-platform mobile applications',
-    icon: 'DevicePhoneMobileIcon',
-  },
-  web: {
-    title: 'Web',
-    description: 'Full-stack web systems & APIs',
-    icon: 'GlobeAltIcon',
-  },
-  data: {
-    title: 'Data',
-    description: 'Research analytics & data management',
-    icon: 'ChartBarIcon',
-  },
-};
-
-export const techStack = [
-  { category: 'Mobile', tools: ['Flutter', 'Dart', 'Android Studio', 'Firebase'] },
-  { category: 'Frontend', tools: ['React', 'JavaScript', 'Tailwind CSS', 'HTML/CSS'] },
-  { category: 'Backend', tools: ['Python', 'Django', 'Node.js', 'REST APIs'] },
-  { category: 'Data & DB', tools: ['PostgreSQL', 'MySQL', 'MongoDB', 'Data Analysis'] },
-  { category: 'ERP', tools: ['Odoo', 'Custom Modules', 'Business Automation'] },
-  { category: 'DevOps', tools: ['Git', 'Linux', 'Docker', 'CI/CD'] },
+  { number: '5+', label: 'Years Building' },
 ];
 
 export const languages = [
@@ -90,7 +61,6 @@ export const certifications = [
   { name: 'Microsoft Azure Fundamentals', issuer: 'Microsoft', year: '2025' },
   { name: 'Microsoft 365 Fundamentals (MS-900)', issuer: 'Microsoft', year: '2025' },
   { name: 'Microsoft Security, Compliance & Identity', issuer: 'Microsoft', year: '2025' },
-  { name: 'AI in Azure', issuer: 'Microsoft', year: '2025' },
   { name: 'Cisco CCNA 1 & 2 - Networking', issuer: 'Cisco', year: '' },
   { name: 'Cybersecurity Certification', issuer: 'Huawei', year: '' },
   { name: 'ERP Implementation', issuer: 'Odoo', year: '' },

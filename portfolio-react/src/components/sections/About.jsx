@@ -52,8 +52,8 @@ export function About() {
                 {profile.aboutBio}
               </p>
               <p className="text-stone-400 text-sm sm:text-base leading-relaxed mb-4">
-                Moving from developer to technology lead means I understand both sides: the code and the business.
-                When I take on a project, I'm thinking about what happens after launch, not just what gets it out the door.
+                I take responsibility for technical decisions, communicate trade-offs clearly, and stay involved after launch.
+                I work with teams to make sure a product fits how the business operates, not only how it looks in a demo.
               </p>
               <p className="text-stone-400 text-sm sm:text-base leading-relaxed mb-6">
                 Outside of work, I'm exploring EV technology for fleet integration, mentoring junior developers,
@@ -78,6 +78,25 @@ export function About() {
                   <ArrowDownTrayIcon className="w-5 h-5" />
                   Cover Letter
                 </a>
+              </div>
+            </div>
+
+            <div className="bg-dark-800/80 rounded-3xl p-5 sm:p-7 lg:p-8 border border-stone-700/50">
+              <div className="mb-6">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-accent-500">My approach</p>
+                <h3 className="text-xl font-semibold text-white">How I take responsibility</h3>
+              </div>
+              <div className="grid gap-x-8 sm:grid-cols-3">
+                {[
+                  ['Clear communication', 'I make progress, risks, and decisions visible to the people relying on the work.'],
+                  ['End-to-end ownership', 'I stay accountable from early planning through launch and ongoing improvement.'],
+                  ['Business-first decisions', 'I focus on practical solutions that fit users and day-to-day operations.'],
+                ].map(([principle, description]) => (
+                  <div key={principle} className="border-t border-stone-700/70 py-4">
+                    <h4 className="mb-2 text-sm font-semibold text-stone-200">{principle}</h4>
+                    <p className="text-sm leading-6 text-stone-400">{description}</p>
+                  </div>
+                ))}
               </div>
             </div>
 

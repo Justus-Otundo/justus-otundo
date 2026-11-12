@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justus Otundo - Cover Letter</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #292524;
+      background: #fafaf9;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+    }
+
+    @media screen {
+      .page {
+        margin: 2rem auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      }
+    }
+
+    .header {
+      position: relative;
+      overflow: hidden;
+      background: #292524;
+      color: #fff;
+      padding: 2.5rem 3rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -70%;
+      right: -8%;
+      width: 340px;
+      height: 340px;
+      
+      pointer-events: none;
+    }
+
+    .header-left {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-left h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .header-left h1::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 4px;
+      border-radius: 999px;
+      background: #fbbf24;
+      margin-bottom: 0.6rem;
+    }
+
+    .header-left .title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fbbf24;
+    }
+
+    .header-right {
+      position: relative;
+      z-index: 1;
+      text-align: right;
+      font-size: 0.82rem;
+      color: #d6d3d1;
+      line-height: 1.8;
+      flex-shrink: 0;
+    }
+
+    .header-right a {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    .accent-bar {
+      height: 4px;
+      background: #f59e0b;
+    }
+
+    .content {
+      padding: 2.5rem 3rem 3rem;
+    }
+
+    .date {
+      font-size: 0.88rem;
+      color: #78716c;
+      margin-bottom: 2rem;
+    }
+
+    .recipient {
+      margin-bottom: 2rem;
+    }
+
+    .recipient p {
+      font-size: 0.88rem;
+      color: #57534e;
+      line-height: 1.6;
+    }
+
+    .recipient .name {
+      font-weight: 700;
+      color: #1c1917;
+    }
+
+    .salutation {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #1c1917;
+      margin-bottom: 1.25rem;
+    }
+
+    .body p {
+      font-size: 0.88rem;
+      color: #44403c;
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+    }
+
+    .body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      color: #d97706;
+      font-weight: 600;
+    }
+
+    .closing {
+      margin-top: 2rem;
+    }
+
+    .closing p {
+      font-size: 0.88rem;
+      color: #44403c;
+      margin-bottom: 0.25rem;
+    }
+
+    .closing .sign-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1c1917;
+      margin-top: 1.5rem;
+    }
+
+    .closing .sign-title {
+      font-size: 0.85rem;
+      color: #f59e0b;
+      font-weight: 600;
+    }
+
+    .closing .sign-contact {
+      font-size: 0.82rem;
+      color: #78716c;
+      margin-top: 0.25rem;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: #f59e0b;
+      margin: 1.5rem 0;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .header {
+        padding: 1.5rem 2rem 1.25rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .header::after {
+        display: none;
+      }
+      .header-left h1::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .accent-bar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .content { padding: 2rem; }
+    }
+
+    @page {
+      margin: 0;
+      size: A4;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="header-left">
+        <h1>Justus Otundo</h1>
+        <div class="title">System Architect & Technology Lead</div>
+      </div>
+      <div class="header-right">
+        <div><a href="mailto:justusotundo86@gmail.com">justusotundo86@gmail.com</a></div>
+        <div>+254 799 993 420</div>
+        <div>Nairobi, Kenya</div>
+        <div><a href="https://linkedin.com/in/justus-omoto-452044247">LinkedIn</a> &middot; <a href="https://github.com/Justus-Otundo">GitHub</a></div>
+      </div>
+    </div>
+    <div class="accent-bar"></div>
+
+    <div class="content">
+      <div class="date">August 2026</div>
+
+      <div class="recipient">
+        <p class="name">Hiring Manager</p>
+        <p>[Company Name]</p>
+        <p>[Company Address]</p>
+      </div>
+
+      <div class="salutation">Dear Hiring Manager,</div>
+
+      <div class="body">
+        <p>
+          I'm writing about the <span class="highlight">[Position Title]</span> role at <span class="highlight">[Company Name]</span>. I've spent the last three years building software that businesses depend on: taxi-hailing platforms, ERP systems, and SACCO management tools. I'm looking for my next team to build with.
+        </p>
+
+        <p>
+          At Javi Research Support Services, I ran the entire technology side of the business. I built a taxi-hailing platform from scratch that now has 6,000+ users, implemented an ERP that replaced spreadsheets for 500+ employees, and delivered a SACCO platform that 1,000+ members use to manage their savings and loans. I also built a cross-platform customer app and a multi-tenant SaaS ticketing system. All of it is live, all of it still running.
+        </p>
+
+        <p>
+          The thing I'm good at is taking something from an idea to a working product and not disappearing when things get hard. I don't just build what's on the spec. I ask why we're building it, who's going to use it, and what happens after launch. When we hit problems at 2 AM before a deadline, I'm the one still pushing fixes. My work at Javi cut manual processes by about half, and every product I delivered is still in active use.
+        </p>
+
+        <p>
+          I work across the full stack: mobile apps, web systems, backend APIs, databases, and ERP implementations. I have a BSc in IT from Murang'a University. Over the years I picked up certifications from Microsoft, Cisco, Huawei, and Odoo along the way. I learn what the job needs and go get it.
+        </p>
+
+        <!-- Personalize this line before sending: fill in [Company Name]. If you can, also name one specific thing about the company in your own words (a product, their mission, or something they recently did), then delete these two comment lines. -->
+        <p>
+          I'm interested in <span class="highlight">[Company Name]</span> because of what you're building and where you're headed. I'd like to bring what I've learned building products in the Kenyan market to your team.
+        </p>
+
+        <p>
+          I'm available to start immediately, whether that's freelance, contract, or full-time. Happy to jump on a call whenever works for you.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="closing">
+        <p>Thanks for your time.</p>
+        <!-- <p>Justus</p> -->
+
+        <div class="sign-name">Justus Otundo</div>
+        <div class="sign-title">System Architect & Technology Lead</div>
+        <div class="sign-contact">justusotundo86@gmail.com &middot; +254 799 993 420</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

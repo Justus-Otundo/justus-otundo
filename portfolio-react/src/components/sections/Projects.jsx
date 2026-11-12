@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
@@ -5,7 +6,16 @@ import { SectionHeader } from '../ui';
 import { getIcon } from '../../utils/icons';
 import { featuredProjects, portfolioProjects } from '../../data/projects';
 
+const highlightedProjectIds = [1, 5, 6, 9];
+
 export function Projects() {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const primaryProjects = highlightedProjectIds
+    .map((id) => featuredProjects.find((project) => project.id === id))
+    .filter(Boolean);
+  const additionalProjectCount = featuredProjects.length - primaryProjects.length + portfolioProjects.length;
+  const visibleProjects = showAllProjects ? featuredProjects : primaryProjects;
+
   return (
     <section id="projects" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       {/* Background */}
@@ -15,14 +25,14 @@ export function Projects() {
         {/* Section Header */}
         <SectionHeader
           badge="Projects"
-          title="Things I've"
-          highlight="Built"
-          subtitle="These are production systems with real users, real data, real uptime requirements"
+          title="Selected"
+          highlight="work"
+          subtitle="A selection of live products and business systems built for everyday use."
         />
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {featuredProjects.map((project, index) => {
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+          {visibleProjects.map((project, index) => {
             const IconComponent = getIcon(project.icon);
 
             return (
@@ -34,18 +44,17 @@ export function Projects() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group"
               >
-                <div className="relative h-full bg-dark-800 rounded-3xl overflow-hidden transition-all duration-500">
+                <div className="relative h-full rounded-3xl bg-dark-800 transition-colors duration-300">
                   {/* Border */}
-                  <div className="absolute inset-0 rounded-3xl border border-stone-700/50 group-hover:border-accent-500/30 transition-colors duration-300 pointer-events-none z-10" />
+                  <div className="pointer-events-none absolute inset-0 z-10 rounded-3xl border border-stone-700/70 transition-colors duration-300 group-hover:border-accent-500/50" />
 
-                  {/* Optional hero image: drop a screenshot/mockup at project.image to enable */}
                   {project.image && (
-                    <div className="relative aspect-video w-full overflow-hidden bg-dark-700/60">
+                    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-3xl bg-dark-700">
                       <img
                         src={project.image}
-                        alt={`${project.title} preview`}
+                        alt={`Screenshot of the ${project.title} website`}
                         loading="lazy"
-                        className="w-full h-full object-cover"
+                        className="h-full w-full object-cover object-top"
                       />
                     </div>
                   )}
@@ -79,7 +88,7 @@ export function Projects() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-stone-300 text-base sm:text-[17px] lg:text-lg leading-relaxed mb-5 sm:mb-6">
+                    <p className="mb-5 text-sm leading-6 text-stone-400 sm:mb-6 sm:text-base sm:leading-7">
                       {project.description}
                     </p>
 
@@ -151,8 +160,20 @@ export function Projects() {
           })}
         </div>
 
+        <div className="mt-8 text-center">
+          <button
+            type="button"
+            onClick={() => setShowAllProjects((showAll) => !showAll)}
+            aria-expanded={showAllProjects}
+            className="inline-flex items-center gap-2 border-b border-stone-600 pb-1.5 text-sm font-semibold text-stone-300 transition-colors hover:border-accent-500 hover:text-accent-500"
+          >
+            {showAllProjects ? 'Show selected projects' : `View ${additionalProjectCount} more projects`}
+            <ArrowTopRightOnSquareIcon className={`h-4 w-4 transition-transform ${showAllProjects ? 'rotate-45' : ''}`} aria-hidden="true" />
+          </button>
+        </div>
+
         {/* Other Work */}
-        {portfolioProjects.length > 0 && (
+        {showAllProjects && portfolioProjects.length > 0 && (
           <>
             <motion.div
               className="text-center mt-24 mb-12"

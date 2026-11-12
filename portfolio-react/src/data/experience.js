@@ -51,10 +51,10 @@ export const timeline = [
   },
   {
     id: 5,
-    date: '2026+',
-    title: 'CTO',
+    date: '2027 goal',
+    title: 'Chief Technology Officer',
     company: null,
-    description: 'That\'s where I\'m heading',
+    description: 'A leadership goal: guide engineering, align technology with business priorities, and remain accountable for delivery outcomes.',
     skills: null,
     icon: 'RocketLaunchIcon',
     position: 'left',
