@@ -28,8 +28,8 @@ export const testimonials = [
 ];
 
 export const stats = [
-  { value: '5000+', label: 'Hours Worked', icon: 'ClockIcon' },
-  { value: '25+', label: 'Projects Completed', icon: 'RectangleStackIcon' },
-  { value: '15+', label: 'Happy Clients', icon: 'FaceSmileIcon' },
-  { value: '4+', label: 'Products in Production', icon: 'TrophyIcon' },
+  { value: '6,000+', label: 'Ride-hailing users', icon: 'TruckIcon' },
+  { value: '1,000+', label: 'SACCO members', icon: 'UserIcon' },
+  { value: '500+', label: 'ERP users', icon: 'RectangleStackIcon' },
+  { value: '4+', label: 'Products live', icon: 'TrophyIcon' },
 ];

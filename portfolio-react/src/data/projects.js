@@ -40,7 +40,7 @@ export const featuredProjects = [
   {
     id: 2,
     title: 'Maskani Connect',
-    description: 'I built a rental platform for the Kenyan housing market: a public marketplace where tenants search and apply for homes online, a landlord dashboard for managing units, applications, and rent, and a mobile app for M-Pesa payments and maintenance tickets. The marketplace is live at maskani-web.onrender.com.',
+    description: 'A rental marketplace where tenants can find and apply for homes, while landlords manage units and applications. The mobile app supports rent payments and maintenance requests.',
     status: 'Production',
     statusType: 'live',
     features: ['Property Search', 'Online Applications', 'M-Pesa Payments', 'Landlord Dashboard'],
@@ -52,7 +52,7 @@ export const featuredProjects = [
   {
     id: 3,
     title: 'Teketeke ERP',
-    description: 'I ran the full ERP implementation across 500+ users at this Kenyan startup. Custom modules for procurement, HR, inventory, and financial reporting replaced spreadsheet-based workflows with automated processes and gave leadership real-time operational visibility.',
+    description: 'Led the ERP implementation for more than 500 users. Modules for procurement, HR, inventory, and financial reporting replaced spreadsheet-based workflows.',
     status: 'Production',
     statusType: 'live',
     features: ['Custom Modules', 'Business Automation', 'Financial Reports', 'Inventory'],
@@ -95,7 +95,7 @@ export const featuredProjects = [
   {
     id: 7,
     title: 'Javi Ticketing',
-    description: 'I architected and built a multi-tenant SaaS ticketing platform: event creation, online ticket sales, attendee check-in, and organizer dashboards in one system, replacing manual ticketing for events of any size.',
+    description: 'Built an event ticketing platform with event setup, online sales, attendee check-in, and organizer dashboards.',
     status: 'Production',
     statusType: 'live',
     features: ['Multi-tenant SaaS', 'Online Sales', 'Attendee Check-in', 'Organizer Dashboard'],
@@ -107,7 +107,7 @@ export const featuredProjects = [
   {
     id: 8,
     title: 'Portfolio Assistant',
-    description: 'A conversational guide built into this portfolio to help visitors find project details and contact information.',
+    description: 'A portfolio guide that helps visitors find project details and contact information.',
     status: 'Live',
     statusType: 'live',
     features: ['Project Information', 'Visitor Questions', 'Contact Details'],
@@ -155,8 +155,8 @@ export const achievements2025 = [
   {
     id: 1,
     category: 'Career',
-    title: 'Head of Technology',
-    description: 'Promoted to lead technology department. CTO-level ownership of software, infrastructure, and digital transformation.',
+    title: 'Technology leadership',
+    description: 'Led technology planning and product delivery across software and digital operations.',
     metrics: [
       { value: 'CTO', label: 'Level' },
       { value: '3+', label: 'Products' },

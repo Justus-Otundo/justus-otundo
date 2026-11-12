@@ -52,12 +52,10 @@ export function About() {
                 {profile.aboutBio}
               </p>
               <p className="text-stone-400 text-sm sm:text-base leading-relaxed mb-4">
-                I take responsibility for technical decisions, communicate trade-offs clearly, and stay involved after launch.
-                I work with teams to make sure a product fits how the business operates, not only how it looks in a demo.
+                At Javi, I worked on software for ride-hailing, internal operations, and member services. That meant understanding existing workflows, discussing trade-offs with the people involved, and following up once the software was in use.
               </p>
               <p className="text-stone-400 text-sm sm:text-base leading-relaxed mb-6">
-                Outside of work, I'm exploring EV technology for fleet integration, mentoring junior developers,
-                and always looking for the next hard problem to solve.
+                I also follow the work around electric vehicles for fleet use and mentor junior developers.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <a

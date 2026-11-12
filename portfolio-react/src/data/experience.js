@@ -71,10 +71,10 @@ export const workExperience = [
     company: 'Javi Research Support Services Ltd',
     status: 'Previous',
     achievements: [
-      'Leading technology strategy and product development',
-      'Architecting and delivering JaviRide taxi-hailing platform',
-      'Implementing Teketeke ERP with custom business modules',
-      'Managing cross-functional development teams',
+      'Led technology planning and product delivery',
+      'Architected and delivered the JaviRide taxi-hailing platform',
+      'Implemented Teketeke ERP with custom business modules',
+      'Coordinated developers across product work',
     ],
   },
   {

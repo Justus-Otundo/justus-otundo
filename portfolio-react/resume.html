@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Justus Otundo - Resume</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
       color: #292524;
       background: #fafaf9;
       line-height: 1.6;
@@ -43,17 +41,6 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 2rem;
-    }
-
-    .header::after {
-      content: '';
-      position: absolute;
-      top: -70%;
-      right: -8%;
-      width: 340px;
-      height: 340px;
-      
-      pointer-events: none;
     }
 
     .header-left {
@@ -339,6 +326,47 @@
       color: #1c1917;
     }
 
+    :root {
+      --page: #f2f1e9;
+      --surface: #fcfbf6;
+      --ink: #17343a;
+      --body: #586b69;
+      --muted: #71817c;
+      --line: #dbe0d6;
+      --accent: #176258;
+      --copper: #a56a45;
+    }
+
+    body { color: var(--ink); background: var(--page); }
+    .page { background: var(--surface); }
+    .header { background: var(--ink); }
+    .header-left h1::before { background: var(--copper); }
+    .header-left .title, .header-right a { color: #d1a07e; }
+    .header-left .tagline { color: #d0d9d4; }
+    .header-right { color: #e4e9e5; }
+    .accent-bar { background: var(--copper); }
+    .section-title {
+      color: var(--accent);
+      border-color: var(--line);
+    }
+    .section-title::before, .job li::before, .cert-item::before { background: var(--copper); }
+    .summary, .job li, .project-desc, .cert-item, .lang-item { color: var(--body); }
+    .job-title, .project-name, .skill-category h4, .edu-degree, .lang-item strong { color: var(--ink); }
+    .job-period, .skill-category p, .edu-period { color: var(--muted); }
+    .job-company, .project-role, .edu-school { color: var(--accent); }
+    .job li::before { box-shadow: none; }
+
+    @media (max-width: 640px) {
+      .page { margin: 12px; min-height: 0; }
+      .header { flex-direction: column; gap: 1.25rem; padding: 1.75rem 1.5rem; }
+      .header-left h1 { font-size: 1.8rem; }
+      .header-right { text-align: left; }
+      .content { padding: 1.5rem; }
+      .skills-grid, .cert-list { grid-template-columns: 1fr; gap: 0.7rem; }
+      .lang-row { flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+      .job-header { align-items: flex-start; }
+    }
+
     /* Print styles */
     @media print {
       body { background: #fff; }
@@ -351,9 +379,6 @@
         padding: 1.5rem 2rem 1.25rem;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-      }
-      .header::after {
-        display: none;
       }
       .header-left h1::before,
       .section-title::before {
@@ -376,6 +401,8 @@
       margin: 0;
       size: A4;
     }
+
+    *, *::before, *::after { background-image: none; }
   </style>
 </head>
 <body>
@@ -384,9 +411,9 @@
     <div class="header">
       <div class="header-left">
         <h1>Justus Otundo</h1>
-        <div class="title">System Architect & Technology Lead</div>
+        <div class="title">Senior Software Developer &amp; Systems Architect</div>
         <div class="tagline">
-          I build apps, web platforms, and ERP systems that people actually use. Currently looking for my next team.
+          I build software for the way people work, from the first planning conversation through release.
         </div>
       </div>
       <div class="header-right">
@@ -404,7 +431,7 @@
       <div class="section">
         <h2 class="section-title">Professional Summary</h2>
         <p class="summary">
-          Software developer who ended up leading a whole tech department. Over three years building production apps, web platforms, and ERP systems that real businesses use every day. At Javi Research Support Services, I ran the technology side: taxi-hailing platform with 6,000+ users, ERP for 500+ staff, SACCO platform for 1,000+ members, a customer app, and a SaaS ticketing system. I go from idea to production and stick around to keep things running. Looking for my next role.
+          Since 2021, my work has grown from hands-on development into product delivery and technology leadership. At Javi Research Support Services, I worked across products used in day-to-day operations: a ride-hailing platform with 6,000+ users, an ERP used by 500+ staff, and a SACCO platform serving 1,000+ members. I also delivered a customer app and an event-ticketing platform.
         </p>
       </div>
 
@@ -419,11 +446,11 @@
           </div>
           <div class="job-company">Javi Research Support Services Ltd, Nairobi</div>
           <ul>
-            <li>Ran the tech side of the business: decided what got built, how, and when</li>
-            <li>Built JaviRide from scratch: two apps (driver + rider), GPS tracking, dispatch, payments, the works</li>
-            <li>Put in place Teketeke ERP with custom modules for procurement, HR, inventory, and financials</li>
-            <li>Led a small dev team, kept multiple projects moving at the same time</li>
-            <li>Set up how we wrote, reviewed, and deployed code. Things ran smoother after that.</li>
+            <li>Planned technology work and helped teams prioritize product development.</li>
+            <li>Led delivery of JaviRide, including passenger and driver apps, trip tracking, dispatch, and payments.</li>
+            <li>Implemented Teketeke ERP modules for procurement, HR, inventory, and financial reporting.</li>
+            <li>Coordinated developers and delivery across several active projects.</li>
+            <li>Introduced clearer code review and release practices to improve consistency.</li>
           </ul>
         </div>
 
@@ -434,11 +461,11 @@
           </div>
           <div class="job-company">Javi Research Support Services Ltd, Nairobi</div>
           <ul>
-            <li>Built the Javi Customer App so clients could access services from their phones instead of the website</li>
-            <li>Built the Niinue Nikuinue SACCO platform where members manage loans, savings, and statements from an app</li>
-            <li>Ran IT infrastructure and digital operations for the whole organization</li>
-            <li>Turned messy research data into reports the leadership team could actually use</li>
-            <li>Cut a lot of manual work by building custom software to automate the repetitive stuff</li>
+            <li>Delivered the Javi Customer App, giving clients a mobile way to access services.</li>
+            <li>Built the Niinue Nikuinue SACCO platform for member savings, loan applications, and statements.</li>
+            <li>Managed IT infrastructure and digital operations across the organization.</li>
+            <li>Prepared research analysis and reports for leadership decision-making.</li>
+            <li>Automated recurring tasks with software built around existing business workflows.</li>
           </ul>
         </div>
 
@@ -449,9 +476,8 @@
           </div>
           <div class="job-company">Freelance & Campus Projects</div>
           <ul>
-            <li>Built websites and mobile apps for clients: e-commerce stores, business sites, custom tools</li>
-            <li>Wrote backend APIs and set up databases for the projects I was building</li>
-            <li>Client work that brought in actual business for them, not just a nice-looking site</li>
+            <li>Built websites, e-commerce stores, and mobile applications for clients.</li>
+            <li>Developed the supporting APIs and data structures for those products.</li>
           </ul>
         </div>
       </div>
@@ -462,52 +488,44 @@
 
         <div class="project">
           <span class="project-name">JaviRide</span> <span class="project-role">- Project Lead & Architect</span>
-          <div class="project-desc">Taxi-hailing platform I built from the ground up. Two apps (driver and rider), real-time GPS, dispatch system, fare negotiation, carpooling, and M-Pesa payments. Serving 6,000+ users.</div>
+          <div class="project-desc">Led delivery of passenger and driver apps with trip tracking, dispatch, fare negotiation, carpooling, and M-Pesa payments. The service has reached 6,000+ users.</div>
         </div>
 
         <div class="project">
           <span class="project-name">Teketeke ERP</span> <span class="project-role">- ERP Implementor</span>
-          <div class="project-desc">Custom ERP that replaced spreadsheets for 500+ employees. Built specific modules for procurement, HR, inventory, and financial reporting based on how they actually work.</div>
+          <div class="project-desc">Implemented business modules for procurement, HR, inventory, and financial reporting for an organization with 500+ users.</div>
         </div>
 
         <div class="project">
           <span class="project-name">Javi Customer App</span> <span class="project-role">- Lead Developer</span>
-          <div class="project-desc">Cross-platform mobile app so clients can book services, track orders, and manage their accounts from their phone instead of the corporate website.</div>
+          <div class="project-desc">A mobile app for clients to schedule services, receive updates, and track orders.</div>
         </div>
 
         <div class="project">
           <span class="project-name">Niinue Nikuinue SACCO</span> <span class="project-role">- Lead Developer</span>
-          <div class="project-desc">SACCO platform for 1,000+ members. Replaced an Excel-based system with an app where members apply for loans, check balances, and view statements.</div>
+          <div class="project-desc">A member platform for loan applications, balances, savings, and statements, serving more than 1,000 members.</div>
         </div>
       </div>
 
-      <!-- Core Competencies -->
+      <!-- Areas of Strength -->
       <div class="section">
-        <h2 class="section-title">Core Competencies</h2>
+        <h2 class="section-title">Areas of Strength</h2>
         <div class="skills-grid">
           <div class="skill-category">
-            <h4>Mobile Development</h4>
-            <p>Cross-platform mobile apps, native performance, offline-first architecture</p>
+            <h4>Product delivery</h4>
+            <p>Requirements, planning, release coordination, and post-launch follow-up</p>
           </div>
           <div class="skill-category">
-            <h4>Web & Backend Systems</h4>
-            <p>Full-stack web applications, RESTful APIs, microservices, cloud deployment</p>
+            <h4>Business systems</h4>
+            <p>ERP implementation, workflow analysis, and operational software</p>
           </div>
           <div class="skill-category">
-            <h4>Enterprise Solutions</h4>
-            <p>ERP implementation, business process automation, system integration</p>
+            <h4>Technology leadership</h4>
+            <p>Architecture decisions, prioritization, and delivery coordination</p>
           </div>
           <div class="skill-category">
-            <h4>Database & Data</h4>
-            <p>Database architecture, data analysis, research analytics, reporting systems</p>
-          </div>
-          <div class="skill-category">
-            <h4>Infrastructure & Security</h4>
-            <p>Network administration, cybersecurity, server management, CI/CD pipelines</p>
-          </div>
-          <div class="skill-category">
-            <h4>Leadership & Strategy</h4>
-            <p>Team management, project planning, product strategy, client communication</p>
+            <h4>Research and reporting</h4>
+            <p>Data analysis, clear reporting, and decision support</p>
           </div>
         </div>
       </div>
@@ -541,7 +559,6 @@
           <div class="cert-item">Microsoft Azure Fundamentals</div>
           <div class="cert-item">Microsoft 365 Fundamentals (MS-900)</div>
           <div class="cert-item">Microsoft Security, Compliance & Identity</div>
-          <div class="cert-item">AI in Azure</div>
           <div class="cert-item">Cisco CCNA 1 & 2 - Networking</div>
           <div class="cert-item">Huawei - Cybersecurity</div>
           <div class="cert-item">Odoo - ERP Implementation</div>
